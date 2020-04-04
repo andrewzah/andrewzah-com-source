@@ -1,0 +1,5 @@
+{{ $pages := .Pages }}
+
+{{- range (.Paginate (where $pages "File.Dir" "!=" "/")).Pages -}}
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+{{- end -}}

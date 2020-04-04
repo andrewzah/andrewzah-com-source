@@ -1,0 +1,98 @@
+# https://github.com/foo-dogsquared/hugo-theme-arch-terminal/blob/master/MANUAL.adoc
+baseURL = "https://andrewzah.com/"
+languageCode = "en-us"
+title = "Andrew Zah's Website"
+description = "my description"
+theme = "zah"
+summaryLength = 15
+paginate = 10
+canonifyUrls = true
+
+[author]
+    name = "Andrew Zah"
+    email = "zah@andrewzah.com"
+
+[markup]
+  [markup.highlight]
+    style = "solarized-dark"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "about/"
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "contact/"
+
+  [[menu.main]]
+    identifier = "rss"
+    name = "RSS"
+    url = "index.xml/"
+
+[params]
+  enableContentImageZoom = true
+  keywords = "andrew zah, zah"
+  enableThemeToggle = false
+  #hidePostsOnHome = true
+  enableContentPagination = true
+  #enableBreadcrumbs = true
+  contentTypeName = "posts"
+  themeColor = "green"
+  enableBackToTopLink = true
+  showLanguageSelector = false
+  enableOpenGraphSchema = true
+  enableJsonLdSchema = true
+  enableTwitterCard = true
+  feedLimit = 25
+  readMoreLabel = "tet"
+  readOtherPostsLabel = "tet"
+
+  # 404
+  notFoundHeader = "404 Not Found :("
+  notFoundLinkMessage = "Return home"
+  notFoundMessage = "I see you're an explorer. I like that."
+
+[languages]
+  [languages.en]
+    title = "Andrew Zah's Website"
+    keywords = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "Terminal"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "showcase"
+        name = "Showcase"
+        url = "/showcase"
+
+[mediaTypes]
+    [mediaTypes."application/atom+xml"]
+        suffixes = ["atom", "atom.xml"]
+
+    [mediaTypes."application/rss+xml"]
+        suffixes = ["rss", "rss.xml"]
+
+[outputFormats]
+    [outputFormats.Rss]
+        mediaType = "application/rss+xml"
+        baseName = "index"
+
+    [outputFormats.Atom]
+        mediaType = "application/atom+xml"
+        baseName = "index"
+
+[outputs]
+    home = ["HTML", "JSON", "RSS", "ATOM"]
+    section = ["HTML", "JSON", "RSS", "ATOM"]
