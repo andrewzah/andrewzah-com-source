@@ -3,7 +3,7 @@ baseURL = "https://andrewzah.com/"
 languageCode = "en-us"
 title = "Andrew Zah's Website"
 description = "my description"
-theme = "zah"
+theme = "slick"
 summaryLength = 15
 paginate = 10
 canonifyUrls = true
@@ -14,7 +14,9 @@ canonifyUrls = true
 
 [markup]
   [markup.highlight]
-    style = "solarized-dark"
+    codeFences = true
+    style = "xcode"
+    tabwidth = 2
 
 [menu]
   [[menu.main]]
