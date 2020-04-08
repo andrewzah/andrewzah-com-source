@@ -2,7 +2,7 @@
 baseURL = "https://andrewzah.com/"
 languageCode = "en-us"
 description = "my description"
-theme = "slick"
+theme = "hugo-flex"
 summaryLength = 15
 paginate = 10
 canonifyUrls = true
@@ -14,7 +14,7 @@ canonifyUrls = true
 [markup]
   [markup.highlight]
     codeFences = true
-    style = "xcode"
+    style = "rainbow_dash"
     tabwidth = 2
 
 [menu]
@@ -37,9 +37,7 @@ canonifyUrls = true
   enableContentImageZoom = true
   keywords = "andrew zah, zah"
   enableThemeToggle = false
-  #hidePostsOnHome = true
   enableContentPagination = true
-  #enableBreadcrumbs = true
   contentTypeName = "posts"
   enableBackToTopLink = true
   showLanguageSelector = false
@@ -51,7 +49,7 @@ canonifyUrls = true
   readOtherPostsLabel = "tet"
 
   # 404
-  notFoundHeader = "404 Not Found :("
+  notFoundHeader = "404 Not Found"
   notFoundLinkMessage = "Return home"
   notFoundMessage = "I see you're an explorer. I like that."
 
@@ -62,10 +60,6 @@ canonifyUrls = true
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
-
-    [languages.en.params.logo]
-      logoText = "Terminal"
-      logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]

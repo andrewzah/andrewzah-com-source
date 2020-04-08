@@ -9,6 +9,9 @@ keywords = "minecraft java edition papermc paper spigot bukkit freenas freebsd p
 +++
 
 = Hosting Minecraft Servers + BungeeCord with FreeNAS
+:source-highlighter: rouge
+:rouge-css: style
+:rouge-style: github
 
 How I set up multiple minecraft servers in FreeNAS with a
 bungeecord/waterfall proxy.
@@ -17,20 +20,16 @@ This guide assumes you’re running a FreeNAS server on a local network.
 If not, you’ll have to update your ip address and default gateway
 settings accordingly.
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png'',
-desc=``Dynmap rendering of our FreeNAS minecaft server'', t=``Dynmap
-rendering of our FreeNAS minecaft server'' )}}
+image:https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png[Dynmap rendering of our FreeNAS minecaft server]
 
 == Prerequisites
 
 * Console access to a server running FreeNAS
 
-(Don’t download these yet, read on) * Your server jarfile:
-https://www.spigotmc.org/wiki/bungeecord/[spigot.jar], or
-https://papermc.io/downloads#Paper-1.15[paper.jar], etc. * Your proxy
-jarfile: https://www.spigotmc.org/wiki/bungeecord/[bungeecord.jar], or
-https://papermc.io/downloads#Waterfall[waterfall.jar], etc.
+(Don’t download these yet, read on) 
+
+* Your server jarfile: https://www.spigotmc.org/wiki/bungeecord/[spigot.jar], or https://papermc.io/downloads#Paper-1.15[paper.jar], etc.
+* Your proxy jarfile: https://www.spigotmc.org/wiki/bungeecord/[bungeecord.jar], or https://papermc.io/downloads#Waterfall[waterfall.jar], etc.
 
 This guide will be using `Paper` and `Waterfall` as they are more
 performant versions of spigot and bungeecord, respectively. They also
@@ -49,7 +48,7 @@ echo '{"pkgs":["openjdk12", "curl"]}' > /tmp/minecraft.json
 When a jail is created, `pkg` isn’t installed by default. Using this
 saves us some commands in the next step.
 
-[source,bash]
+[source,Bash]
 ----
 iocage create \
   --name <name> \
@@ -81,7 +80,7 @@ mc_creative
 Next, let’s create directories in the jails and mount them in the root
 system:
 
-[source,bash]
+[source,go]
 ----
 # Creates the directories in the root system
 mkdir -p /xxx/data/minecraft/mc_main
@@ -164,7 +163,6 @@ It’s far better to let
 https://www.freebsd.org/cgi/man.cgi?query=rc.d&sektion=8&n=1[rc.d]
 manage it for us. Add this script to `/usr/local/etc/minecraftd`:
 
-[source,bash]
 ----
 #!/bin/sh
 #

@@ -16,11 +16,7 @@ https://buy.garmin.com/en-US/US/p/641435/pn/010-02157-10[Garmin Fenix
 I forgot that my phone was in Korean, and thus the notifications would
 be in Korean… Silly me.
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/2020_01_11_garmin_fenix/garmin-notification.jpg'',
-desc=``An example notification from my phone, which is in Korean. The
-korean text is rendered as question marks in black boxes.'', t=``An
-example notification from my phone, which is in Korean.'' )}}
+image:https://s3.amazonaws.com/andrewzah.com/posts/2020_01_11_garmin_fenix/garmin-notification.jpg[An example notification from my phone, which is in Korean.]
 
 The 6 series is not cheap, starting at $600, with the 6X starting at
 $750. The solar editions go for $1,000 and $1,150. This specific variant
@@ -34,11 +30,7 @@ supported languages], and a page
 https://www.garmin.com/en-US/forms/ideas/[to share ideas] but it errors
 on submission.
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/2020_01_11_garmin_fenix/express-utilities.png'',
-desc=``A screenshot of the Utilities tab in the Tools & Content section
-of the Garmin Express application.'', t=``Tools & Content > Utilities in
-the Garmin Express application.'' )}}
+image:https://s3.amazonaws.com/andrewzah.com/posts/2020_01_11_garmin_fenix/express-utilities.png[A screenshot of the Utilities tab in the Tools & Content section of the Garmin Express application.]
 
 I saw that Romanian (my mother tongue) was supported so I asked a friend
 who works at Garmin about that, and he mentioned that they have an
