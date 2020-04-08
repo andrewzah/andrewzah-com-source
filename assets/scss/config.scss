@@ -1,37 +1,15 @@
-body {
-  padding-top: 0px !important;
-  background-color: green;
-}
+// colors
+$primary: #096340;
+$primary-hover: #096340;
 
-p {
-  margin-top: 0px;
-  margin-bottom: .75rem;
-}
+$text: rgb(40, 40, 40);
 
 $background: rgb(247,247,247);
-$foreground: rgb(40, 40, 40);
-$accent: #689d6a;
-$fontFamily: serif !default;
-$fontSize: 1.2rem !default;
-$iconSize: 2rem !default; 
-$borderColor: #b8bb26;
+//$accent: #689d6a;
 
-// 2nd theme variables
-$background-2nd: #282828;
-$foreground-2nd: #8ec07c;
-$accent-2nd: $foreground-2nd;
-$fontFamily-2nd: $fontFamily !default;
+// general
+$max-width: 650px !default;
 
-// Main breakpoints
+// breakpoints
 $phoneWidth: 600px !default;
 $desktopWidth: 1024px !default;
-
-// Content appearance options
-$maxWidth: 780px !default;
-$sidePadding: 1.25rem !default;
-$contentPadding: 1rem !default;
-
-// Border options
-// It only missing the color so you should provide one.
-$primaryBorder: solid 1px #ccc !default;
-$secondaryBorder: dashed 1px !default;

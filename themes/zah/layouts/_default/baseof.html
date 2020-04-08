@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ $.Site.Language }}">
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "header.html" . -}}
+    {{- partial "navbar.html" . -}}
 
-    <div id="content">
+    <div id="content" class="container">
       {{- block "main" . }}{{- end }}
     </div>
 

@@ -1,7 +1,6 @@
 # https://github.com/foo-dogsquared/hugo-theme-arch-terminal/blob/master/MANUAL.adoc
 baseURL = "https://andrewzah.com/"
 languageCode = "en-us"
-title = "Andrew Zah's Website"
 description = "my description"
 theme = "slick"
 summaryLength = 15
@@ -42,7 +41,6 @@ canonifyUrls = true
   enableContentPagination = true
   #enableBreadcrumbs = true
   contentTypeName = "posts"
-  themeColor = "green"
   enableBackToTopLink = true
   showLanguageSelector = false
   enableOpenGraphSchema = true
@@ -59,7 +57,7 @@ canonifyUrls = true
 
 [languages]
   [languages.en]
-    title = "Andrew Zah's Website"
+    title = "andrewzah.com"
     keywords = ""
     menuMore = "Show more"
     readMore = "Read more"
@@ -98,3 +96,20 @@ canonifyUrls = true
 [outputs]
     home = ["HTML", "JSON", "RSS", "ATOM"]
     section = ["HTML", "JSON", "RSS", "ATOM"]
+
+[caches]
+  [caches.getjson]
+    dir = "/home/andrew/website/hugo-site/cache/json"
+    maxAge = -1
+  [caches.getcsv]
+    dir = "/home/andrew/website/hugo-site/cache/csv"
+    maxAge = -1
+  [caches.images]
+    dir = "/home/andrew/website/hugo-site/cache/images"
+    maxAge = -1
+  [caches.assets]
+    dir = "/home/andrew/website/hugo-site/cache/assets"
+    maxAge = -1
+  [caches.modules]
+    dir = "/home/andrew/website/hugo-site/cache/modules"
+    maxAge = -1

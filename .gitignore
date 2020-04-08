@@ -1,4 +1,5 @@
 resources/_gen
+cache/
 public/
 
 themes/hugo-flex

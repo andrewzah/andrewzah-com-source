@@ -1,0 +1,15 @@
+nav {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 2px;
+
+  .nav-brand {
+    border-bottom: none;
+    color: $text;
+  }
+
+  .nav-links {
+    @include horizontal-list;
+    @include anchor-style;
+    @include anchor-colors($text, $text);
+  }
+}
