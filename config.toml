@@ -6,16 +6,16 @@ theme = "hugo-flex"
 summaryLength = 15
 paginate = 10
 canonifyUrls = true
+toc = true
 
 [author]
     name = "Andrew Zah"
     email = "zah@andrewzah.com"
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    style = "rainbow_dash"
-    tabwidth = 2
+  [markup.asciidocext]
+    args = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+    workingFolderCurrent = true
 
 [menu]
   [[menu.main]]
@@ -33,77 +33,3 @@ canonifyUrls = true
     name = "RSS"
     url = "index.xml/"
 
-[params]
-  enableContentImageZoom = true
-  keywords = "andrew zah, zah"
-  enableThemeToggle = false
-  enableContentPagination = true
-  contentTypeName = "posts"
-  enableBackToTopLink = true
-  showLanguageSelector = false
-  enableOpenGraphSchema = true
-  enableJsonLdSchema = true
-  enableTwitterCard = true
-  feedLimit = 25
-  readMoreLabel = "tet"
-  readOtherPostsLabel = "tet"
-
-  # 404
-  notFoundHeader = "404 Not Found"
-  notFoundLinkMessage = "Return home"
-  notFoundMessage = "I see you're an explorer. I like that."
-
-[languages]
-  [languages.en]
-    title = "andrewzah.com"
-    keywords = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
-
-[mediaTypes]
-    [mediaTypes."application/atom+xml"]
-        suffixes = ["atom", "atom.xml"]
-
-    [mediaTypes."application/rss+xml"]
-        suffixes = ["rss", "rss.xml"]
-
-[outputFormats]
-    [outputFormats.Rss]
-        mediaType = "application/rss+xml"
-        baseName = "index"
-
-    [outputFormats.Atom]
-        mediaType = "application/atom+xml"
-        baseName = "index"
-
-[outputs]
-    home = ["HTML", "JSON", "RSS", "ATOM"]
-    section = ["HTML", "JSON", "RSS", "ATOM"]
-
-[caches]
-  [caches.getjson]
-    dir = "/home/andrew/website/hugo-site/cache/json"
-    maxAge = -1
-  [caches.getcsv]
-    dir = "/home/andrew/website/hugo-site/cache/csv"
-    maxAge = -1
-  [caches.images]
-    dir = "/home/andrew/website/hugo-site/cache/images"
-    maxAge = -1
-  [caches.assets]
-    dir = "/home/andrew/website/hugo-site/cache/assets"
-    maxAge = -1
-  [caches.modules]
-    dir = "/home/andrew/website/hugo-site/cache/modules"
-    maxAge = -1

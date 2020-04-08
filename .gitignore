@@ -1,3 +1,7 @@
+*.svg
+*.png
+.asciidoctor/
+
 resources/_gen
 cache/
 public/

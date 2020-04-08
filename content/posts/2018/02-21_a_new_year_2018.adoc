@@ -25,7 +25,7 @@ Here’s what my Caddyfile for `andrewzah.com`, `andrei.blue`, and
 `znc.andrewzah.com` looks like:
 
 .Caddyfile
-[caddyfile]
+[source, caddyfile]
 ....
 andrewzah.com, andrei.blue {
   tls your@email.com

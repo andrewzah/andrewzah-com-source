@@ -10,8 +10,7 @@ keywords = "minecraft java edition papermc paper spigot bukkit freenas freebsd p
 
 = Hosting Minecraft Servers + BungeeCord with FreeNAS
 :source-highlighter: rouge
-:rouge-css: style
-:rouge-style: github
+:rouge-css: github
 
 How I set up multiple minecraft servers in FreeNAS with a
 bungeecord/waterfall proxy.
@@ -41,6 +40,7 @@ The first thing we’ll need to do is create the main jail (the one
 running bungeecord or waterfall). Alter the version for the current one
 your server is running.
 
+[source,bash]
 ....
 echo '{"pkgs":["openjdk12", "curl"]}' > /tmp/minecraft.json
 ....
@@ -48,7 +48,7 @@ echo '{"pkgs":["openjdk12", "curl"]}' > /tmp/minecraft.json
 When a jail is created, `pkg` isn’t installed by default. Using this
 saves us some commands in the next step.
 
-[source,Bash]
+[source,bash]
 ----
 iocage create \
   --name <name> \
@@ -80,7 +80,7 @@ mc_creative
 Next, let’s create directories in the jails and mount them in the root
 system:
 
-[source,go]
+[source,bash]
 ----
 # Creates the directories in the root system
 mkdir -p /xxx/data/minecraft/mc_main

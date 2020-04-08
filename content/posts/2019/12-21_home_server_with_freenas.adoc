@@ -2,7 +2,6 @@
 title = "Building a Home Server with FreeNAS"
 slug = "building-home-server-freenas"
 date = "2019-12-21"
-draft = true
 tags = ["servers", "workflow"]
 categories = ["self-hosting"]
 description = "I built a home server with FreeNAS and an amd ryzen."
@@ -10,10 +9,21 @@ keywords = "home server setup amd ryzen ixsystems freebsd freenas"
 +++
 
 = Building a Home Server with FreeNAS
+:toc:
 
 A few months ago I got gripped with server fever. I’d had a raspberry pi
 for a while, but I could never find a meaningful use for it. I’d tried
 running plex, etc, but the pi3 would choke after a bit and sputter out.
+
+[graphviz, example, svg]
+....
+digraph G {
+  main -> parse -> execute;
+  main -> init;
+  main -> cleanup;
+  execute -> comparator;
+}
+....
 
 One day I decided enough was enough: it was time to build a more beefy
 server. (and I found a compelling use for the pi!)

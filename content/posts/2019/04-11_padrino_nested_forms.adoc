@@ -32,6 +32,9 @@ This is what the migration schema looks like:
 
 [source,ruby]
 ----
+class Foo
+end
+
 Sequel.migration do
   up do
     create_table :grammars do
