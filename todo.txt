@@ -1,0 +1,2 @@
+- aside
+  - don't show on tablet screens or smaller

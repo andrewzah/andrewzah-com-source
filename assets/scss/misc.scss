@@ -1,8 +1,78 @@
+:root {
+  /* Light Theme */
+  --c-light-bg: rgb(247, 247, 247);
+  --c-light-text: rgb(40, 40, 40);
+
+  /* Dark Theme */
+  --c-dark-bg: rgb(30, 30, 30);
+  --c-dark-text: rgb(220, 220, 220);
+}
+
+.theme-container {
+  height: 100vh;
+
+  --c-bg: var(--c-light-bg);
+  --c-text: var(--c-light-text);
+
+  @media (prefers-color-scheme: dark) {
+    --c-bg: var(--c-dark-bg);
+    --c-text: var(--c-dark-text);
+  }
+
+  background-color: var(--c-bg);
+  color: var(--c-text);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: 0px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap; /* 1. */
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.dark-mode-label {
+  position: fixed;
+  top: 0;
+  right: 1rem;
+  font-size: 26px;
+}
+
+.dark-mode-checkbox:checked ~ .theme-container {
+  --c-bg: var(--c-dark-bg);
+  --c-text: var(--c-dark-text);
+}
+
+.dark-mode-checkbox:checked ~ .theme-container .dark-mode-label::before {
+  content: "\263C";
+}
+
+.dark-mode-label::before {
+  content: "\263D";
+}
+
+html, body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
-  @include anchor-colors;
-  @include anchor-style;
+  //@include anchor-colors;
+  //@include anchor-style;
 
   padding-top: 0px !important;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .container {

@@ -1,10 +1,10 @@
-// colors
-$primary: #096340;
-$primary-hover: #096340;
-
-$text: rgb(40, 40, 40);
-
-$background: rgb(247,247,247);
+$color-vars: (
+  primary: #096340,
+  primary-hover: #096340,
+  bg: rgb(247,247,247),
+  text: rgb(40, 40, 40),
+);
+//$primary: #116340;
 //$accent: #689d6a;
 
 // general

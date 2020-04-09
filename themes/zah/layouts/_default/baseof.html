@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.Language }}">
   {{- partial "head.html" . -}}
+
   <body>
-    {{- partial "navbar.html" . -}}
+    <input id="dark-mode" class="dark-mode-checkbox visually-hidden" type="checkbox">
+    <div class="theme-container">
+      <label class="dark-mode-label" for="dark-mode"></label>
 
-    <div id="content" class="container">
-      {{- block "main" . }}{{- end }}
+      {{- partial "navbar.html" . -}}
+
+      <div id="content" class="container">
+        {{- block "main" . }}{{- end }}
+      </div>
+
+      {{- partialCached "footer.html" . -}}
     </div>
-
-    {{- partialCached "footer.html" . -}}
   </body>
 </html>

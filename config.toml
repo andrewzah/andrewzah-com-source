@@ -2,11 +2,12 @@
 baseURL = "https://andrewzah.com/"
 languageCode = "en-us"
 description = "my description"
-theme = "hugo-flex"
+theme = "zah"
 summaryLength = 15
 paginate = 10
 canonifyUrls = true
 toc = true
+destination = "public"
 
 [author]
     name = "Andrew Zah"
