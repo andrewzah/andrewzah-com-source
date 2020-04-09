@@ -8,57 +8,6 @@
   --c-dark-text: rgb(220, 220, 220);
 }
 
-.theme-container {
-  height: 100vh;
-
-  --c-bg: var(--c-light-bg);
-  --c-text: var(--c-light-text);
-
-  @media (prefers-color-scheme: dark) {
-    --c-bg: var(--c-dark-bg);
-    --c-text: var(--c-dark-text);
-  }
-
-  background-color: var(--c-bg);
-  color: var(--c-text);
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: 0px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap; /* 1. */
-}
-
-.grow {
-  flex-grow: 1;
-}
-
-.dark-mode-label {
-  position: fixed;
-  top: 0;
-  right: 1rem;
-  font-size: 26px;
-}
-
-.dark-mode-checkbox:checked ~ .theme-container {
-  --c-bg: var(--c-dark-bg);
-  --c-text: var(--c-dark-text);
-}
-
-.dark-mode-checkbox:checked ~ .theme-container .dark-mode-label::before {
-  content: "\263C";
-}
-
-.dark-mode-label::before {
-  content: "\263D";
-}
-
 html, body {
   height: 100%;
   padding: 0px;
@@ -75,15 +24,36 @@ body {
   flex-direction: column;
 }
 
+p {
+  margin-top: 0px;
+  margin-bottom: .75rem;
+}
+
+
+.theme-container {
+  height: 100vh;
+
+  --c-bg: var(--c-light-bg);
+  --c-text: var(--c-light-text);
+
+  @media (prefers-color-scheme: dark) {
+    --c-bg: var(--c-dark-bg);
+    --c-text: var(--c-dark-text);
+  }
+
+  background-color: var(--c-bg);
+  color: var(--c-text);
+}
+
+
+.grow {
+  flex-grow: 1;
+}
+
 .container {
   max-width: $max-width;
   margin: 0 auto;
 
-}
-
-p {
-  margin-top: 0px;
-  margin-bottom: .75rem;
 }
 
 .row {

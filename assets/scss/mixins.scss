@@ -1,5 +1,5 @@
 // IE doesn't support vars yet (of course)
-@mixin vare($property, $varName) {
+@mixin var($property, $varName) {
   #{$property}: map-get($color-vars, $varName);
   #{$property}: var(--#{$varName});
 }

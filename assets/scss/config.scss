@@ -1,9 +1,13 @@
 $color-vars: (
-  primary: #096340,
-  primary-hover: #096340,
-  bg: rgb(247,247,247),
-  text: rgb(40, 40, 40),
+  light-primary: #096340,
+  light-bg: rgb(247,247,247),
+  light-text: rgb(40, 40, 40),
+
+  dark-primary: #096340,
+  dark-bg: rgb(30, 30, 30),
+  dark-text: rgb(220, 220, 220),
 );
+
 //$primary: #116340;
 //$accent: #689d6a;
 

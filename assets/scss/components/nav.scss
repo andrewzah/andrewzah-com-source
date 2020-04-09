@@ -3,7 +3,7 @@ nav {
   padding-bottom: 2px;
 
   .nav-brand {
-    @include vare(color, text);
+    @include var(color, text);
     border-bottom: none;
   }
 
