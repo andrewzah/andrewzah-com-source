@@ -4,10 +4,8 @@ languageCode = "en-us"
 description = "my description"
 theme = "zah"
 summaryLength = 15
-paginate = 10
 canonifyUrls = true
 toc = true
-destination = "public"
 
 [author]
     name = "Andrew Zah"

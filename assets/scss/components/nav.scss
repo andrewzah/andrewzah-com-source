@@ -3,13 +3,11 @@ nav {
   padding-bottom: 2px;
 
   .nav-brand {
-    @include var(color, text);
     border-bottom: none;
   }
 
   .nav-links {
     @include horizontal-list;
     @include anchor-style;
-    @include anchor-colors(map-get($color-vars, text), map-get($color-vars, text));
   }
 }

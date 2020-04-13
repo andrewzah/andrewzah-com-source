@@ -1,8 +1,8 @@
 // IE doesn't support vars yet (of course)
-@mixin var($property, $varName) {
-  #{$property}: map-get($color-vars, $varName);
-  #{$property}: var(--#{$varName});
-}
+//@mixin var($property, $varName) {
+  //#{$property}: map-get($color-vars, $varName);
+  //#{$property}: var(--#{$varName});
+//}
 
 @mixin horizontal-list($list-margin: 0 8px 0 0) {
   display: inline-block;
@@ -36,13 +36,12 @@
   }
 }
 
-@mixin anchor-colors(
-  $color: map-get($color-vars, primary), $color_hover: map-get($color-vars, primary-hover)) {
+@mixin anchor-colors() {
   a {
-    color: $color;
+    color: var(--c-primary);
 
     &:hover {
-      color: $color_hover;
+      color: var(--c-primary);
     }
   }
 }

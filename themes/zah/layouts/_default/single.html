@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{ .Title }}</title> 
-</head>
-<body>
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-</body>
-</html>
+{{- define "main" }}
+<div>
+  <div>
+    <h2 class="post-title">
+      {{ if .Draft }}DRAFT: {{ end }}
+      {{ .Title }}
+    </h2>
+    {{ partial "post_meta.html" . }}
+  </div>
+  <div>
+    {{ .Content }}
+  </div>
+</div>
+{{- end }}

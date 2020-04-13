@@ -1,15 +1,21 @@
 :root {
   /* Light Theme */
+  --c-light-primary: #096340;
+  --c-light-primary-hover: #0d8c5b; //#10754e
   --c-light-bg: rgb(247, 247, 247);
   --c-light-text: rgb(40, 40, 40);
 
   /* Dark Theme */
+  --c-dark-primary: #096340;
+  --c-light-primary-hover: #0d8c5b;
   --c-dark-bg: rgb(30, 30, 30);
   --c-dark-text: rgb(220, 220, 220);
+
+
+  // $secondary: #55efc4;
 }
 
 html, body {
-  height: 100%;
   padding: 0px;
   margin: 0px;
 }
@@ -31,15 +37,20 @@ p {
 
 
 .theme-container {
-  height: 100vh;
+  height: 100%;
 
   --c-bg: var(--c-light-bg);
   --c-text: var(--c-light-text);
+  --c-primary: var(--c-light-primary);
+  --c-primary-hover: var(--c-light-primary-hover);
 
   @media (prefers-color-scheme: dark) {
     --c-bg: var(--c-dark-bg);
     --c-text: var(--c-dark-text);
+    --c-primary: var(--c-dark-primary);
+    --c-primary-hover: var(--c-dark-primary-hover);
   }
+
 
   background-color: var(--c-bg);
   color: var(--c-text);

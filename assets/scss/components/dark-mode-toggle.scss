@@ -13,6 +13,8 @@
 .dark-mode-checkbox:checked ~ .theme-container {
   --c-bg: var(--c-dark-bg);
   --c-text: var(--c-dark-text);
+  --c-primary: var(--c-dark-primary);
+  --c-primary-hover: var(--c-dark-primary-hover);
 }
 
 .dark-mode-checkbox:checked ~ .theme-container .dark-mode-label::before {

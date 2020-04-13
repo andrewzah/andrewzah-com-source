@@ -1,19 +1,25 @@
-$color-vars: (
-  light-primary: #096340,
-  light-bg: rgb(247,247,247),
-  light-text: rgb(40, 40, 40),
-
-  dark-primary: #096340,
-  dark-bg: rgb(30, 30, 30),
-  dark-text: rgb(220, 220, 220),
+// variables
+$serif-stack: (
+  "Libre Baskerville",
+  Georgia,
+  serif
 );
 
-//$primary: #116340;
-//$accent: #689d6a;
+$monospace-stack: (
+  "SFMono-Regular",
+  Consolas,
+  "Liberation Mono",
+  Menlo,
+  Courier,
+  monospace
+);
+
+
+$reference-mark: &#8251;
 
 // general
-$max-width: 650px !default;
+$max-width: 650px;
 
 // breakpoints
-$phoneWidth: 600px !default;
-$desktopWidth: 1024px !default;
+$phoneWidth: 600px;
+$desktopWidth: 1024px;

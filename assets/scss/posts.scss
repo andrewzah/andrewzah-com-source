@@ -1,0 +1,45 @@
+.posts {
+  section:not(:last-child) {
+    &:after {
+      text-align: center;
+      content: "\203B";
+      color: var(--c-text);
+      font-size: 2rem;
+    }
+  }
+
+  .posts-year {
+    font-family: $monospace-stack;
+    margin-top: 1rem;
+    h2 {
+      margin: 0px;
+      margin-bottom: .25rem;
+    }
+  }
+}
+
+.post-link {
+  margin-bottom: 10px;
+
+  .post-date {
+    @include anchor-colors();
+    font-family: $monospace-stack;
+
+    a {
+      color: var(--c-primary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--c-primary-hover);
+        border-bottom: 1px dotted var(--c-primary-hover);
+      }
+    }
+  }
+
+  .post-title {
+    a {
+      color: var(--c-text);
+      text-decoration: none;
+    }
+  }
+}

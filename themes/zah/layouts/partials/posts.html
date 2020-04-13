@@ -1,8 +1,25 @@
 {{ $pages := .Site.Pages }}
 {{  $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
 
-{{- range (.Paginate (where $pages "File.Dir" "!=" "/")).Pages -}}
-  <div class="row">
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </div>
-{{- end -}}
+<section class="posts">
+  {{- range (where .Site.RegularPages "Type" "posts").GroupByDate "2006" -}}
+    <section class="posts-year">
+      <h2> {{ .Key }} </h2>
+      {{- range .Pages }}
+        <div class="post-link">
+          <div class="post-date">
+            <a href="{{ .Permalink }}">
+              {{ .Date.Format "Jan 01, 2006" }}
+            </a>
+          </div>
+
+          <div class="post-title">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </div>
+        </div>
+      {{- end -}}
+    </section>
+  {{- end -}}
+</section>
