@@ -1,6 +1,17 @@
 nav {
+  padding-top: .1rem;
+  padding-bottom: .2rem;
+
   border-bottom: 1px dotted #ccc;
-  padding-bottom: 2px;
+
+  a {
+    text-decoration: none;
+    color: $text;
+
+    &:hover {
+      color: $primary-hover;
+    }
+  }
 
   .nav-brand {
     border-bottom: none;
@@ -8,6 +19,5 @@ nav {
 
   .nav-links {
     @include horizontal-list;
-    @include anchor-style;
   }
 }

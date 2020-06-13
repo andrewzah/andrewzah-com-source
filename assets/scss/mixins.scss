@@ -38,10 +38,10 @@
 
 @mixin anchor-colors() {
   a {
-    color: var(--c-primary);
+    color: $primary;
 
     &:hover {
-      color: var(--c-primary);
+      color: $primary-hover;
     }
   }
 }

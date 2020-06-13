@@ -1,0 +1,25 @@
+article#post {
+  // div#post-header { }
+  margin-bottom: 3rem;
+}
+
+
+div#post-body {
+  text: $serif-stack;
+
+  div.paragraph > p {
+    @include anchor-colors()
+    @include anchor-style()
+
+    span.image > img {
+      max-width: 98%;
+      margin: 0 auto;
+    }
+  }
+
+  hr {
+    width: 80%;
+    color: #eee;
+    margin: 2rem auto;
+  }
+}

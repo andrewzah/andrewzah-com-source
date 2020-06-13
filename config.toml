@@ -6,6 +6,8 @@ theme = "zah"
 summaryLength = 15
 canonifyUrls = true
 toc = true
+destination = "./public"
+title = "Andrew Zah"
 
 [author]
     name = "Andrew Zah"
@@ -13,8 +15,11 @@ toc = true
 
 [markup]
   [markup.asciidocext]
-    args = ["--no-header-footer", "-r", "asciidoctor-html5s", "-b", "html5s", "-r", "asciidoctor-diagram"]
+    extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]
     workingFolderCurrent = true
+
+    [markup.asciidocext.attributes]
+        my-base-url = "https://andrewzah.com/"
 
 [menu]
   [[menu.main]]
