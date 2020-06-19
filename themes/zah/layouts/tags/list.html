@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section class="page">
+    <h1> Tags (Alphabetical) </h1>
+    {{- range .Data.Terms.Alphabetical -}}
+      <h4> {{ .Page.Title }} ({{ .Count }})</h4>
+
+      {{- range .Page.Pages -}}
+        <p> {{ .Title }} </p>
+      {{- end -}}
+      <hr>
+    {{- end -}}
+  </section>
+{{- end -}}

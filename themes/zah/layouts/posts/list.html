@@ -1,5 +1,10 @@
 {{ define "main" }}
   {{- .Content -}}
 
-  {{- partial "posts.html" . -}}
+  <h2> Posts </h2>
+  <section class="page">
+    {{- range (where .Site.RegularPages "Type" "posts" ).GroupByDate "2006" -}}
+      {{- partial "posts/link.html" . -}}
+    {{- end -}}
+  </section>
 {{- end -}}

@@ -3,10 +3,10 @@
   {{- partial "head.html" . -}}
 
   <body>
-    <div id="site-wrapper">
-      {{- partialCached "navbar.html" . -}}
+    <div id="wrapper">
+      <!-- {{- partialCached "navbar.html" . -}} -->
 
-      <div id="content" class="container">
+      <div id="content" class="container page">
         {{- block "main" . }}{{- end }}
       </div>
 

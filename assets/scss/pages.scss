@@ -1,12 +1,5 @@
-.posts {
-  section:not(:last-child) {
-    &:after {
-      text-align: center;
-      content: "\203B";
-      color: var(--c-text);
-      font-size: 2rem;
-    }
-  }
+.page {
+  margin-bottom: 2rem;
 
   .posts-year {
     margin-top: 1rem;
@@ -19,6 +12,11 @@
       margin-bottom: .25rem;
     }
   }
+
+  hr {
+    color: #eee;
+    width: 80%;
+  }
 }
 
 .post-link {
@@ -29,13 +27,13 @@
 
     a {
       text-decoration: none;
-      color: $primary;
+      color: $text;
     }
   }
 
   .post-title {
     a {
-      color: $text;
+      color: $primary;
       text-decoration: none;
 
       &:hover {

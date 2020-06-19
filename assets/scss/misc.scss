@@ -9,9 +9,6 @@ body {
   background: $background;
   color: $text;
 
-  display: flex;
-  flex-direction: column;
-
   @media only screen and (max-width: 801px)  {
     margin: auto 1.5rem;
   }
@@ -22,15 +19,27 @@ p {
   margin-bottom: .75rem;
 }
 
+h3, h4, h5 {
+  margin-bottom: .2rem;
+}
 
-.grow {
-  flex-grow: 1;
+
+#wrapper {
+  margin-top: 1rem;
 }
 
 .container {
   max-width: $max-width;
   margin: 0 auto;
 
+  section.page:not(:last-child) {
+    &:after {
+      text-align: center;
+      content: "\203B";
+      color: $text;
+      font-size: 2rem;
+    }
+  }
 }
 
 .row {

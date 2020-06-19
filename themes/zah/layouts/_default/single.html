@@ -1,17 +1,5 @@
 {{- define "main" }}
 
-<article id="post">
-  <div id="post-header">
-    <h2 class="post-title">
-      {{ if .Draft }} [Draft] {{ end }}
-      {{ .Title }}
-    </h2>
-    {{ partial "post_meta.html" . }}
-  </div>
-
-  <div id="post-body">
-    {{ .Content }}
-  </div>
-</article>
+default layout ~be more specific~.
 
 {{- end }}
