@@ -4,7 +4,7 @@
   <h2> Posts </h2>
   <section class="page">
     {{- range (where .Site.RegularPages "Type" "posts" ).GroupByDate "2006" -}}
-      {{- partial "posts/link.html" . -}}
+      {{- partial "posts/links.html" . -}}
     {{- end -}}
   </section>
 {{- end -}}

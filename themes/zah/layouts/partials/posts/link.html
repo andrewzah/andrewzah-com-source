@@ -1,18 +1,13 @@
-<section class="posts-year">
-  <h4> {{ .Key }} </h4>
-  {{- range .Pages }}
-    <div class="post-link">
-      <span class="post-date">
-        <a href="{{ .Permalink }}">
-          {{ .Date.Format "Jan 01, 2006" }}
-        </a>
-      </span>
+<div class="post-link">
+  <span class="post-date">
+    <a href="{{ .Permalink }}">
+      {{ .Date.Format "01/02" }}
+    </a>
+  </span>
 
-      <span class="post-title">
-        <a href="{{ .Permalink }}">
-          {{ .Title }}
-        </a>
-      </span>
-    </div>
-  {{- end -}}
-</section>
+  <span class="post-title">
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </span>
+</div>

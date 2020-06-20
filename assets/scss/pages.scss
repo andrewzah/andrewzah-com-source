@@ -1,21 +1,19 @@
 .page {
-  h2, h4 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  .section-title {
+    sup {
+      margin-left: .25rem;
+      font-size: 14px;
+    }
+    margin-bottom: .25rem;
   }
 
-  .posts-year {
-    margin-top: 1rem;
-    font-family: $serif-stack;
+  h4 {
+    font-family: $monospace-stack;
+  }
 
-    h2 {
-      font-weight: bold;
-
-      margin: 0px;
-      margin-bottom: .25rem;
-    }
+  h2, h4 {
+    padding: 0px 0px;
+    margin: 0px 0px;
   }
 
   hr {
@@ -24,26 +22,3 @@
   }
 }
 
-.post-link {
-  margin-bottom: 10px;
-
-  .post-date {
-    font-family: $monospace-stack;
-
-    a {
-      text-decoration: none;
-      color: $text;
-    }
-  }
-
-  .post-title {
-    a {
-      color: $primary;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}

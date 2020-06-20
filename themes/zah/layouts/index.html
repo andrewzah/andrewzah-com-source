@@ -6,22 +6,26 @@
     I typically write about Korean, language learning, or programming. </p>
 
     <p>
-    You can contact me at zah@andrewzah.com or via <a href="https://t.me/andrewzah">Telegram</a>.
+    You can contact me at zah@andrewzah.com or via <a class="link" href="https://t.me/andrewzah">Telegram</a>.
     </p>
   </section>
 
+  {{ partial "divider.html" }}
+
   {{- range .Site.Sections -}}
     <section class="page">
-      <h2>
+      <h2 class="section-title">
         {{ title .Type }}
+        {{- if eq .Type "posts" -}}
+          <sup><a class="link" href="/tags">(view by tag)</a></sup>
+        {{- end -}}
       </h2>
-      {{- if eq .Type "posts" -}}
-      <p><a href="/tags">(view by tag)</a></p>
-      {{- end -}}
 
       {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
-        {{- partial "posts/link.html" . -}}
+        {{- partial "posts/links.html" . -}}
       {{- end -}}
     </section>
+
+    {{ partial "divider.html" }}
   {{- end -}}
 {{- end -}}

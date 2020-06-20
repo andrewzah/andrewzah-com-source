@@ -14,16 +14,17 @@
   </section>
 </article>
 
+{{ partial "divider.html" }}
+
 <section id="after-post" class="page">
-  <h2> Related Posts </h2>
   {{ $parentTitle := .Title }}
 
   {{ range (.GetTerms "tags") }}
     {{ if gt (len .Pages) 1 }}
-      <h4>{{ .Title }}</h4>
+      <strong>other <span class="underline">{{ .Title }}</span> posts</strong>
       {{ range .Pages }}
         {{ if not (eq .Title $parentTitle) }}
-          <p> {{ .Title }} </p>
+          {{ partial "posts/link.html" . }}
         {{ end }}
       {{ end }}
     {{ end }}
