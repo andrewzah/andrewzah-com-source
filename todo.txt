@@ -1,3 +1,8 @@
-- show related tagged posts under posts
-  - render post link via template/partial
-- fix code/pre rendering
+fixes:
+  - code/pre
+  - ToC
+  - make all links adhere to standard
+  - page metadata
+    - date published
+    - tags, etc...
+  - tags render posts via partial, restyle
