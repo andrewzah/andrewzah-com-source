@@ -4,7 +4,7 @@ article.post {
 }
 
 
-div#post-body {
+section#post-body {
   text: $serif-stack;
 
   div.paragraph > p {
@@ -22,4 +22,8 @@ div#post-body {
     color: #eee;
     margin: 2rem auto;
   }
+}
+
+.post-tags {
+  @include horizontal-list();
 }

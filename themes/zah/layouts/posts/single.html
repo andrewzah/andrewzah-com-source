@@ -1,17 +1,33 @@
 {{- define "main" }}
 
-<article id="post">
-  <div id="post-header">
+<article id="post" class="page">
+  <section id="post-header">
     <h2 class="post-title">
       {{ if .Draft }} [Draft] {{ end }}
       {{ .Title }}
     </h2>
     {{ partial "posts/meta.html" . }}
-  </div>
+  </section>
 
-  <div id="post-body">
+  <section id="post-body">
     {{ .Content }}
-  </div>
+  </section>
 </article>
+
+<section id="after-post" class="page">
+  <h2> Related Posts </h2>
+  {{ $parentTitle := .Title }}
+
+  {{ range (.GetTerms "tags") }}
+    {{ if gt (len .Pages) 1 }}
+      <h4>{{ .Title }}</h4>
+      {{ range .Pages }}
+        {{ if not (eq .Title $parentTitle) }}
+          <p> {{ .Title }} </p>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</section>
 
 {{- end }}

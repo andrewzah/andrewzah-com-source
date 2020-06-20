@@ -1,9 +1,24 @@
 {{ define "main" }}
   {{- .Content -}}
 
+  <section class="page">
+    <p> Hi, I'm Andrew! I work as a software engineer for Open Source Systems.
+    I typically write about Korean, language learning, or programming. </p>
+
+    <p>
+    You can contact me at zah@andrewzah.com or via <a href="https://t.me/andrewzah">Telegram</a>.
+    </p>
+  </section>
+
   {{- range .Site.Sections -}}
     <section class="page">
-      <h2> {{ title .Type }} </h2>
+      <h2>
+        {{ title .Type }}
+      </h2>
+      {{- if eq .Type "posts" -}}
+      <p><a href="/tags">(view by tag)</a></p>
+      {{- end -}}
+
       {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
         {{- partial "posts/link.html" . -}}
       {{- end -}}
