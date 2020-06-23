@@ -2,9 +2,8 @@
 title = "My $850 smartwatch can’t render Korean text"
 slug = "my-850-dollar-watch-cant-render-korean-text"
 date = "2020-01-11"
-tags = ["programming", "watches", "anki", "docker"]
-categories = ["rants"]
-keywords = "garmin fenix language support cjk korean japanese chinese cant"
+tags = ["programming", "languages", "rants"]
+keywords = "garmin fenix language support cannot cjk korean japanese chinese cant"
 description = "My $850 watch can’t render CJK languages because Garmin assumes people living in one region only use 1 language."
 +++
 

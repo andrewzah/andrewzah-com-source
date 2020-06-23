@@ -14,6 +14,7 @@ professional journey as a self taught programmer so far. Here’s my story
 of going from a media arts degree and no job to working fulltime
 remotely.
 
+[.full-width]
 image::https://s3.amazonaws.com/andrewzah.com/posts/006/remotely-working.jpg[Working remotely whilst driving across Wyoming]
 
 == Background

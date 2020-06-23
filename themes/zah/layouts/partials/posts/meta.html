@@ -1,36 +1,39 @@
-{{- $showdate := default false $.Site.Params.showMetaDates }}
-{{- $showlink := default false $.Site.Params.showMetaLinks }}
+{{- $showdate := default true $.Site.Params.showMetaDates }}
+{{- $showlink := default true $.Site.Params.showMetaLinks }}
 {{- if or $showdate $showlink }}
-<div class="post-meta">
+<div id="post-meta">
   {{- if $showdate }}
-  <span>Date</span> &#x5b;
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-      {{ .Date.Format (default "02 Jan 06 15:04 MST" .Site.Params.dateFmt) }}
-    </time>
-  &#x5d;
+  <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 01, 2006" }}">
+    {{ .Date.Format (default "January 1, 2006" .Site.Params.dateFmt) }}
+  </time> &mdash;
   {{- end }}
-  {{- if $showlink }}
-    {{- $fallback := slice (dict "Identifier" "Categories") (dict "Identifier" "Series") (dict "Identifier" "Tags") }}
-    {{- range default $fallback .Site.Menus.meta }}
-      {{- $taxo := $.Param .Identifier }}
-      {{- if $taxo }}
-        {{ $name := default .Identifier .Name }}
-        {{ $link := default .Identifier .URL }}
-  <span{{ if .Title }} title="{{ .Title }}"{{ end }}>{{ $name }}</span> &#x5b;
-        {{- range $taxo }}
-          {{- $perma := lower (path.Join $link (urlize .)) }}
-    <a href="{{ $perma | relURL }}">{{ . }}</a>
-        {{- end }}
-  &#x5d;
-      {{- end }}
-    {{- end }}
-  {{- end }}
+  {{ .Page.WordCount }} words
+  &mdash;
+  <ul class="post-tags">
+    under
+    {{ $list := (.GetTerms "tags") }}
+    {{ $len := (len $list) }}
+
+    {{ range $i, $e := $list }}
+      <li>
+        <a class="link" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        {{- if not (eq (add $i 1) $len) -}}, {{- end -}}
+      </li>
+    {{ end }}
+  </ul>
+
+  <br>
+
+  {{- if $showdate -}}
+    {{- if .Page.Lastmod -}}
+      <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 01, 2006" }}">
+        Updated on {{ .Page.Lastmod.Format (default "January 1, 2006" .Site.Params.dateFmt) }}
+      </time>
+    {{- end -}}
+  {{- end -}}
+
+
 </div>
 {{- end }}
 
-<ul class="post-tags">
-  Tags:
-    {{ range (.GetTerms "tags") }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-   {{ end }}
-</ul>
+{{ partial "divider.html" }}

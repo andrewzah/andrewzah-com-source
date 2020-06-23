@@ -24,7 +24,6 @@ HTTPS certificates using https://letsencrypt.org/[Let’s Encrypt].
 Here’s what my Caddyfile for `andrewzah.com`, `andrei.blue`, and
 `znc.andrewzah.com` looks like:
 
-.Caddyfile
 [source, caddyfile]
 ....
 andrewzah.com, andrei.blue {

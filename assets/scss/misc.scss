@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
 html, body {
   padding: 0px;
   margin: 0px;
@@ -19,8 +24,98 @@ p {
   margin-bottom: .75rem;
 }
 
+h3 {
+  margin-top: 1rem;
+
+  font-weight: normal;
+  text-decoration: underline;
+}
+
 h3, h4, h5 {
   margin-bottom: .2rem;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 1px dotted $primary;
+
+  &:hover {
+    color: $primary-hover;
+    border-bottom: 1px dotted $primary-hover;
+  }
+}
+
+code {
+  font-size: 16px;
+}
+
+img {
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+.imageblock {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .title {
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+a.image {
+  border-bottom: none;
+}
+
+.olist, .ulist {
+  li > p {
+    margin-bottom: .25rem;
+  }
+}
+
+.smol {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.full-width {
+  .content {
+    display: block;
+    text-align: center;
+
+    img {
+      text-align: center;
+
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
+
+      max-width: 1200px !important;
+    }
+  }
+
+  p {
+    text-align: center;
+
+    .image {
+      display: block;
+
+      img {
+      }
+    }
+  }
+}
+
+pre {
+  overflow: auto;
+  max-height: 550px;
+  padding: .5em 1em;
+  border-radius: 1px;
+  border: 2px solid #d5d5d5;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .2);
 }
 
 
@@ -31,16 +126,6 @@ h3, h4, h5 {
 .container {
   max-width: $max-width;
   margin: 0 auto;
-}
-
-a.link {
-  color: $primary;
-  text-decoration: none;
-  border-bottom: 1px dotted $primary;
-
-  &:hover {
-    color: $primary-hover;
-  }
 }
 
 .underline {
@@ -74,6 +159,22 @@ a.link {
     left: 0.5em;
     margin-right: -50%;
   }
+}
+
+#toc {
+  #toctitle {
+    font-weight: bold;
+  }
+
+  ul {
+    margin-top: 0px;
+  }
+}
+
+#post-meta {
+  font-style: italic;
+  color: $text;
+  font-weight: 100;
 }
 
 .row {

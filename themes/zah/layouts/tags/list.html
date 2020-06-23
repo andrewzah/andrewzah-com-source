@@ -1,13 +1,15 @@
 {{ define "main" }}
+
+  <a href="/">Home</a>
+
   <section class="page">
     <h1> Tags (Alphabetical) </h1>
     {{- range .Data.Terms.Alphabetical -}}
       <h4> {{ .Page.Title }} ({{ .Count }})</h4>
 
       {{- range .Page.Pages -}}
-        <p> {{ .Title }} </p>
+        {{ partial "posts/link.html" . }}
       {{- end -}}
-      <hr>
+      <hr/>
     {{- end -}}
-  </section>
 {{- end -}}

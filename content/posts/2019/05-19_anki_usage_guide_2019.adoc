@@ -158,9 +158,7 @@ field is rendered in green while `hanja` is rendered in purple. I render
 my color card’s hex value dynamically. Here’s what my cards look like;
 the horizontal line denotes the front and back:
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/templates.jpg'',
-desc=``How my templates look for sample cards'' )}}
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/templates.jpg[How my templates look for sample cards]
 
 You can go to Browse, Add, or Edit and click on `Cards...` to get to the
 style dialogue. Some premade decks include nice styling for you, or
@@ -175,10 +173,10 @@ hampers your memorization progress. Let’s say you’re reviewing a
 card–you have four options. `Again`, if you forget, and `Hard`, `Good`,
 or `Easy`.
 
-You would assume this means ``I (the user) had a hard/good/easy time
-recalling this card today'', right? Well, Anki actually sees it as
-``this card is intrinsically more difficult; please modify it
-permanently''.
+You would assume this means "I (the user) had a hard/good/easy time
+recalling this card today", right? Well, Anki actually sees it as
+"this card is intrinsically more difficult; please modify it
+permanently".
 
 Huh?
 
@@ -200,17 +198,14 @@ When you hit `Again`, `Hard` or `Easy`, Anki modifies the ease by
 than 130%. You can see now why people recommend not hitting `Easy` at
 all.. it quickly snowballs.
 
-\{\{simage(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/wack.jpg'',
-desc=``still of Hannibal Buress on The Eric Andre Show saying the word
-wack'' )}}
+[.smol]
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/wack.jpg[still of Hannibal Buress on The Eric Andre Show saying the word wack]
 
 So you might be saying, why is seeing cards too often, aka
-``overlearning'', an issue? Either way, I’m seeing more difficult cards
+"overlearning", an issue? Either way, I’m seeing more difficult cards
 more often.. Well, research suggests that after an initial period, the
 extra time spent doesn’t actually lead to better recall.
 
-________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 In one study (Rohrer, Taylor, Pashler, Wixted, & Cepeda, 2005), college
 students learned novel vocabulary (e.g., cicatrix–scar), cycling through
 a list of word–definition pairs either 5 or 10 times. *The extra 5
@@ -218,14 +213,10 @@ cycles yielded a substantial benefit after 1 week, but the gain was no
 longer apparent after 4 weeks* … From a long-term perspective,
 overlearning appears to be inefficient almost to the point of wasting
 time.[0]
-________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Now take a look at what happens in Anki if you lower the ease too much:
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/ease-example.jpg'',
-desc=``An image showing how a cards ease affects its intervals'',
-t=``Image taken from Guide to Anki Intervals and Learning Steps[1]'' )}}
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/ease-example.jpg[Image taken from Guide to Anki Intervals and Learning Steps[1]]
 
 So even if you know a card enough to hit `Good`, if you had hit `Hard`
 3-4 times prior, the interval growth rate is permanently stunted due to
@@ -234,7 +225,6 @@ counterintuitive.
 
 Research also suggests that larger spacing is better in the long term.
 
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 In a 9-year longitudinal investigation, 4 subjects learned and relearned
 300 English-foreign language word pairs. Either 13 or 26 relearning
 sessions were administered at intervals of 14, 28, or 56 days. Retention
@@ -243,14 +233,11 @@ longer intersession intervals slowed down acquisition slightly, but this
 disadvantage during training was offset hy substantially higher
 retention.* Thirteen retraining sessions spaced at 56 days yielded
 retention comparable to 26 sessions spaced at 14 days.[2]
-______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 Our results can be summarized as follows. We find that over substantial
 time periods, spacing has powerful (and typically nonmonotonic) effects
 on retention, with optimal memory occurring when spacing is some modest
 fraction of the final retention interval (perhaps about 10%–20%).[1]
-____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 With that out of the way, here are the plugins I use.
 
@@ -266,10 +253,7 @@ decks onto it. Or you can manually rename the deck in this format:
 `Parent Deck Name::Subdeck Name`. If done right, it should appear like
 this:
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/subdecks.png'',
-desc=``A picture of anki open displaying how the interface shows
-subdecks'' )}}
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/subdecks.png[A picture of anki open displaying how the interface shows subdecks]
 
 The only issue is Anki will still do reviews one deck at a time. I tried
 using the experimental V2 scheduler, but it didn’t work for me. So now
@@ -314,10 +298,7 @@ that link, the default config adds quite a lot, so I
 https://gist.github.com/azah/0391ce0fc3e90f3defea75ef518fd195[modified
 my config] to pare it down, which looks like this:
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/enhanced.png'',
-desc=``A picture displaying how the anki main window looks different
-with this plugin enabled'' )}}
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/enhanced.png[A picture displaying how the anki main window looks different with this plugin enabled]
 
 Note that the stats at the bottom are from the
 `More decks stats and time left` plugin.
@@ -344,10 +325,8 @@ This is an awesome plugin that visually shows your kanji learning
 progress. Simply select a deck that has a `kanji` field, and run Tools >
 `Generate Kanji Grid`. It looks like this:
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/017/kanji-grid.png'',
-desc=``A grid showing kanji characters with a color background based on
-how long the current interval is'' )}}
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/017/kanji-grid.png[A grid showing kanji characters with a color background based on how long the current interval is]
 
 This was generated from my deck with the default settings.
 

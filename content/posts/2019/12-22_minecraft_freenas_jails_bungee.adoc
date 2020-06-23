@@ -19,7 +19,8 @@ This guide assumes you’re running a FreeNAS server on a local network.
 If not, you’ll have to update your ip address and default gateway
 settings accordingly.
 
-image:https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png[Dynmap rendering of our FreeNAS minecaft server]
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png[Dynmap rendering of our FreeNAS minecaft server]
 
 == Prerequisites
 

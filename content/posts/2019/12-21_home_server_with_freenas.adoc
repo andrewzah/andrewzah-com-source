@@ -15,23 +15,10 @@ A few months ago I got gripped with server fever. I’d had a raspberry pi
 for a while, but I could never find a meaningful use for it. I’d tried
 running plex, etc, but the pi3 would choke after a bit and sputter out.
 
-[graphviz, example, svg]
-....
-digraph G {
-  main -> parse -> execute;
-  main -> init;
-  main -> cleanup;
-  execute -> comparator;
-}
-....
-
 One day I decided enough was enough: it was time to build a more beefy
 server. (and I found a compelling use for the pi!)
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/freenas-info.png'',
-desc=``FreeNAS server information'', t=``Current FreeNAS server
-information'' )}}
+image::https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/freenas-info.png[Current FreeNAS server information]
 
 == My Goals
 
@@ -127,8 +114,7 @@ The total was $676 for these parts, with $291 for the memory alone. DDR4
 ram with ecc isn’t cheap. For comparison, a Xeon E5-2650 V2 goes for
 around $70 on ebay, with significantly cheaper DDR3 ram.
 
-\{\{note(c=``Note'', t=``I’ve used the ryzen setup for 3+ months now
-with no issues.'') }}
+NOTE: I’ve used the ryzen setup for 3+ months now with no issues.
 
 '''''
 
@@ -235,9 +221,8 @@ cwspear/docker-local-persist-volume-plugin
 portainer/portainer
 ....
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/freenas-memory.png'',
-desc=``FreeNAS memory graph'', t=``Current FreeNAS memory graph'' )}}
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/freenas-memory.png[Current FreeNAS memory graph]
 
 === A Use for the Raspberry Pi
 
@@ -255,10 +240,8 @@ values, which is pretty important. I’ll probably have to write a simple
 script to pull those values and host another metrics target for
 prometheus.
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/grafana-node-exporter.png'',
-desc=``Grafana with node_exporter metrics from FreeNAS'', t=``Grafana
-with node_exporter metrics from FreeNAS'' )}}
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/serverbuild-freenas/grafana-node-exporter.png[Grafana with node_exporter metrics from FreeNAS]
 
 ==== Why FreeNAS?
 

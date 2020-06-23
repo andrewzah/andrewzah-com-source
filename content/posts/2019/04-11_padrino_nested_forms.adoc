@@ -2,7 +2,6 @@
 title = "Nested Resource Forms Tutorial with Padrino or Rails"
 date = "2019-04-11"
 tags = ["padrino", "ruby" ]
-categories = ["programming"]
 description = "This guide shows how to create forms with nested resources in padrino (and/or rails)."
 +++
 

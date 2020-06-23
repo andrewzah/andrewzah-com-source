@@ -1,8 +1,15 @@
-fixes:
-  - code/pre
-  - ToC
-  - make all links adhere to standard
-  - page metadata
-    - date published
-    - tags, etc...
-  - tags render posts via partial, restyle
+fix blockquote styling
+
+all posts:
+  - fix references/citations
+  - finetune line height + font size
+  - finetune header display
+  - fix shortcodes
+  - add zebra striping / styling to tables
+
+posts to fix:
+  anki guide:
+    - wack image downsize to ~80px or so
+    - plugin links
+  korean programming:
+    - shortcodes

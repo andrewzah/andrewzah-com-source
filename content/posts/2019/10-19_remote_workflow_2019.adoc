@@ -2,20 +2,23 @@
 title = "My setup for remote programming on OSX in 2019"
 slug = "my-setup-remote-programming-osx-2019"
 date = "2019-10-19"
-draft = true
 tags = ["programming", "workflow"]
-categories = ["self"]
 description = "This is my personal workflow for being productive remotely on OSX in 2019."
 keywords = "remote programming setup my workflow digital nomad mac apple osx vim nvim macbook rider rust ruby c#"
 +++
 
 = My setup for remote programming on OSX in 2019
+:toc:
+:sectnums:
+:sectanchors:
 
 Hi! My name is Andrew, and I work remotely as a software developer. I’ve
 worked while traveling across America with spotty or no internet
 connection. I’ve worked in countries like South Korea and Japan. I like
 traveling, and this is how I stay productive.
 
+.Working remotely at WeWork in 강남
+[.full-width]
 image::https://s3.amazonaws.com/andrewzah.com/posts/015/wework-gangnam.jpg[Working remotely at WeWork in Gangnam Seoul]
 
 == Development Machine
@@ -32,7 +35,7 @@ premiere, affinity designer, and sketch.
 
 Before you scoff, I used freebsd and arch on my home pc as daily
 drivers. I used a modded thinkpad t430 for a few months as
-well.\{\{fn(n=0)}} I put in an i7-3632QM (quadcore) chip, a quieter
+well. <<tmg>> I put in an i7-3632QM (quadcore) chip, a quieter
 heatsink, 2x8gb memory, a t420 old-style keyboard, and a 9 cell battery.
 
 It was sweet… before I started lugging it around.
@@ -43,15 +46,15 @@ occasionally it would just die earlier than expected. (Forcing me to go
 reset the system time in BIOS).
 
 I was always worried about my power source. I
-link:/posts/living-out-of-two-backpacks-a-six-month-retrospective/[have
-lived out of two backpacks] and worked remotely while traveling, so I
+link:/posts/2019/living-out-of-2-backpacks-6-month-retrospective/[have lived out of two backpacks]
+and worked remotely while traveling, so I
 can’t rely on always being next to an outlet. My 2015 13" macbook pro’s
 battery is still good to the point that I can get 6-7 hours out of it
 while working with Rust/C#. It’s more like 8-9 if I’m only doing light
 writing, etc.
 
-I know someone’s going to respond with ``but oh, you should’ve just used
-power++ with x, y, z configurations!''. I _did_ experiment with
+I know someone’s going to respond with "but oh, you should’ve just used
+power++ with x, y, z configurations!". I _did_ experiment with
 different settings with power++ and other alternative tools–nothing
 seemed to help. Call me a grumpy old man but I want to work and get
 things done… not fiddle about with battery tuning settings and the like.
@@ -107,18 +110,12 @@ Some applications have minimum window sizes. So if I have too many
 windows in one workspace, they will just overlap. Spotify and KakaoTalk
 are example offenders.
 
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/015/overlap.png'',
-desc=``An example image showing how Kakaotalk does not layout correctly
-when I have a terminal kakaotalk and two chat windows open'', t=``Notice
-the overlaps in bottom left and bottom middle.'' )}}
-
 === poor man’s workspaces
 
 I use 10 Spaces. I added shortcuts to quickly focus them: hyper + 1-5,
 w-y.
 
-I disable ``Automatically rearrange Spaces based on most recent use'',
+I disable "Automatically rearrange Spaces based on most recent use",
 in Settings -> Mission Control. This has got to be one of the worst
 defaults ever made.
 
@@ -149,15 +146,19 @@ Misc tools I generally use:
 * Azure Data Studio (ms-sql querying)
 * Datagrip (reading stored procedures / db schemas)
 
-Task bar apps: * Harvest (time tracking) * Duet (use my ipad as an extra
-display)_ _ Caffeine (prevent my computer from sleeping) * SnapScan
-client (for my
-https://www.fujitsu.com/global/products/computing/peripheral/scanners/scansnap/ix500/[Fujitsu
-ix500 scanner])
+Task bar apps:
 
-And non programming-related ones: * Discord (messaging, language study,
-rss) * KakaoTalk (messaging) * Line (messaging) * Signal (messaging) *
-Anki (flash card study)
+* Harvest (time tracking)
+* Duet (to use my ipad as an extra display)
+* Caffeine (prevent my computer from sleeping)
+
+And non programming-related ones:
+
+* Discord (messaging, language study, rss)
+* KakaoTalk (messaging)
+* Line (messaging)
+* Signal (messaging)
+* Anki (flash card study)
 
 === code editor
 
@@ -166,7 +167,7 @@ care what you use. I like (neo)vim, so I use that. I just become
 disappointed when people reflexively dismiss it (or Emacs) because they
 have any learning curve, like at all. There’s a _reason_ why vim has
 one, and it’s not because Bram Moolenaar is particularly masochistic. In
-particular, modal editing and buffers\{\{refer(n=0)}} are why I enjoy
+particular, modal editing and buffers <<buf>> are why I enjoy
 vim.
 
 Even if you don’t use vim, I urge you to read the manuals of the
@@ -207,11 +208,6 @@ best color schemes ever made. Every once in a while I experiment with a
 different scheme but I inevitably get drawn back to the king. If someone
 made https://github.com/arcticicestudio/nord[Nord] but with green as the
 main color instead of blue, I might use that.
-
-\{\{image(
-url=``https://s3.amazonaws.com/andrewzah.com/posts/015/nvim.png'',
-desc=``Screenshot of neovim with four buffers open and using monaco
-font'', t=``neovim with four _buffers_ open – and monaco font'' )}}
 
 ==== cons
 
@@ -284,19 +280,20 @@ if you always need rapid communication with your team.
 
 === logging my thoughts
 
-The http://notational.net/[Notational Velocity] application changed my
-life. At its core, the idea is deceivingly simple.
+The http://notational.net/[Notational Velocity] application massively improved the quality of my life.
+At its core, the idea is deceivingly simple.
 
-__________________________________________________________________________________________________________________________________________________
+[quote, National Velocity]
+____
 NOTIONAL VELOCITY is an application that *stores and retrieves notes*.
 
 It is an attempt to loosen the mental blockages to recording information
 and to scrape away the tartar of convention that handicaps its
 retrieval.
-__________________________________________________________________________________________________________________________________________________
 
 You store text in notes. There is only one search box–if a file doesn’t
 exist for your search string, one will automatically be created.
+____
 
 I began to use it for just about everything, since any and all
 information I had written down could now be easily searched through and
@@ -324,10 +321,8 @@ currently which may fix this.
 
 '''''
 
-\{\{image(
-url=``https://raw.githubusercontent.com/alok/notational-fzf-vim/master/screenshots/usage.gif'',
-desc=``A gif showcasing how notational fzf vim works.'', t=``Taken from
-https://github.com/Alok/notational-fzf-vim'' )}}
+[.full-width]
+image::https://raw.githubusercontent.com/alok/notational-fzf-vim/master/screenshots/usage.gif[A gif showcasing how notational fzf vim works.]
 
 After I started writing this article, Alex Singh released
 https://github.com/alok/notational-fzf-vim[notational-fzf-vim], which is
@@ -375,5 +370,5 @@ suggestions.
 [bibliography]
 == References
 
-- https://medium.com/@n4ru/the-definitive-t430-modding-guide-3dff3f6a8e2e[Definitive T430 Modding Guide]
-- https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs[SO: Why do Vim experts prefer buffers over tabs?]
+- [[[tmg, 0]]] https://medium.com/@n4ru/the-definitive-t430-modding-guide-3dff3f6a8e2e[Definitive T430 Modding Guide]
+- [[[buf, 1]]] https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs[SO: Why do Vim experts prefer buffers over tabs?]

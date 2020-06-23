@@ -1,5 +1,6 @@
 ---
 title: "Living out of 2 backpacks: A 6-month retrospective"
+slug: "living-out-of-2-backpacks-6-month-retrospective"
 date: 2019-09-19
 lastMod: 2019-09-20
 categories:
@@ -10,14 +11,17 @@ cover: "https://i3.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
 ---
 
 = Living out of 2 backpacks: A 6-month retrospective
+:toc:
+:sectnums:
+:sectanchors:
+:sectnumlevels: 2
 
 In January of this year, I set out for semi-permanent traveling with only two* backpacks: A Goruck GR1 26L, and a Goruck GR2 40L. Prior to setting out I had done a -lot- of research, and made a https://docs.google.com/spreadsheets/d/1G2LZ8zVWrJF9apgV1cRvr1qAxD33_mO1xKaOoz2uyW4/edit?usp=sharing[detailed spreadsheet] (down to the gram) of what I’d be taking. It’s not too bad I think, although the gorucks are more weighty than I’d like.
 
 * Including a daily bag. See EDC below.
 
 .My travel bags. OpposeThis Invisible Rolltop, Goruck GR1 26L, Goruck GR2 40L
-[#img-header]
-[caption="", link=https://s3.amazonaws.com/andrewzah.com/posts/retrospective/three-bags.jpg]
+[.full-width]
 image::https://s3.amazonaws.com/andrewzah.com/posts/retrospective/three-bags.jpg[backpacks]
 
 == My Philosophy
@@ -82,7 +86,7 @@ Since dyers aren’t common in Korea my merino wool clothes worked out great. Se
 
 === Transportation
 
-==== subway
+==== The Subway
 
 One reason why I love Korea and Japan is not needing to own a car. Parking is annoying, insurance is expensive (particularly for me as an 18–25 year old male), and I can’t use my phone while driving. I find taking the bus or subway to be a zen-like experience where I can meditate or listen to a podcast. It lets me stretch my legs after sitting all day on my computer. (I almost always stand, unless I’m tired or the ride is 65+ minutes).
 
@@ -93,8 +97,8 @@ In Korea you can take any bus or subway line with a T-Money card, available at n
 Most, if not all, Korean stations have public restrooms that are cleaned regularly. A lot of places that I stayed in Korea at had older toilets and plumbing, so these restooms are gifts from God; resplendent beacons of hope.
 
 .A romanized version of the Seoul subway map
-[caption="", link=https://s3.amazonaws.com/andrewzah.com/posts/retrospective/seoulsubwaymap.gif]
-image::https://s3.amazonaws.com/andrewzah.com/posts/retrospective/seoulsubwaymap.gif[seoul-subway-map]
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/retrospective/seoulmetromap.gif[seoul-subway-map]
 
 Korea’s green line gets very crowded at 6pm due to employees and students returning home. Traveling home from 여의도 was the only time in Korea that I got shoved on the train as part of people packing in. 8am on the Marunouchi line in Japan was similar except there were people pushing quite aggressively. I always travel now with a mask on the subway in case the train becomes that crowded.
 
@@ -108,7 +112,7 @@ A lot of subway stations in Korea are connected to underground malls. Some of th
 
 ==== Long Distance
 
-Compared to Korea’s KTX, Japan’s Shinkansen lines are _insanely_ expensive. I don’t know how KTX is so cheap but you can get from 서울 [Seoul] -> 부산 [Busan] in ~2.5 hours for ~$55. The 무궁화 line is even cheaper, although much slower at ~4 hours. Each KTX train car has room at the end to store some luggage, and overhead racks.
+Compared to Korea’s KTX, Japan’s Shinkansen lines are insanely expensive. I don’t know how KTX is so cheap but you can get from 서울 [Seoul] -> 부산 [Busan] in ~2.5 hours for ~$55. The 무궁화 line is even cheaper, although much slower at ~4 hours. Each KTX train car has room at the end to store some luggage, and overhead racks.
 
 I don’t know if the Green cars in the Shinkansen are worth the steep price increase. The extra space was nice though. I actually found the atmosphere on the KTX to be quieter than the Shinkansen.
 
@@ -124,7 +128,7 @@ The biggest issue I faced was loneliness. All of my college friends moved back h
 
 What I didn’t expect was missing out on… americans/westerners. Rather, I missed having people around that I shared roughly the same culture with, people that spoke English fluently (at distinguished or almost native level). I only made a couple foreigner friends at the language exchange because foreigners were always matched with korean locals.
 
-I fixed this by going to 이태원 [Itaewon] and 용산 [Yongsan] more. These are _the_ foreigner areas in Korea, due to the American military base nearby. These areas have lot of music events and foreign food if you get homesick. I also went to a few programming meetups through meetup.com which were comprised of almost entirely foreigners.
+I fixed this by going to 이태원 [Itaewon] and 용산 [Yongsan] more. These are the foreigner areas in Korea, due to the American military base nearby. These areas have lot of music events and foreign food if you get homesick. I also went to a few programming meetups through meetup.com which were comprised of almost entirely foreigners.
 
 ==== Space
 
@@ -155,7 +159,6 @@ The thing with gorucks is that I somehow always manage to reorganize and fit mor
 I really wish I could recommend these bags but the prices are too steep. There are other good quality bags that aren’t so prohibitively expensive.
 
 .My OPPOSETHIS Invisible Rolltop backpack, with various handsewn patches
-[caption="", link=https://s3.amazonaws.com/andrewzah.com/posts/retrospective/rolltop.jpg]
 image::https://s3.amazonaws.com/andrewzah.com/posts/retrospective/rolltop.jpg[oposethis rolltop]
 
 === OPPOSETHIS Invisible Rolltop
@@ -202,13 +205,13 @@ This was worthless at first because https://i.ebayimg.com/images/g/FdAAAOSwpkFY7
 
 Then at home I daisy-chained the card adapter to the cheap adapter. Hey, it worked.
 
-In Japan I daisy-chained it _in reverse_ with the cheap adapter to plug in my 3-prong mac charger. ¯\_(ツ)_/¯
+In Japan I daisy-chained it in reverse with the cheap adapter to plug in my 3-prong mac charger. ¯\\_(ツ)_/¯
 
 Next time I travel, I may very well take Japanese/Korean versions of the macbook pro cable to not deal with this headache. If they don’t take up too much weight/space of course.
 
 ==== Amazon Kindle
 
-I got tired of trying to make my way through a Korean history book. I had the mentality of ``finish one book, then read another'' but this doesn’t pan out so well for information-dense books.
+I got tired of trying to make my way through a Korean history book. I had the mentality of "finish one book, then read another" but this doesn’t pan out so well for information-dense books.
 
 Instead, now I read what I feel like reading. I’m in the progress of _Pro Git_, _Meditations by Marcus Aurelius_, and _Korea’s Place in the Sun_ now.
 
@@ -265,19 +268,19 @@ This watch is absolutely gorgeous. I saw it while walking around in Yodobashi Ca
 
 Let me start off with saying I am not a snob about writing tools. I like rollerball pens (https://www.amazon.com/uni-ball-Vision-Rollerball-Point-0-7mm/dp/B00006IE8J[like these ones]) just as much as I like niche fountain pens. Now, with that out of the way:
 
-===== Sailor Pro Gear Slim - Mustard, Fine Nib
+* Sailor Pro Gear Slim - Mustard, Fine Nib
 
 I tried out a Mustard Sailor Pro Gear Slim at Kingdom Note in Japan, and I was blown away. I _love_ writing with this pen. It’s from Sailor’s https://community.fpc.ink/t/kingdom-note-x-sailor-vegetable-series-pro-gear-slim-release/45[Vegetable Collection], which seems to be no longer available on their website as of 9/19/2019.
 
-===== Platinum 3776 Century, Fine Nib
+* Platinum 3776 Century, Fine Nib
 
 I tried https://www.gouletpens.com/products/platinum-3776-century-fountain-pen-chartres-blue-gold?variant=11884876824619[this one] out at Kindome Note as well and enjoyed how it wrote. It is a bit finer than the mustard Sailor so I use it a lot for kanji practice.
 
-===== TWSBI Eco Demonstrators x2, Bright Green/Red, F/EF Nib
+* TWSBI Eco Demonstrators x2, Bright Green/Red, F/EF Nib
 
 I found a small fountain pen store in Korea and https://www.gouletpens.com/products/platinum-3776-century-fountain-pen-bourgogne[got these] for fun. The F is too wide for kanji practice but I like the extra-fine.
 
-===== Inks
+Inks:
 
 * Kindom Note Blue
 * Kobe Inks - Ginza Itoya Sepia

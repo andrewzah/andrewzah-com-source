@@ -1,0 +1,44 @@
+// note tip important warning caution
+
+.admonitionblock {
+  margin: .5rem auto;
+  padding: .75rem;
+
+  table > tbody > tr {
+    display: block;
+
+    td.icon {
+      display: block;
+    }
+  }
+
+  table > tbody > tr > td.icon > div.title {
+    display: block;
+    font-weight: bold;
+
+    &:after {
+      content: ':'
+    }
+  }
+}
+
+.admonitionblock.note {
+  color: #2d3436;
+
+  background-color: rgba(45, 52, 54, .1);
+  border: 1px solid rgba(45, 52, 54, .5);
+}
+
+.admonitionblock.tip {
+  color: #1e3799;
+
+  background-color: rgba(30, 55, 153, .1);
+  border: 1px solid rgba(30, 55, 153, .5);
+}
+
+.admonitionblock.warning, .admonitionblock.important, .admonitionblock.caution {
+  color: rgba(214, 48, 49,1.0);
+
+  background-color: rgba(214, 48, 49, .1);
+  border: 1px solid rgba(214, 48, 49, .5);
+}
