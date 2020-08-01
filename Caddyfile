@@ -1,0 +1,4 @@
+:2020 {
+  root * /var/www
+  file_server
+}

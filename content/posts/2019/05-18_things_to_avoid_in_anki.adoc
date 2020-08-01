@@ -1,5 +1,6 @@
 +++
 title = "Things to avoid with Anki"
+slug = "things-to-avoid-with-anki"
 date = 2019-05-18
 tags = ["memorization", "anki"]
 categories = ["learning"]

@@ -1,5 +1,6 @@
 ---
 title: "A new year, a new site"
+slug: "new-year-new-site-2018"
 date: 2018-02-01
 tags:
   - "self"

@@ -1,0 +1,39 @@
+{{- define "main" }}
+
+<a href="/">Home</a>
+
+<article id="post" class="page">
+  <section id="post-header">
+    <h2 class="post-title">{{ .Title }}</h2>
+    {{ partial "talks/meta.html" . }}
+  </section>
+
+  <section id="post-body">
+    <a class="button" href="{{ .Params.pdf_link }}"> Download PDF </a>
+
+    {{ if .Params.video_link }}
+      <a href="{{ .Params.pdflink }}"> Video </a>
+    {{ end }}
+
+    {{ .Content }}
+  </section>
+</article>
+
+{{ partial "divider.html" }}
+
+<section id="after-post" class="page">
+  {{ $parentTitle := .Title }}
+
+  {{ range (.GetTerms "tags") }}
+    {{ if gt (len .Pages) 1 }}
+      <strong>other <span class="underline">{{ .Title }}</span> posts</strong>
+      {{ range .Pages }}
+        {{ if not (eq .Title $parentTitle) }}
+          {{ partial "posts/link.html" . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</section>
+
+{{- end }}

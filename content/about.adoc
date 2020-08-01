@@ -1,8 +1,50 @@
 ---
 title: "About"
-date: 2020-03-24
+date: 2020-08-01
 description: "About me"
 slug: "about"
 ---
 
-test
+My name is Andrew, but I also go by andrei, or zah. I entered this earth in '96 in Chicago.
+
+== Background
+
+In 2016, graduated from the University of South Carolina with a degree in Media Arts,
+and a cognate in Acoustic Engineering. I focused on documentary filmmaking and sound design.
+
+At the end of 2014 I started teaching myself how to program here and there with ruby and rails.
+After I graduated I started looking for rails jobs to no avail, so I ended up teaching English in
+South Korea in 2017. I've been studying Korean ever since then.
+
+In 2018 I found a job with https://ossys.com[Open Source Systems] and have stayed there since.
+I've had the opportunity to work on many projects, with all sorts of languages: ruby, python, c#, rust, golang, and typescript.
+
+I am not tied to any particular language, but I do prefer rust if the situation makes sense.
+
+== Ideologies
+I generally try not to use proprietary software unless the open source alternatives *really* suck. That said, I don't mind paying for good software if it's not user hostile.
+
+I am generally disgusted at the current state of web development. Modern web pages are severely bloated and collect an insane amount of personal data. Web developers update their old, fast, usable websites with buggy, slow, whitespace-heavy abominations. They optimize for ease of developing (on beefy computers and fiber internet...), not performance or user happiness. It's all very inconsiderate.
+
+Free Speech doesn't mean one is free of criticism. However, I think people go too far sometimes, sifting through decades of someones's writings to find something, anything to criticize. While I agree with 
+
+(vi)m keybindings for life. Using a good IDE (like a Jetbrains product) with vim bindings is magnificent.
+
+After using golang, I expect a formatting tool for any project I work on. I _hate_ wasting valuable brain resources on bikeshedding about formatting or manually formatting code.
+
+== Interests
+
+- Languages: Linguistics, Korean
+- Music: Bass Guitar &amp; Music Theory
+- Games: Super Smash Bros. Melee for the Nintendo Gamecube
+
+== Contact
+
+If you're contacting me about an issue for an open source project I work on,
+creating a github issue is better.
+
+Please ping me again if I don't respond in 1-2 weeks.
+I try to get back to people when possible but I can be quite spacy about responding.
+
+- email: zah {@} andrewzah {.} com
+- https://t.me/andrewzah[telegram]

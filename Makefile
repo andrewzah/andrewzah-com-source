@@ -24,4 +24,12 @@ build: $(CONTENT_FILES)
 
 static: build
 	find ./public/posts -name "*.png" -exec rm {} \;
-	rsync -arv public/* ../blog-assets
+	rsync -arv public/* ../generated_assets
+
+docker: docker-build docker-push
+
+docker-build:
+	docker build . -t andrewzah/personal_site
+
+docker-push:
+	docker push andrewzah/personal_site

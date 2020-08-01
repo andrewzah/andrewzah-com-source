@@ -1,5 +1,6 @@
 +++
 title = "Korean for Programmers"
+slug = "korean_for_programmers"
 date = "2019-02-16"
 lastmod = "2020-06-22"
 tags = ["korean", "programming"]

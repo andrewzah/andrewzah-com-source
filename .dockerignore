@@ -1,0 +1,15 @@
+build.sh
+serve.sh
+Makefile
+
+*.svg
+*.png
+.asciidoctor/
+
+resources/_gen
+cache/
+public/
+
+themes/hugo-flex
+themes/hugo-theme-console
+themes/slick

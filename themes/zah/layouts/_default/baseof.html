@@ -4,13 +4,13 @@
 
   <body>
     <div id="wrapper">
-      <!-- {{- partialCached "navbar.html" . -}} -->
-
       <div id="content" class="container page">
         {{- block "main" . }}{{- end }}
       </div>
 
-      {{- partialCached "footer.html" . -}}
+      {{ if or (not (eq .Page.Type "page")) (eq .Page.RelPermalink "/") }}
+        {{- partialCached "footer.html" . -}}
+      {{ end }}
     </div>
   </body>
 </html>

@@ -7,7 +7,7 @@
     {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
   </time> &mdash;
   {{- end }}
-  {{ .Page.WordCount }} words
+  at {{ .Params.location }}
   &mdash;
   <ul class="post-tags">
     about
@@ -31,7 +31,6 @@
       </time>
     {{- end -}}
   {{- end -}}
-
 
 </div>
 {{- end }}

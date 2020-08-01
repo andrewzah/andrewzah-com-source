@@ -1,5 +1,20 @@
-{{- define "main" }}
 
-default layout ~be more specific~.
+{{- define "main" }}
+<p> <a href="/">Home</a> </p>
+
+<article id="post" class="page">
+  <h2 class="post-title">
+    {{ .Title }}
+  </h2>
+  <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 02, 2006" }}">
+    <p><i>
+      last updated on {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
+    </i></p>
+  </time>
+
+  {{ partial "divider.html" }}
+
+  {{ .Content }}
+</article>
 
 {{- end }}

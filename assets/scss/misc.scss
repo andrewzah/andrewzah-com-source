@@ -17,6 +17,8 @@ body {
   @media only screen and (max-width: 801px)  {
     margin: auto 1.5rem;
   }
+
+  line-height: 1.25;
 }
 
 p {
@@ -71,6 +73,10 @@ a.image {
   border-bottom: none;
 }
 
+.horizontal-list {
+  @include horizontal-list;
+}
+
 .olist, .ulist {
   li > p {
     margin-bottom: .25rem;
@@ -93,7 +99,10 @@ a.image {
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
 
+      max-width: max(95vw) !important;
+      @media (min-width: 1200px) {
       max-width: 1200px !important;
+      }
     }
   }
 
@@ -187,4 +196,19 @@ pre {
   text-align: center;
   font-style: italic;
   color: #555;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 3px;
+
+  padding: 10px 15px;
+  text-align: center;
+  color: rgb(253, 253, 253);
+  background-color: $primary;
+
+  &:hover {
+    color: rgb(253, 253, 253);
+    background-color: $primary-hover;
+  }
 }
