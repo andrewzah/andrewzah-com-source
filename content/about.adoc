@@ -26,7 +26,10 @@ I generally try not to use proprietary software unless the open source alternati
 
 I am generally disgusted at the current state of web development. Modern web pages are severely bloated and collect an insane amount of personal data. Web developers update their old, fast, usable websites with buggy, slow, whitespace-heavy abominations. They optimize for ease of developing (on beefy computers and fiber internet...), not performance or user happiness. It's all very inconsiderate.
 
-Free Speech doesn't mean one is free of criticism. However, I think people go too far sometimes, sifting through decades of someones's writings to find something, anything to criticize. While I agree with 
+Free Speech doesn't mean one is free of criticism.  However, I think people go too far sometimes,
+sifting through decades of someone's writings to find something, anything to criticize.
+I also find the overall approach to be almost completely punitative, with very little attempts at rehabilitation.
+It also feels like a lot of people _enjoy_ the drama that arises.
 
 (vi)m keybindings for life. Using a good IDE (like a Jetbrains product) with vim bindings is magnificent.
 
@@ -34,9 +37,10 @@ After using golang, I expect a formatting tool for any project I work on. I _hat
 
 == Interests
 
-- Languages: Linguistics, Korean
+- General: Cooking, Baking, Writing
+- Languages: Linguistics, Korean, Japanese, Spanish
 - Music: Bass Guitar &amp; Music Theory
-- Games: Super Smash Bros. Melee for the Nintendo Gamecube
+- Games: _Super Smash Bros. Melee_ for the Nintendo Gamecube
 
 == Contact
 

@@ -1,0 +1,10 @@
+---
+title: "Friendly Sites"
+date: 2020-08-01
+description: "Friends"
+slug: "friends"
+---
+
+Links to sites operated by friends and colleagues that write about interesting things.
+
+* http://cdaniels.net/index.html[Charles Daniels' site]
