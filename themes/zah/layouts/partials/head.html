@@ -16,8 +16,7 @@
   <meta name="application-name" content="{{ .Site.Title }}">
 
   {{- $style := resources.Get "scss/main.scss" | toCSS | minify -}}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
-
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}?{{ now.Unix }}">
 
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
