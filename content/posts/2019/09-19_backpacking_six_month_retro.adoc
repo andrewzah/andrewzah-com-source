@@ -8,6 +8,8 @@ categories:
 tags:
   - "backpacking"
 cover: "https://i3.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+aliases:
+  - "/posts/living-out-of-two-backpacks-a-six-month-retrospective/"
 ---
 
 = Living out of 2 backpacks: A 6-month retrospective

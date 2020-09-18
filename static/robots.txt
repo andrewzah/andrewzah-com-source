@@ -1,0 +1,21 @@
+Sitemap: https://andrewzah.com/sitemap.xml
+
+User-agent: *
+Allow: *
+Crawl-delay: 5
+
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+User-agent: Mediapartners-Google*
+Disallow: /
+
+User-Agent: NPBot
+Disallow: /
+
+User-Agent: SlySearch
+Disallow: /
+
+User-Agent: AdsBot-Google
+Disallow: /

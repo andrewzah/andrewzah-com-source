@@ -5,6 +5,9 @@ date = "2019-05-19"
 lastmod = "2020-08-01"
 tags = ["memorization", "anki"]
 description = "Anki is a good app for memorization, but making some modifications turns it into a phenomenal app."
+aliases = [
+  "/posts/better-anki-usage-guide-2019/"
+]
 +++
 
 = Better Anki Usage Guide
