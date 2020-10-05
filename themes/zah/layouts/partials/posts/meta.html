@@ -10,15 +10,12 @@
   {{ .Page.WordCount }} words
   &mdash;
   <ul class="post-tags">
-    about
     {{ $list := (.GetTerms "tags") }}
     {{ $len := (len $list) }}
 
+    about
     {{ range $i, $e := $list }}
-      <li>
-        <a class="link" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-        {{- if not (eq (add $i 1) $len) -}}, {{- end -}}
-      </li>
+      <li><a class="link" href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}</li>
     {{ end }}
   </ul>
 
