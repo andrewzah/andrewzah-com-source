@@ -1,0 +1,219 @@
++++
+title = "Three years of Rust"
+slug = "three-years-of-rust"
+date = "2021-01-20"
+draft = true
+tags = ["programming", "rust"]
+keywords = ""
+description = "Rust in review after 3 years."
++++
+
+= Three Years of Rust
+
+I don't recall exactly when I started using Rust.
+I do remember going over the first edition of *Programming Rust* from O'Reilly, and I want to say I read about the release of version 1.25 or 1.26.
+
+Right from the start, the idea of a programming language that emphasized safety intrigued me.
+At the time I had been working on some larger Ruby on Rails projects, and I was becoming thoroughly disenthused with dynamically typed, interpreted languages.
+
+I wrote a
+https://github.com/andrewzah/dotacr[fair]
+https://github.com/andrewzah/cowapi[few]
+projects in https://crystal-lang.org/[Crystal], but it never really seemed to catch on.
+While I don't evaluate languages by popularity alone, the less users there are, the more likely I'll have to take a detour and write something like a `zip` library, for example.
+It does make an enormous difference for web frameworks.
+
+NOTE: There's certainly nothing wrong with writing libraries.
+Even if no one ever used dota-cr or miniflux-cr (including myself...), I learned a lot about API usage and design that has shaped my work today.
+But creating a robust API is exhausting, and I'd rather use my limited time these days to work applications.
+
+I gave https://clojure.org/[Clojure] a fair shake as well, but the indiscipherable stream of compilation errors made debugging a pain.
+I think every programmer should experience working with a functional language early on in their career,
+but I still found that there was a lack of resources around web development.
+
+== So, why Rust over Go or C#, etc?
+
+* Memory Safety.
+
+Rust's approach to memory safety really won me over. What I saw was a careful approach to language and compiler design, and I was impressed as hell.
+
+The fact that Rust is performant was nice as well, but I have never reached that need for performance in any code I've written personally or professionally.
+Understanding things like data structures and algorithms to use in different situations has been much more important. Analyzing benchmarks is not particularly useful if your server gets like 10k visits a week, etc.
+
+With Rust's type system eliminating entire classes of bugs, I can say that writing code has never been so much fun. Debugging runtime errors in Ruby or C# is the exact opposite of fun. Rust is not perfect but it does make it much harder to run into those kinds of issues.
+
+* Error Handling & and Propagation
+
+Rust's
+https://doc.rust-lang.org/std/result/enum.Result.html[Result] and
+https://doc.rust-lang.org/std/option/enum.Option.html[Option] types
+(and that you're forced to handle them) is nothing short of elegance. Step aside, Ruby.
+After dealing with errors in Rust with the `?` operator, I loath doing it in any other language. Especially go.
+
+[source, rust]
+----
+use std::fs::File;
+use std::error::Error;
+
+fn my_fallible_fn() -> Result<(), Box<dyn Error>> {
+  // this can potentially error
+  let mut my_file = File::open("/nonexistent/dir/my_file")?;
+
+  Ok(())
+}
+
+fn main() {
+  // look at how easy it was to add error handling!
+  match my_fallible_fn() {
+    Ok(_) => println!("success!"),
+    Err(error) => {
+      errorln!("uh oh: {}", error);
+    }
+  }
+}
+----
+
+In this trivial example it may not look like much, but once you start looking at real codebases, the flexibility of how and when to handle errors is amazing.
+At first one might get frustrated with having to unwrap `Result` or `Option` types all the time, but being forced to handle potential failures leads to much more robust code.
+
+NOTE: This system only works if you don't call .unwrap() all the time. So... don't do that ;-)
+
+* Guaranteeing thread safety via types.
+
+In order to use an object across thread or async/await boundaries, it must implement the https://doc.rust-lang.org/std/marker/trait.Send.html[Send trait].
+Writing asynchronous or concurrent code *correctly* is usually rather difficult, and I feel much safer with the rust compiler guaranteeing certain things via the type system itself.
+
+* The Community
+
+Last but certainly not least, I have very much enjoyed working with the Rust community.
+Every community has its issues (like the actix-web unsafe usage drama), but overall I find the community to be very kind and full of thoughtful people.
+
+== Projects
+
+My first major Rust project was https://github.com/andrewzah/korean-nums[korean-nums], a library that converts integers to Hangeul.
+Here, I used the `Option` type a lot https://github.com/andrewzah/korean-nums/blob/master/src/parse.rs#L38[for flow handling].
+Even with rust, there's no getting around the fact that languages have an insane number of edge cases.
+
+Looking back at it, my parse functions like https://github.com/andrewzah/korean-nums/blob/master/src/parse.rs#L8[parse_hangeul_sino] should have used returned a `Result` type in order to gracefully handle errors. This was a bit before I grokked Rust's error handling. Guess it's time for a rewrite...
+
+---
+
+After a few toy projects here and there experimenting with https://diesel.rs/[Diesel], I started work on https://github.com/andrewzah/danmuji[Danmuji], a discord bot. Now I had the problem of shared state... and the https://doc.rust-lang.org/std/sync/struct.Arc.html[Arc] and https://doc.rust-lang.org/std/sync/struct.Mutex.html[Mutex] types came to the rescue.
+
+`Arc<T>` (Atomically Reference Counted) allows for multiple **immutable** references to a value of type `T`. However I still needed mutability across threads, so I wrapped my type in a `Mutex` as well, ending up with a type of `Arc<Mutex<AppState>>`. This works via https://doc.rust-lang.org/book/ch15-05-interior-mutability.html[Interior Mutability].
+
+I had barely scratched the surface of Rust's wrapper/smart pointer types: `Box<T>`, `Rc<T>`, `Arc<T>`, `Cell<T>`, `RefCell<T>`, `Mutex<T>`, `RwLock<T>`, etc. These all have pros and cons, and it's worth
+https://doc.rust-lang.org/nightly/book/ch15-00-smart-pointers.html[spending the time to thoroughly understand them].
+
+For the error handling, I basically copied the code from burntsushi's https://github.com/BurntSushi/rust-csv/blob/master/src/error.rs[rust-csv].
+The difference here is with the manual `From<T>` trait implementations, I could encapsulate any error into my own error type (`AppError`). It's just a little more verbose:
+
+[source, rust]
+----
+pub fn insert_messages(nms: &Vec<NewMessage>) -> Result<usize, AppError> {
+    use crate::schema::messages::dsl::*;
+
+    let conn = pool().get()?;
+    insert_into(messages)
+        .values(nms)
+        .execute(&conn)
+        .map_err(|err| AppError::new(ErrorKind::DbResult(err)))
+}
+----
+
+This was better, but it still wasn't great. It's fairly boilerplate-y, due to having to specify `ErrorKind`.
+
+---
+
+And now we get to modern error handling via `ThisError` derives:
+
+[source, rust]
+----
+use serde::ser::{Serialize, Serializer};
+use thiserror::Error;
+
+#[derive(Error, Debug)]
+pub enum AppError {
+    #[error("generic")]
+    Generic(String),
+
+    // ---- 3rd party errors
+    #[error(transparent)]
+    Regex(#[from] regex::Error),
+
+    // ---- std errors
+    #[error(transparent)]
+    IO(#[from] std::io::Error),
+}
+----
+
+Thankfully, `thiserror` lets us skip manually writing all those impls. Now if I want to return an `AppError`, I just need to:
+
+----
+pub fn my_rm_file(path: Pathbuf) -> Result<(), AppError> {
+  std::fs::remove_file(&path).map_err(AppError::from)?;
+
+  // do other thing;
+  Ok(())
+}
+----
+
+However, one can obviate even that with the https://docs.rs/anyhow/1.0.38/anyhow/index.html[anyhow] crate. However I had difficulties getting it to play nicely with https://docs.rs/warp/0.3.0/warp/[warp], which expects a return type of `Result<warp::Reply, warp::Rejection>`. I think this will change with warp 0.3.0, but I haven't had the time to look into it yet. Exciting!
+
+== Rust in Production
+
+I can't talk -too- much due to my NDA, but at https://www.ossys.com/[Open Source Systems], we're slowly using Rust more and more!
+The https://lib.rs/crates/structopt[structopt] crate let us quickly make robust internal CLI tools.
+I wrote a very simple https://github.com/andrewzah/writebytes/blob/master/src/main.rs#L7[bytes tool] as an exercise.
+
+Rust also shines for APIs - I love using https://github.com/seanmonstar/warp[warp], but https://lib.rs/crates/actix-web[actix] and plain old https://lib.rs/crates/hyper[hyper] are also nice.
+
+---
+
+To avoid bikshedding about formatting, we use https://github.com/rust-lang/rustfmt[rustfmt] with the nightly toolchain for things like merging imports.
+This is one thing golang is absolutely correct about- I can't believe I used to waste brainpower on manual formatting before.
+
+== Other Useful Crates
+
+* https://docs.rs/bytes/1.0.1/bytes/[bytes]
+* https://lib.rs/crates/itertools[itertools]
+* https://lib.rs/crates/notify-rust[notify-rust]
+* https://lib.rs/crates/once_cell[once_cell] - I prefer to use this instead of `lazy_static`.
+* https://lib.rs/crates/parking_lot[parking_lot] - More compact and efficient implementations of the standard synchronization primitives.
+* https://lib.rs/crates/signal-hook[signal-hook]
+* https://lib.rs/crates/sqlx[sqlx] - async!
+
+Web Requests
+
+* https://lib.rs/crates/isahc[isahc]
+* https://lib.rs/crates/ureq[ureq]
+* https://lib.rs/crates/curl[curl]
+
+Concurrent & Parallel Programming
+
+* https://github.com/crossbeam-rs/crossbeam[crossbeam]
+* https://github.com/rayon-rs/rayon[rayon]
+* https://lib.rs/crates/threadpool[threadpool]
+* https://lib.rs/crates/num_cpus[num_cpus]
+
+Asynchronous Programming & Runtimes
+
+* https://lib.rs/crates/pin-project[pin-project]
+* https://lib.rs/crates/tokio[tokio]
+* https://lib.rs/crates/async-compat[async-compat] - This lets us use libraries that use traits from the `futures` crate.
+
+Telemetry
+
+* https://lib.rs/crates/tracing[tracing] - I learned about this via a rust talk given by David Barsky.
+Awesome crate, and if I recall correctly, is seeing production usage at Amazon.
+
+== Rust Books & Other Resources
+* https://doc.rust-lang.org/book/[The Rust Book] - I highly recommend starting with this.
+* https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/[Programming Rust: 2nd Edition]
+* https://pragprog.com/titles/khrust/programming-webassembly-with-rust/[Programming WebAssembly with Rust: Unified Development for Web, Mobile, and Embedded Applications]
+* https://www.manning.com/books/rust-in-action[Rust in Action]
+
+Async / Concurrency
+
+* https://rust-lang.github.io/async-book/01_getting_started/01_chapter.html[The Async Book]
+* https://tokio.rs/tokio/tutorial[Tokio Tutorial]
