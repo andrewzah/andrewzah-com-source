@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-eval "$(rbenv init -)"
+set -euxo pipefail
+
+if [ ! -f "/home/andrew/.rbenv/shims/ruby" ]; then
+  eval "$(rbenv init -)"
+fi
+
 hugo server -D
