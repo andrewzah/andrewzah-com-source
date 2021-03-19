@@ -1,0 +1,111 @@
++++
+title = "Master & Main"
+slug = "main-master"
+date = "2021-03-08"
+tags = ["politics", "programming", "slactivism"]
+keywords = "main master git github branch 2020 black lives matter"
+description = "Main & Master"
++++
+
+= Main & Master
+
+2020 was a hell of a year. One of the many things that occurred is programmers
+began to re-evaluate certain terminology, starting with `master/slave`. It always did puzzle
+me as to why both computer science and electrical engineering had `master/slave` as terms.
+I hadn't seen that much in computing but I saw it a lot in audio engineering, particularly
+when dealing with syncing clocks to a master clock. ...Whoever chose the term `slave` was
+incredibly tone deaf at best, to put it lightly, especially when paired with `master`.
+
+I completely agree with changing these- who wouldn't? `slave` has just nasty connotations
+across history, across continents. `master/node`, `leader/follower` etc, get across the
+same meaning just as well so there are no excuses.
+
+Where I begin scratching my head is some of the other terms that got targeted, such as
+`whitelist` and `blacklist`. These terms' origins are not related to race. I actually never
+knew those origins until this debacle, but they're
+https://www.reddit.com/r/AskHistorians/comments/866ynp/what_are_the_origins_of_the_words_blacklist_and/[fairly interesting].
+
+My issue here is that people who are supposedly targeting racism are conflating the
+words `white` with `good` and `black` with `bad`. I certainly do not see it this way, and I
+would venture that no reasonable person does either. `White` and `Black` are relatively recent
+(https://en.wikipedia.org/wiki/Race_(human_categorization)#United_States[yet outdated])
+arbitary race constructs, yes, but `white` and `black` are also colors (or the lack thereof)
+that physically exist in our universe. It does not make sense to say that any terms with a
+`white/black` dichototomy must necessarily be racist. In fact, I believe it's extremely
+racist to suggest this.
+
+Whatever happened to understanding words in context?
+For example, the word `dominant` means very different things in musician and BDSM circles.
+It is not difficult to interpret words in context.
+
+---
+
+Where I really begin to take issue is with the targeting of the word `master`, by itself.
+This makes no sense, as `master` has many varied usages outside of the
+`master/slave` usage. Looking at
+https://learnersdictionary.com/definition/master[Learner's Dictionary] there are at least
+**11** different uses.
+
+Are we (and github, et. al) going to ban Master's degrees? Masters of crafts/hobbies?
+Master bedrooms? White and black hats? This is honestly so ridiculous as to almost be
+a parody.
+
+NOTE: But why do you care so much, Andrew? Don't you
+have more important things to worry about?
+
+Responding to this "argument" is like trying to respond to "you're just mad" or "you're salty".
+Going "No I'm not" just feeds it, and the point is to shut down conversation, not have a 
+discussion.
+
+Nevertheless, I take issue with the principle of the matter here. All of a sudden, a word
+has been deemed NotGood and now you **must** acquiesce to the arbitary demands, or else you
+get accused of being Racist.
+
+NOTE: C'mon, be reasonable here. It's a small change, so why not?
+
+The size of the change is irrelevant. I object to arbitrarily policing other people's
+behavior and words. I'm as much of an arbiter of the word `master` as you are; not at all.
+This change looks innocuous enough until you consider how it's effectively an attempt to
+police our thoughts, and I suppose that's why it rubs me the wrong way.
+
+Furthermore, bullying people into accepting a position by threatening them with labels is
+the opposite of healthy debate.
+
+NOTE: Why are you opposed to something that potentially makes someone feel more safe?
+
+Of course I'm not opposed to that, to a reasonable extent. There are times when it's
+appropriate to honor a request. There are other times when the request is not reasonable,
+so the response is more like "grow a thicker skin" and "stop conflating white with good".
+
+There is a difference of being reasonable or accomodating, and allowing people to walk over 
+you because they say they're on the right side. Nobody thinks they're on the wrong side!
+
+---
+
+I am not special. You are not special.
+
+To put it bluntly, we [if you're in the USA reading this] are getting
+f---ed in the a-- by our politicians and our police at all levels with zero recourse.
+
+There are so many real issues to deal with (and not just in the USA), and I will not be
+told by slacktivists changing the name of **git branches** that a) I'm Racist for disagreeing
+with words arbitrarily being deemed NotGood and b) that they are doing anything useful for
+Black Americans *at all*.
+
+How many of you have called or emailed your house representatives and senators even once?
+How many of you have voted in a non-presidential election? (Such as, say, a Sheriff's
+election)...
+
+If it makes you feel better to use alternative terminology or words, go right ahead.
+If people want to ignore any and all context for words, that's their prerogative, and not 
+really my problem. Furthermore, I will continue calling people who conflate
+`white` with `good` and `black` with `bad` what they are: racists.
+
+I don't think I'm being unreasonable here, but I invite discussion (preferably through email)
+if you disagree.
+
+NOTE: I say Black Americans here because these discussions almost always
+center around the USA's history, and completely gloss over i.e. slavery and prejudice in Asia.
+But then we'd have to actually acknowledge things like Koreans being slaves as recently as
+the 1920s and the fact that the USA is not the center of the universe...
+

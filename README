@@ -1,9 +1,0 @@
-dependencies:
-* ruby (currently `2.6.6`)
-* hugo (currently `0.82.0-DEV+extended`)
-
-gems:
-* `asciidoctor-diagram`
-* `asciidoctor-html5s`
-* `asciidoctor`
-* `rouge`

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -exo pipefail
 
-if [ ! -f "/home/andrew/.rbenv/shims/ruby" ]; then
+if ! command -v ruby >/dev/null; then
   eval "$(rbenv init -)"
 fi
 

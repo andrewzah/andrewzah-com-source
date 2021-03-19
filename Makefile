@@ -20,7 +20,7 @@
 .PHONY: all
 
 build: $(CONTENT_FILES)
-	sh build.sh
+	bash build.sh
 
 static: build
 	find ./public/posts -name "*.png" -exec rm {} \;
