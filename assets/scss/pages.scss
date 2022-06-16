@@ -22,3 +22,10 @@
   }
 }
 
+
+// https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one
+.container.page {
+  .nav-link ~ .nav-link {
+    margin-left: 1rem;
+  }
+}

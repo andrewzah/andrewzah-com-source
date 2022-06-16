@@ -1,6 +1,9 @@
 +++
-title = "How to run Kakaotalk on Linux in 2020"
-slug = "how-to-kakaotalk-linux-2020"
+title = "How to run Kakaotalk on Linux in 2021"
+slug = "how-to-kakaotalk-linux-2021"
+aliases = [
+  "/posts/2020/how-to-kakaotalk-linux-2020/"
+]
 date = "2020-10-05"
 tags = ["linux", "korean"]
 keywords = "kakaotalk linux kkt 카카우톡 카톡 how to instruction tutorial"
@@ -12,6 +15,9 @@ description = "How to set up Kakaotalk on Linux in 2020"
 :rouge-css: github
 
 Thankfully, installing Kakaotalk has become much easier than before now that it's 64bit.
+
+NOTE: As of 2021-07-08, unfortunately, there is a bug where if you have more than 2-3 lines of input in the chat window, Kakaotalk crashes.
+I have no idea how to fix this, and it's pretty annoying.
 
 == Preparation
 
@@ -77,5 +83,3 @@ Kakaotalk is now installed! You should now see this screen:
 image::https://s3.amazonaws.com/andrewzah.com/posts/2020_10_05_kakaotalk_linux/main_menu.png[Playonlinux main menu]
 
 Double click KakaoTalk and sign in. Congrats, you now have KakaoTalk running on linux!
-
-NOTE: I had issues downloading my chat backup. So I skipped that, but everything else works for me now.

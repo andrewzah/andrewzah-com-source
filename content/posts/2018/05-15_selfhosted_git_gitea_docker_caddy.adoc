@@ -2,9 +2,7 @@
 title = "Selfhosting git with Gitea, Docker, Caddy"
 date = "2018-05-15"
 description = "This walks through hosting a git frontend with docker, caddy, and gitea."
-tags = ["caddy", "docker", "gitea"]
-categories = ["self-hosting"]
-cover = "https://i3.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+tags = ["selfhosting", "caddy", "docker", "gitea"]
 +++
 
 = Selfhosting git with Gitea, Docker, Caddy

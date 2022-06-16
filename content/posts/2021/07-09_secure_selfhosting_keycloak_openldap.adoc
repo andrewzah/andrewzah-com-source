@@ -1,0 +1,428 @@
++++
+title = "Secure Selfhosting with OpenLDAP and Keycloak"
+slug = "secure-selfhosting-openldap-keycloak"
+date = "2021-07-09"
+tags = ["docker", "selfhosting", "security", "FOSS"]
+keywords = "self hosting selfhosting security authentication auth openldap keycloak traefik"
+description = "Setting up robust security is less complicated than you'd think."
++++
+
+= Secure Selfhosting with OpenLDAP and Keycloak
+:toc:
+:sectnums:
+:source-highlighter: rouge
+:rouge-css: github
+
+Setting up security in front of your applications is important for selfhosting,
+and it's really less complicated than you'd think. With SSO (Single Sign On) via OIDC and LDAP,
+it's quite convenient to use one secure login across multiple services.
+
+NOTE: Let's Encrypt and Traefik won't work if your internet provider blocks ports 80 and 443.
+Wireguard is a good option for that.
+
+TODO: change kanban.xyz -> kanban.example.com
+[graphviz, "Auth", svg]
+....
+digraph G {
+  subgraph cluster_2 {
+    label = "Auth Services"
+
+    keycloak
+
+    LAM -> openldap
+    keycloak -> openldap [style=dashed, color="grey"]
+    openldap -> keycloak [style=dashed, color="grey"]
+    keycloak -> EAS
+    EAS -> keycloak
+  }
+
+  kanban_fqdn [label="https://kanban.xyz", style="rounded", margin = 0.3, shape=rect]
+  kanban_fqdn -> traefik
+
+  traefik -> EAS
+  EAS -> kanban
+}
+....
+
+This is roughly the flow for the authentication process. The user visits `https://kanban.example.com`,
+which has Traefik listening on ports `80` and `443`.
+Then Traefik redirects to a Keycloak signin page via an EAS middleware.
+If the auth is successful, EAS redirects to the requested application, `kanban`.
+
+== Traefik
+
+For this setup, our reverse proxy will be https://github.com/traefik/traefik[Traefik].
+Traefik is a little bit tricky to initially set up, but then it's fantastic.
+If you haven't used it before, I highly recommend taking the time as
+it lets you have dynamic routing with docker-compose services.
+Having to constantly edit a static config file for Nginx or Caddy is very tedious by comparison.
+
+.docker-compose.yml
+[source,yaml]
+....
+version: '3.7'
+
+services:
+  traefik:
+    image: "traefik:v2.5"
+    container_name: 'traefik'
+    command:
+      ## enable API on :8080 for debug information
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+
+      ## enable providers
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      ## if using a toml configuration file for static routes
+      - "--providers.file=true"
+      - "--providers.file.watch=true"
+      - "--providers.file.filename=/etc/traefik/rules.toml"
+
+      ## enable entrypoints for other docker-compose services to use
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entryPoints.web.forwardedHeaders.insecure"
+      - "--entryPoints.websecure.forwardedHeaders.insecure"
+
+      ## set up Let's Encrypt automatic certs
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=admin@example.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+      ## if dev / testing to avoid getting rate limited
+      - "--certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+    labels:
+      - "traefik.enable=true"
+
+      ## redirect http -> https
+      - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
+      - "traefik.http.routers.http-catchall.entrypoints=web"
+      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https@docker"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.redir.redirectScheme.scheme=https"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "./data/traefik/letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    restart: unless-stopped
+....
+
+WARNING: It's easy to get ratelimited from Let's Encrypt, so make sure your server is reachable on ports 80 and 443.
+
+== OpenLDAP
+
+OpenLDAP is, well, an open source implementation of
+https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol[LDAP].
+A lot of older applications support LDAP, where newer ones might support general OIDC flows.
+
+One downside is OpenLDAP isn't documented very well, but FreeIPA isn't documented well either.
+
+.docker-compose.yml
+[source,yaml]
+....
+version: '3.7'
+
+services:
+  openldap:
+    image: osixia/openldap:1.5.0
+    env_file:
+      # LDAP_ADMIN_PASSWORD=MySecureAdminPassword
+      # LDAP_READONLY_USER_PASSWORD=MySecureReadonlyUserPassword
+      - "./secret.env"
+    environment:
+      LDAP_DOMAIN: 'example.com'
+      LDAP_ORGANISATION: 'MyOrganization'
+      LDAP_BASE_DN: 'dc=example,dc=com'
+      LDAP_TLS: 'false'
+      LDAP_READONLY_USER: 'true'
+      LDAP_READONLY_USER_USERNAME: 'readonly'
+    volumes:
+      - "./data/openldap/openldap/:/etc/ldap/slapd.d/"
+      - "./data/openldap/runtime/:/var/lib/ldap/"
+    restart: unless-stopped
+....
+
+For this setup, OpenLDAP itself will only be available in the docker network.
+
+== LAM (LDAP Account Manager)
+
+.docker-compose.yml
+[source,yaml]
+....
+version: '3.7'
+
+services:
+  lam:
+    image: ldapaccountmanager/lam:stable
+    hostname: 'lam.idp.example.com'
+    env_file:
+      # LAM_PASSWORD=MySecureLamAdminPassword
+      - "secret.env"
+    environment:
+      LAM_SKIP_PRECONFIGURE: 'false'
+      LDAP_DOMAIN: 'example.com'
+      LDAP_SERVER: 'ldap://openldap:389'
+      LDAP_BASE_DN: 'dc=example,dc=com'
+      LDAP_USERS_DN: 'ou=people,dc=example,dc=com'
+      LDAP_GROUPS_DN: 'ou=groups,dc=example,dc=com'
+      ADMIN_USER: 'cn=admin,dc=example,dc=com'
+      LAM_LANG: 'en_US'
+    ports:
+      - "80"
+    depends_on:
+      - traefik
+    volumes:
+      - "./data/lam/etc/:/etc/ldap-account-manager/"
+      - "./data/lam/var/config/:/var/lib/ldap-account-manager/config/"
+      - "./data/lam/var/sess/:/var/lib/ldap-account-manager/sess/"
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.lam.rule=Host(`lam.idp.example.com`)"
+      - "traefik.http.routers.lam.entrypoints=websecure"
+      - "traefik.http.routers.lam.tls.certresolver=myresolver"
+....
+
+Here are all the https://github.com/LDAPAccountManager/lam/blob/develop/lam-packaging/docker/.env[supported env vars].
+
+== External Auth Server
+
+EAS lets us guard services with Keycloak via a Traefik middleware.
+
+.docker-compose.yml
+[source,yaml]
+....
+version: '3.7'
+
+services:
+  eas:
+    image: travisghansen/external-auth-server:latest
+    env_file:
+      # use `openssl rand -hex 64` or something similarly secure for each of these
+      # EAS_CONFIG_TOKEN_SIGN_SECRET="foo"
+      # EAS_CONFIG_TOKEN_ENCRYPT_SECRET="bar"
+      # EAS_ISSUER_SIGN_SECRET="super secret"
+      # EAS_ISSUER_ENCRYPT_SECRET="blah"
+      # EAS_COOKIE_SIGN_SECRET="hello world"
+      # EAS_COOKIE_ENCRYPT_SECRET="something"
+      # EAS_SESSION_ENCRYPT_SECRET="baz"
+      - "./secret.env"
+    environment:
+      EAS_PORT: 8080
+      EAS_CONFIG_TOKEN_STORES: '{}'
+      EAS_LOG_LEVEL: "info"
+      # if using redis
+      EAS_STORE_OPTS='{"store":"redis","host":"redis"}'
+    ports:
+      - "8080"
+    restart: unless-stopped
+    depends_on:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.eas.rule=Host(`eas.example.com`)"
+      - "traefik.http.routers.eas.entrypoints=websecure"
+      - "traefik.http.routers.eas.tls.certresolver=myresolver"
+
+      - "traefik.http.middlewares.eas-default.forwardauth.trustForwardHeader=true"
+      - "traefik.http.middlewares.eas-default.forwardauth.authResponseHeaders=X-Userinfo, X-Id-Token, X-Access-Token, Authorization"
+....
+
+=== Generating and using tokens
+
+EAS has https://github.com/travisghansen/external-auth-server/blob/master/CONFIG_TOKENS.md[documentation on generating tokens here].
+
+I wrote a https://TODO/[complete example configuration script] since EAS itself lacks OIDC examples.
+
+.docker-compose.yml
+[source,yaml]
+....
+services:
+  foobar:
+    labels:
+      # create a middleware named 'eas-default' with the token
+      - 'traefik.http.middlewares.eas-default.forwardauth.address=https://auth.example.com/verify?config_token=<token>'
+
+      # update <foobar> service's middlewares
+      - 'traefik.http.routers.cryptpad.middlewares=eas-default'
+....
+
+To generate a token, you can copy the `token.js` file inside the EAS
+docker container to `home/eas/app/bin`, and run `node token.js`.
+I created a script to automate this process:
+
+.gen-token.sh
+[source,bash]
+....
+#!/bin/bash
+
+set -exo pipefail
+
+BIN_PATH='/home/eas/app/bin'
+SCRIPT_PATH=${1?Specify the token script js file as the first argument.}
+
+if ! docker ps | grep -q "external-auth-server"; then
+  echo "External Auth Server is not running?"
+fi
+
+CONTAINER=$(docker ps | grep external-auth-server | awk '{print $1}')
+
+docker cp "$SCRIPT_PATH" "${CONTAINER}:$BIN_PATH/token-gen.js"
+
+echo "Generating EAS token via $SCRIPT_PATH"
+docker exec -w "$BIN_PATH" "$CONTAINER" node "token-gen.js"
+....
+
+The token will look something like:
+
+....
+%2BihV6%2F9CcXNCAOoc4grrmOmyxW0Xnbh0n8sY9qcgptvi1ct1bT857LxZBuctz8Qd%2BxSuhciOSvwxe66pmbl0uTG0WxZkoh5lygIvqdYQQ70i8%2FpUBVF91JTHWURDPHnrnT7EmJLcc2hr%2FRwzRyVLe7vhla86q0nzeQGgjcRksFeNpE62GCGjT0IYKN67Wm6KGPpZXSShwnW617TbpBVbmQ1DoUP0LbJPGKycVSPiv4USGLx7WuwiobmWoeABKcekm574mYthy8RMho6tJibeZq6fDE9%2BeyQf4by3n3rhOdOOnzGexKt6MyPUEcm4Bs%2By5Eg0FnxwoY3nzbMLdsK8nMDRv%2FcaIoPxZAAIQ9hP4WEjwM2hqQat7zZUuqAPTIqfw9Z1uvqKpJNe0fVY%2FwkhjvtDn1Mi15I27CrMeLp08r7U5ZxHA%2BxJ2WJja6ImotWyaJn4Ks1ANQ05z%2Fyjaunuds5rBUaIYUBJFEcv3fEifTnQ6qB6I25PxBLbie5Iy%2BP6MYkTNihrxRRZyAnaiP8Ggh5eSsCwpygb0gjapsRlc%2FwbO0N1GcBt8ROLQ%2FYoRy33uRlnsFjbqh8ZH6TzlPf1SNL8%2BHgDOfh3A4AnK5fjp2OvNMJ5BE5soyf9h%2Bcxob%2BiYMvGpYWkzXr%2FtF6YNs%2BopRBdblXFeFlm31a%2FLA29eVv27AaJMTTz8w71ABm4ozHa7HJofCDZHxlxLQEiTPEavwiV44K71HXfTAackyql8KmpQ1UiGVaBToOwj5U%2FMndHsaHwBnHug7G4qJLAHp2WaZIhTzZv62bMAVOQGFAFqoDMm%2ByB3kswzC%2BH4LP3ZREyclnS1N9cU3g01OO38Te3hGSeNrzCr9gRzykHR6N0%2FfL6FJlFj6EFE9zj2y0T5VzAGKryhmxjjhbuwEHpVcIsS1h3DKvY9vOvvVDFBlE2zzomjbRYaRU2%2FbQKWsPZCeJ7fma%2BdweLKIAhnE3j4RRNZhVGhpBbQXT%2BgmZozG9lLpIZOVIN8D8V2QLrFUj4OU758DyyBN6AcImhwAqNRqLC1UVdVEGNWnsbHF6sfOt9JZzJR71UUHU4I19f43N%2BPfhZQ%2BiffSQRE6tOGqE3vOl50wI7DQFmuPEGBHFhb8ao3Ox2uYNXFF0DVdAb%2B094iT9ReIssScqBqZWR28eHeZEs6J3AFZ7Zhfya9TOjYt%2FR955mZkeKFGJJU9ohUT0uz9bK90lsoB%2Fm17AU49VVAgMLy1CCc%2BKT3TxhGKW0dmQzliDIx%2FKtCeLGfK%2FFgVB%2F4cRPbKb7mOB4E89TAq81mRouJdW%2F2S1shG9s9M1eo8yLDBslK54kKywM9rQPMlTfcmupXi3Etdn%2FeNuCQUvD2BvcjXjRuhXLzvRcQa8pXlbYzgAT3DKu6%2FJb78YnN5owGCuYRh8949L5bWB3DNrvK3JliT%2BnaSPLUks6B6Dqr5pvrePjvCLHbgPQwzeLvyW8KmDdVJ4DTNcXQvIfTsuuM%2FKUu898VD2REPwC%2F7UjLXwFBLdb3932JK0PAkdbZd0aNYDAvoTxocW5UaJ5b7imLfMFk6BB6CZ7lA2lWGfA%2FdNxCoy%2BBI44%2FhKKqIg%2B2mcULlNdKseaOoRzcr9KI39InLJShM8zOXV5ZUx84V9tYq61r8r4gySP9cBrj4DerXk3K%2BJviujq0vq9m8RBwJPxSLHdC2fvYgss3UfiZ0Ekm7MeqIwl2hQOISjfScC3DBgm7KI%2FnGQ2ytle4vMbfVqrsCqDnRkJpO6Y6li2n1r5Nr8oQJEd2ExvIMstUlwBY1ijKUCIZ0lIoCpl8gCX2ewQIPItf5pKvOEmuZp9h9enN6TSGd5%2FXLtGpEFEDctMnv8vsAPKOEAwoKTBvs%2BDXTcWR5FigabcfRwPcKEkaaFQ4uzS%2FNaAFwzoIFTAh3m%2BcJ4ZWLAWJ9gildA3C%2BXSBglFf8KIEAPW91%2BWFvHZq3P6C%2FSV6%2B7KkNJSV1z2n1fE19oHrYnQDQJt0LzfBctwDVNZejQGkFSQXPlg8IphOT%2BbLv%2Bym%2FApbxjSffnAy09ZlfwNSuu1tDMcLBJgdXQPYgPY4JaD7g%3D%3D
+....
+
+.token-example.js
+[source,javascript]
+....
+const jwt = require("jsonwebtoken");
+const utils = require("../src/utils");
+
+const config_token_sign_secret =
+  process.env.EAS_CONFIG_TOKEN_SIGN_SECRET ||
+  utils.exit_failure("missing EAS_CONFIG_TOKEN_SIGN_SECRET env variable");
+
+const config_token_encrypt_secret =
+  process.env.EAS_CONFIG_TOKEN_ENCRYPT_SECRET ||
+  utils.exit_failure("missing EAS_CONFIG_TOKEN_ENCRYPT_SECRET env variable");
+
+let config_token = {
+  eas: {
+    plugins: [
+            {
+    type: "oidc",
+    issuer: {
+        discover_url: "https://idp.example.com/auth/realms/<myrealm>/.well-known/openid-configuration",
+    },
+    client: {
+        client_id: "<eas client>",
+        client_secret: "<eas client secret>"
+
+    },
+    scopes: ["openid", "email", "profile"], // must include openid
+    custom_authorization_parameters: {},
+    redirect_uri: "https://eas.example.com/oauth/callback",
+    features: {
+        cookie_expiry: false,
+        userinfo_expiry: 86400,
+        session_expiry: 604800,
+        session_expiry_refresh_window: 86400,
+        session_retain_id: true,
+        refresh_access_token: true,
+        fetch_userinfo: true,
+        introspect_access_token: false,
+        introspect_expiry: 86400,
+
+        /** possible values are id_token, access_token, or refresh_token */
+        authorization_token: "access_token"
+    },
+    assertions: {
+        exp: true,
+        nbf: true,
+        iss: true,
+        userinfo: [],
+        id_token: [],
+        access_token: []
+    },
+    xhr: {
+        //defaults to 302 but could be set to anything
+        //if set to 401 the response will include a WWW-Authenticate header with proper realm/scopes
+        redirect_http_code: 302,
+
+        //if set to true, the browser will be redirected to the referer
+        use_referer_as_redirect_uri: true
+    },
+    csrf_cookie: {
+        enabled: true, //can disable the use of csrf cookies completely
+        domain: "example.com", //defaults to request domain, could do sso with more generic domain
+        path: "/",
+        //httpOnly: true,
+        //secure: false,
+        //sameSite: lax,
+    },
+    cookie: {
+        //name: "__company_session",//default is _oeas_oauth_session
+        domain: "example.com", //defaults to request domain, could do sso with more generic domain
+        path: "/",
+        //httpOnly: true,
+        //secure: false,
+        //sameSite: lax,
+    },
+    // see HEADERS.md for details
+    custom_error_headers: {},
+    custom_service_headers: {
+      "X-Auth-Username": {
+            source: "userinfo",// userinfo, id_token, access_token, refresh_token, static, config_token, plugin_config, req, parentRequestInfo
+            query_engine: "jp",
+            query: "$.preferred_username", // if left blank the data will be passed unaltered (ie: jwt encoded data)
+            query_opts: {
+                single_value: true // by default, a jsonpath query always returns a list (ie: array), this force the value to be the fist value in the array
+            },
+        }
+    },
+      }
+    ], 
+  }
+};
+
+config_token = jwt.sign(config_token, config_token_sign_secret);
+const config_token_encrypted = utils.encrypt(
+  config_token_encrypt_secret,
+  config_token
+);
+
+console.log("encrypted token (for server-side usage): %s", config_token_encrypted);
+console.log("");
+
+console.log(
+  "URL safe config_token: %s",
+  encodeURIComponent(config_token_encrypted)
+);
+console.log("");
+....
+
+== Keycloak
+
+.docker-compose.yml
+[source,yaml]
+....
+version: '3.7'
+
+keycloak:
+    image: jboss/keycloak:13.0.1
+    environment:
+      DB_VENDOR: 'postgres'
+      DB_ADDR: 'postgres'
+      DB_PORT: 5432
+      DB_DATABASE: 'keycloak'
+      DB_USER: 'keycloak'
+
+    env_file: 
+      # DB_PASSWORD=
+      "./secret.env"
+    depends_on:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.keycloak.rule=Host(`idp.example.com`)"
+      - "traefik.http.routers.keycloak.entrypoints=websecure"
+      - "traefik.http.routers.keycloak.tls.certresolver=myresolver"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+....
+
+=== Users
+
+We'll need to create a Realm for our services, and then a Client for EAS.
+If a service natively supports OIDC or Keycloak logins, then you can skip EAS and create a Client for those specifically.

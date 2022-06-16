@@ -11,6 +11,13 @@
     {{ partial "posts/meta.html" . }}
   </section>
 
+  {{- if not (eq .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
+    <div id="toc">
+      {{ .TableOfContents }}
+    </div>
+    <div class="rem-spacer"></div>
+  {{- end -}}
+
   <section id="post-body">
     {{ .Content }}
   </section>

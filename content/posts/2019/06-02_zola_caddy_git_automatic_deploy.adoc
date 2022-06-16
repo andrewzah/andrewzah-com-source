@@ -9,6 +9,8 @@ description = "Using Caddy, Docker, and Zola, one can easily deploy updates to t
 
 = Automatically deploy your blog via Git with Caddy and Docker
 
+NOTE: This is out of date. Caddy v2 -may- have a similar plugin, but I don't know of one to my knowledge. This article will be archived soon.
+
 Over the years, I’ve incrementally optimized my blog. I used to use an
 entire rails setup with postgres, because that was the first thing I
 learned… Yet that’s quite the overkill for a blog with static content. I

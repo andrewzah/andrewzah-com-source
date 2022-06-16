@@ -1,54 +1,58 @@
 ---
 title: "About"
-date: 2020-08-01
+date: 2021-09-11
 description: "About me"
 slug: "about"
 ---
 
-My name is Andrew, but I also go by andrei, or zah. I entered this earth in '96 in Chicago.
+My name is Andrew, but I also go by andrei, or zah. I entered this earth in 1996 in Chicago, or so I'm told.
+I have two cats, named Peanut and Penelope.
+
+image:https://i.imgur.com/H5dwhD9.jpg[Me, supposedly playing guitar]
 
 == Background
 
-In 2016, graduated from the University of South Carolina with a degree in Media Arts,
+In 2016, I graduated from the University of South Carolina with a degree in Media Arts
 and a cognate in Acoustic Engineering. I focused on documentary filmmaking and sound design.
+Immediately after graduating I decided not to pursue a job in that industry.
 
 At the end of 2014 I started teaching myself how to program here and there with ruby and rails.
-After I graduated I started looking for rails jobs to no avail, so I ended up teaching English in
-South Korea in 2017. I've been studying Korean ever since then.
+Post-graduation I was looking for rails jobs to no avail, so I ended up teaching English in
+South Korea in 2017. I've been studying Korean ever since then. On some days I can even speak it.
 
 In 2018 I found a job with https://ossys.com[Open Source Systems] and have stayed there since.
-I've had the opportunity to work on many projects, with all sorts of languages: ruby, python, c#, rust, golang, and typescript.
+I've had the opportunity to work on many projects, with all sorts of languages... particularly ruby, rust, golang, c#, and typescript.
 
-I am not tied to any particular language, but I do prefer rust if the situation makes sense.
+image:https://i.imgur.com/IpeUV1B.jpg[Peanut and Penelope]
+
+Face it, you'll never be as cool these two.
 
 == Ideologies
-I generally try not to use proprietary software unless the open source alternatives *really* suck. That said, I don't mind paying for good software if it's not user hostile.
+=== Programming
+I generally try not to use proprietary software unless the open source alternatives *really* suck (such as film editors currently). That said, I don't mind paying for good software if it's not user hostile.
 
-I am generally disgusted at the current state of web development. Modern web pages are severely bloated and collect an insane amount of personal data. Web developers update their old, fast, usable websites with buggy, slow, whitespace-heavy abominations. They optimize for ease of developing (on beefy computers and fiber internet...), not performance or user happiness. It's all very inconsiderate.
-
-Free Speech doesn't mean one is free of criticism.  However, I think people go too far sometimes,
-sifting through decades of someone's writings to find something, anything to criticize.
-I also find the overall approach to be almost completely punitative, with very little attempts at rehabilitation.
-It also feels like a lot of people _enjoy_ the drama that arises.
-
-(vi)m keybindings for life. Using a good IDE (like a Jetbrains product) with vim bindings is magnificent.
+I am generally disgusted at the current state of web development. Modern web pages are severely bloated and collect an insane amount of personal data. Web developers update their old, fast, usable websites with buggy, slow, invasive, whitespace-heavy abominations. They optimize for ease of developing (on beefy computers and fiber internet...), not performance or user happiness. It's all very inconsiderate.
 
 After using golang, I expect a formatting tool for any project I work on. I _hate_ wasting valuable brain resources on bikeshedding about formatting or manually formatting code.
 
-== Interests
+=== Misc
+Free Speech doesn't mean one is free of criticism or consequences.  However, I think people go too far sometimes,
+sifting through decades of someone's writings to find something, anything to criticize.
+This actually doesn't bother me so much as that people actually capitulate to these sorts of unjustified witch hunts.
+I also find that overall approach to be almost completely punitative, with very little attempts at rehabilitation or addressing the underlying issues...
+It really seems like a lot of people _enjoy_ the resulting drama, in a masturbatory manner.
 
-- General: Cooking, Baking, Writing
-- Languages: Linguistics, Korean, Japanese, Spanish
-- Music: Bass Guitar &amp; Music Theory
-- Games: _Super Smash Bros. Melee_ for the Nintendo Gamecube
+In my opinion, in order to have a healthy society it is paramount that we allow discussion and debate with nuance.
+Operating without context or nuance, just looking for soundbytes out of context, is just shameful.
+
+Democracy is only really tenable when a non-trivial amount of citizens actually participate in the process.
 
 == Contact
 
 If you're contacting me about an issue for an open source project I work on,
 creating a github issue is better.
 
-Please ping me again if I don't respond in 1-2 weeks.
-I try to get back to people when possible but I can be quite spacy about responding.
+Please ping me again if I don't respond in 1-2 weeks. I try to get back to people when possible.
 
-- email: zah {@} andrewzah {.} com
+- email: mailto:hello@andrewzah.com[hello {@} andrewzah {.} com]
 - https://t.me/andrewzah[telegram]

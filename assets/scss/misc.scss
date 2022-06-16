@@ -172,6 +172,8 @@ pre {
 }
 
 #toc {
+  border-bottom: 1px dotted #ccc;
+
   #toctitle {
     font-weight: bold;
   }
@@ -212,4 +214,8 @@ pre {
     color: rgb(253, 253, 253);
     background-color: $primary-hover;
   }
+}
+
+.rem-spacer {
+  padding-bottom: 1rem;
 }

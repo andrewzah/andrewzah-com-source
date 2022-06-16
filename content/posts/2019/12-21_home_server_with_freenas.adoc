@@ -1,15 +1,19 @@
 +++
-title = "Building a Home Server with FreeNAS"
-slug = "building-home-server-freenas"
+title = "Building a Home Server with TrueNAS"
+slug = "building-home-server-truenas"
+aliases = [
+  "/posts/2019/building-home-server-freenas"
+]
 date = "2019-12-21"
-tags = ["servers", "workflow"]
-categories = ["self-hosting"]
+tags = ["selfhosting", "servers", "workflow"]
 description = "I built a home server with FreeNAS and an amd ryzen."
-keywords = "home server setup amd ryzen ixsystems freebsd freenas"
+keywords = "home server plex jellyfin setup amd ryzen truenas ixsystems freebsd freenas"
 +++
 
 = Building a Home Server with FreeNAS
 :toc:
+
+NOTE: After this article was written, FreeNAS was rebranded to TrueNAS.
 
 A few months ago I got gripped with server fever. I’d had a raspberry pi
 for a while, but I could never find a meaningful use for it. I’d tried

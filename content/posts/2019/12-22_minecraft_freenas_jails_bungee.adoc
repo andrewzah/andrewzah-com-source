@@ -9,6 +9,8 @@ keywords = "minecraft java edition papermc paper spigot bukkit freenas freebsd p
 +++
 
 = Hosting Minecraft Servers + BungeeCord with FreeNAS
+:toc:
+:sectnums:
 :source-highlighter: rouge
 :rouge-css: github
 
