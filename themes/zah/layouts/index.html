@@ -2,36 +2,16 @@
   {{- .Content -}}
 
   <section class="page">
-    <p> Hi, I'm Andrew! I develop software by day and study guitar and langages by night.
-    I typically write about language learning, programming, or music. </p>
+    <pre id="index-pre"><code>
+      -------------------------------
+     { Hi, welcome to Andrew's site. }
+      -------------------------------
+             \   ^__^
+              \  (oo)\_______
+                 (__)\       )\/\
+                     ||----w |
+                     ||     ||
 
-    <p>
-    You can contact me at hello@andrewzah.com or via <a class="link" href="https://t.me/andrewzah">Telegram</a>.
-    </p>
-
-    <ul class="horizontal-list">
-      <li><a href="/about">About</a></li>
-      <li><a href="/index.xml">RSS</a></li>
-      <li><a href="/friends">Friends</a></li>
-    </ul>
+    </code></pre>
   </section>
-
-  {{ partial "divider.html" }}
-
-  {{- range .Site.Sections -}}
-    <section class="page">
-      <h2 class="section-title">
-        {{ title .Type }}
-        {{- if eq .Type "posts" -}}
-          <sup><a class="link" href="/tags">(view by tag)</a></sup>
-        {{- end -}}
-      </h2>
-
-      {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
-        {{- partial "posts/links.html" . -}}
-      {{- end -}}
-    </section>
-
-    {{ partial "divider.html" }}
-  {{- end -}}
 {{- end -}}

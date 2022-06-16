@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2021-09-11
+date: 2022-06-16
 description: "About me"
 slug: "about"
 ---
@@ -38,9 +38,9 @@ After using golang, I expect a formatting tool for any project I work on. I _hat
 === Misc
 Free Speech doesn't mean one is free of criticism or consequences.  However, I think people go too far sometimes,
 sifting through decades of someone's writings to find something, anything to criticize.
-This actually doesn't bother me so much as that people actually capitulate to these sorts of unjustified witch hunts.
+This doesn't bother me so much as that other people then capitulate to these sorts of unjustified witch hunts that have little to do with improving the world.
 I also find that overall approach to be almost completely punitative, with very little attempts at rehabilitation or addressing the underlying issues...
-It really seems like a lot of people _enjoy_ the resulting drama, in a masturbatory manner.
+It really seems like a lot of people _enjoy_ the resulting drama.
 
 In my opinion, in order to have a healthy society it is paramount that we allow discussion and debate with nuance.
 Operating without context or nuance, just looking for soundbytes out of context, is just shameful.
@@ -55,4 +55,4 @@ creating a github issue is better.
 Please ping me again if I don't respond in 1-2 weeks. I try to get back to people when possible.
 
 - email: mailto:hello@andrewzah.com[hello {@} andrewzah {.} com]
-- https://t.me/andrewzah[telegram]
+- telegram: https://t.me/andrewzah

@@ -11,7 +11,7 @@ if ! command -v ruby >/dev/null; then
 fi
 
 if [ "$cmd" == "serve" ]; then
-  hugo -D
-else
   hugo server -D
+else
+  hugo -D
 fi

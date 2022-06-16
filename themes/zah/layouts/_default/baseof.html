@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode }}">
   {{- partial "head.html" . -}}
+  {{- partialCached "navbar.html" . -}}
 
   <body>
     <div id="wrapper">
@@ -9,7 +10,10 @@
       </div>
 
       {{ if or (not (eq .Page.Type "page")) (eq .Page.RelPermalink "/") }}
-        {{- partialCached "footer.html" . -}}
+
+          {{ if not .IsHome }}
+            {{- partialCached "footer.html" . -}}
+          {{ end }}
       {{ end }}
     </div>
 

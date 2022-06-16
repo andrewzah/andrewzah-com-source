@@ -2,7 +2,7 @@
 title = "Better Anki Usage Guide"
 slug = "better-anki-usage-guide"
 date = "2019-05-19"
-lastmod = "2020-08-01"
+lastmod = "2022-06-16"
 tags = ["memorization", "anki"]
 description = "Anki is a good app for memorization, but making some modifications turns it into a phenomenal app."
 aliases = [
@@ -276,6 +276,9 @@ This will give you a search prompt. Anki searches can get pretty advanced, so ht
 - `-deck:filtered` filters by normal (unfiltered) decks only.
 
 You can group terms with parentheses: `(tag:tag1 or tag:tag2 and tag:tag3)`
+
+WARNING: Some of these plugins are out of date. This article is slated to be updated.
+The Reset EZ & No Penalties or Boosting plugins are now part of https://www.migaku.io/[Migaku].
 
 == Visual Plugins
 

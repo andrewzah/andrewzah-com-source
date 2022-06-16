@@ -18,8 +18,13 @@ title = "Andrew Zah"
     extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]
     workingFolderCurrent = true
 
-    [markup.asciidocext.attributes]
-        my-base-url = "https://andrewzah.com/"
+  [markup.asciidocext.attributes]
+    my-base-url = "https://andrewzah.com/"
+
+[security]
+  [security.exec]
+    allow = [ "asciidoctor" ]
+    osEnv = ['(?i)^(PATH|HOME|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
 
 [menu]
   [[menu.main]]

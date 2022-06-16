@@ -13,7 +13,7 @@ section#post-body {
 
   div.paragraph > p {
     @include anchor-colors()
-    @include anchor-style()
+    //@include anchor-style()
 
     code {
       color: $primary;
