@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+{{- if (eq .Type "posts") -}}
+  <div id="post-meta">
+    <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 02, 2006" }}">
+      {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
+    </time> &mdash;
+    {{ .Page.WordCount }} words
+    &mdash;
+
+    <div class="post-tags">
+      {{ $list := (.GetTerms "tags") }}
+      {{ $len := (len $list) }}
+
+      about
+      {{ range $i, $e := $list }}
+        <a class="link">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
+      {{ end }}
+    </div>
+
+    <!--href="{{ .Permalink }}"-->
+  </div>
+{{- end -}}
+
+<hr>
+
+{{ .Content | replaceRE "(<h[1-6]\\sid=\"([^\"]+)\"\\s?>)(.+)(</h[1-6]+>)" "${1}<a href=\"#${2}\">${3}</a>${4}" | safeHTML }}
+{{ partial "footer.html" . }}

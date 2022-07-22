@@ -1,0 +1,104 @@
+body {
+  font: 17px/1.6 sans-serif;
+  text-rendering: optimizeLegibility;
+  padding: 2rem;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5{
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+header h1 {
+  display: inline;
+}
+pre, code {
+  font-size: inherit;
+  background: #eee;
+}
+pre {
+  margin-bottom: 2rem;
+}
+pre code {
+  display: block;
+  border: none;
+  padding: 1em;
+  background: none;
+  overflow-x: auto;
+}
+code {
+  background: #eee;
+}
+.writing ul li, .home ul li {
+  list-style-type: none;
+  display: flex;
+  font-variant-numeric: tabular-nums;
+}
+.home ul li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul, ol {
+  padding: 0;
+}
+blockquote {
+  margin: 1em 0;
+  padding: 0 2em;
+  border-left: 3px solid #eee;
+}
+img {
+  max-width: 100%;
+}
+a, a:visited {
+  color: initial;
+}
+
+div.admonitionblock {
+  table > tbody > tr {
+    display: block;
+
+    td.icon {
+      display: block;
+    }
+  }
+
+  table > tbody > tr > td.icon > div.title {
+    font-weight: bold;
+
+    &:after {
+      content: ':'
+    }
+  }
+}
+div.admonitionblock.note {
+  color: #2d3436;
+
+  background-color: rgba(45, 52, 54, .1);
+  border: 1px solid rgba(45, 52, 54, .5);
+}
+div.admonitionblock.tip {
+  color: #1e3799;
+
+  background-color: rgba(30, 55, 153, .1);
+  border: 1px solid rgba(30, 55, 153, .5);
+}
+div.admonitionblock.warning, .admonitionblock.important, .admonitionblock.caution {
+  color: rgba(214, 48, 49,1.0);
+
+  background-color: rgba(214, 48, 49, .1);
+  border: 1px solid rgba(214, 48, 49, .5);
+}
+#header-pagetitle {
+  font-weight: bold;
+}
+#post-meta {
+  font-style: italic;
+  display: inline-block;
+}
+div.sectionbody > div > table {
+  tbody > tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
