@@ -1,8 +1,15 @@
-{{- define "main" -}}
-<h1>404</h1>
-<h2 style="margin: 0;">{{ with $.Site.Params.notFoundHeader }}{{ . }}{{ else }}{{ i18n "404_header" }}{{ end }}</h2>
+{{ partial "header.html" . }}
 
-<p>{{ with $.Site.Params.notFoundMessage }}{{ . }}{{ else }}{{ i18n "404_message" }}{{ end }}</p>
+<p>
+I ate your web page.
+</p>
 
-<a href="{{ $.Site.BaseURL }}" style="font-size: 1.5rem;">{{ with $.Site.Params.notFoundLinkMessage }}{{ . }}{{ else }}{{ i18n "404_link_message" }}{{ end }}</a>
-{{- end -}}
+<p>
+Forgive me,
+</p>
+
+<p>
+it was juicy and tart on my tongue.
+</p>
+
+{{ partial "footer.html" . }}
