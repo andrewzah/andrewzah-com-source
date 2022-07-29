@@ -4,9 +4,7 @@ set -exo pipefail
 
 cmd=${1:-serve}
 
-set -u
-
-if ! command -v ruby >/dev/null; then
+if [ -n "$ASDF_DIR " ]; then
   source "$HOME/.asdf/asdf.sh"
 fi
 
