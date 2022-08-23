@@ -27,6 +27,11 @@ title = "Andrew Zah"
 
 [menu]
   [[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    url = "contact/"
+
+  [[menu.main]]
     identifier = "cats"
     name = "cats"
     url = "cats/"
