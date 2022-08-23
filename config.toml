@@ -40,3 +40,8 @@ title = "Andrew Zah"
     identifier = "friends"
     name = "friends"
     url = "friends/"
+
+  [[menu.main]]
+    identifier = "openbook"
+    name = "openbook"
+    url = "openbook/"
