@@ -1,13 +1,14 @@
 +++
-title = "How to run Kakaotalk on Linux in 2021"
-slug = "how-to-kakaotalk-linux-2021"
+title = "How to run Kakaotalk on Linux"
+slug = "how-to-kakaotalk-linux"
 aliases = [
+  "/posts/2020/how-to-kakaotalk-linux-2021/",
   "/posts/2020/how-to-kakaotalk-linux-2020/"
 ]
 date = "2020-10-05"
 tags = ["linux", "korean"]
 keywords = "kakaotalk linux kkt 카카우톡 카톡 how to instruction tutorial"
-description = "How to set up Kakaotalk on Linux in 2020"
+description = "How to set up Kakaotalk on Linux"
 +++
 
 = How to run Kakaotalk on Linux in 2020

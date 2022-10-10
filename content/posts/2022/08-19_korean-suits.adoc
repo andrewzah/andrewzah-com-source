@@ -1,0 +1,12 @@
++++
+title = "I got some suits & shirts made in Korea. Here are the results"
+slug = "korea-suits"
+date = "2022-08-19"
+tags = ["korea", "fashion"]
+keywords = "south korea itaewon noksapyeong suit suits jacket shirts han's hahn's hans hahns tailor tailored bespoke custom"
+description = ""
++++
+
+= I got some suits & shirts made in Korea. Here are the results
+:toc:
+:sectnums:
