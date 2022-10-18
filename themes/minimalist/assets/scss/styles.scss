@@ -40,9 +40,9 @@ code {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-ul, ol {
-  padding: 0;
-}
+//ul, ol {
+//  padding: 0;
+//}
 blockquote {
   margin: 1em 0;
   padding: 0 2em;
@@ -102,3 +102,24 @@ div.sectionbody > div > table {
     background-color: #f2f2f2;
   }
 }
+div.sectionbody > div {
+  div.ulist > ul > li > p {
+    a {
+      color: #448567;
+
+      &:hover {
+        color: #325F4A;
+      }
+    }
+  }
+  p {
+    a {
+      color: #448567;
+
+      &:hover {
+        color: #325F4A;
+      }
+    }
+  }
+}
+
