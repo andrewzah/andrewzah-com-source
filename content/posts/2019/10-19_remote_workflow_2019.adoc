@@ -11,6 +11,7 @@ keywords = "remote programming setup my workflow digital nomad mac apple osx vim
 :toc:
 :sectnums:
 :sectanchors:
+:figure-caption!:
 
 Hi! My name is Andrew, and I work remotely as a software developer. I’ve
 worked while traveling across America with spotty or no internet
@@ -18,7 +19,7 @@ connection. I’ve worked in countries like South Korea and Japan. I like
 traveling, and this is how I stay productive.
 
 .Working remotely at WeWork in 강남
-[.full-width]
+[.full-width,link=https://s3.amazonaws.com/andrewzah.com/posts/015/wework-gangnam.jpg]
 image::https://s3.amazonaws.com/andrewzah.com/posts/015/wework-gangnam.jpg[Working remotely at WeWork in Gangnam Seoul]
 
 == Development Machine

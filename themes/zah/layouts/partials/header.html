@@ -6,9 +6,9 @@
     <meta name="author" content="Andrew Zah - {{ .Site.BaseURL }}">
     <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{- if .IsHome -}}
-      <title>{{ .Title }}</title>
+      <title>{{ .Page.Title }}</title>
     {{- else -}}
-      <title>{{ .Title }} | {{ .Site.Title }}</title>
+      <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
     {{- end -}}
 
     {{ $styles := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
@@ -21,7 +21,7 @@
         <li><a href="/">andrewzah.com</a></li>
       </ul>
       <ul class="right-menu">
-        <li><a href="/cats">contact</a></li>
+        <li><a href="/cats">cats</a></li>
         <li><a href="/openbook">openbook</a></li>
         <li><a href="/posts">posts</a></li>
         <li><a href="/reviews">reviews</a></li>

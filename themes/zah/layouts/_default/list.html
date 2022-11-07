@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 
-<h1> {{ .Type }} </h1>
 
 <article>
+  <h1> {{ .Type }} </h1>
+
   <ul>
     {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
       <h2 style="font-weight: bold; text-decoration: none;"> {{ .Key }} </h2>

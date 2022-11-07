@@ -10,14 +10,16 @@ description = "The remote setup and workflow I've set up for 2022."
 = My remote work setup for 2022
 :toc:
 :sectnums:
+:figure-caption!:
 
 It's time for my next installment of my workflow series. See my previous one https://andrewzah.com/posts/2019/my-setup-remote-programming-osx-2019/[for 2019].
 
 I work as a software engineer for https://ossys.com[Open Source Systems], primarily on our https://analyticshq.com[AnalyticsHQ data platform]. I was the first employee and we've worked fully remotely since I joined in early 2018. I work on our backend and microservices, and dockerize applications for AnalyticsHQ.
 
+.WeWork, Gangnam Station, Seoul
+[.full-width]
 image::https://s3.amazonaws.com/andrewzah.com/posts/015/wework-gangnam.jpg[Working remotely at WeWork in Gangnam Seoul]
 
-__WeWork, Gangnam Station, Seoul__
 
 == Development Machine
 

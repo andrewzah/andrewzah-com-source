@@ -1,8 +1,10 @@
 @import "normalize";
 
 @import "variables";
+@import "mixins";
 
 @import "components/admonition";
+@import "components/nav";
 @import "components/toc";
 
 * {
@@ -13,6 +15,9 @@
 html, body {
   padding: 0px;
   margin: 0px;
+
+  background: rgb(248,248,248);
+  color: rgb(5,5,5);
 }
 
 article {
@@ -23,6 +28,11 @@ article {
   }
 
   margin: 0 auto;
+
+}
+
+img {
+  max-width: 100%;
 }
 
 pre {
@@ -30,6 +40,43 @@ pre {
   code {
     span {
       margin: 5px;
+    }
+  }
+}
+
+//.full-width {
+//  width: 100vw;
+//  left: 50%;
+//  position: relative;
+//  transform: translateX(-50%);
+//  -webkit-transform: translateX(-50%);
+//}
+
+// https://stackoverflow.com/a/31461807
+.full-width {
+  .content {
+    display: block;
+    text-align: center;
+
+    img {
+      text-align: center;
+
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+
+      max-width: max(100vw);
+
+      @media (min-width: 1200px) {
+        max-width: 1200px;
+      }
+    }
+
+    p {
+      text-align: center;
+
+      .image {
+        display: block;
+      }
     }
   }
 }

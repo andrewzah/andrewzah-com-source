@@ -4,28 +4,19 @@
   {{- if or (eq .Type "posts") (eq .Type "reviews") -}}
     <h1> {{ .Title }} </h1>
     <div id="meta">
-      <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 02, 2006" }}">
-        {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
-      </time>
-      {{- if .Lastmod -}}
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-      TODOFIX
-        <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 02, 2006" }}">
-          {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
-        </time>
-      {{- end -}}
-      &mdash;
-      {{ .Page.WordCount }} words
+      <p>
+        Published: <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 02, 2006" }}">
+        {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time> |
+        {{- if .Lastmod -}}
+          Updated: <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 02, 2006" }}">
+            {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time>
+        {{- end -}}
+      </p>
 
       <div class="post-tags">
+        {{ .Page.WordCount }} words
+        &mdash;
+
         {{ $list := (.GetTerms "tags") }}
         {{ $len := (len $list) }}
 
@@ -34,8 +25,6 @@
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
         {{ end }}
       </div>
-
-      <!--href="{{ .Permalink }}"-->
 
       {{- if not (eq .Params.Toc false) -}}
         <h3> Table of Contents </h3>
