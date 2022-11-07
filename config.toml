@@ -1,7 +1,7 @@
 # https://github.com/foo-dogsquared/hugo-theme-arch-terminal/blob/master/MANUAL.adoc
 baseURL = "https://andrewzah.com/"
 languageCode = "en-us"
-theme = "minimalist"
+theme = "zah"
 summaryLength = 15
 canonifyUrls = true
 toc = true
@@ -27,9 +27,9 @@ title = "Andrew Zah"
 
 [menu]
   [[menu.main]]
-    identifier = "contact"
-    name = "contact"
-    url = "contact/"
+    identifier = "about"
+    name = "about"
+    url = "about/"
 
   [[menu.main]]
     identifier = "cats"
@@ -37,11 +37,16 @@ title = "Andrew Zah"
     url = "cats/"
 
   [[menu.main]]
-    identifier = "friends"
-    name = "friends"
-    url = "friends/"
-
-  [[menu.main]]
     identifier = "openbook"
     name = "openbook"
     url = "openbook/"
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    url = "posts/"
+
+  [[menu.main]]
+    identifier = "reviews"
+    name = "reviews"
+    url = "reviews/"

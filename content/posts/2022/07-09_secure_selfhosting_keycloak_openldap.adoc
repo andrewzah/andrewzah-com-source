@@ -2,6 +2,7 @@
 title = "Secure Selfhosting with OpenLDAP and Keycloak"
 slug = "secure-selfhosting-openldap-keycloak"
 date = "2022-10-10"
+lastmod = "2022-11-07"
 draft = true
 tags = ["docker", "selfhosting", "security", "FOSS"]
 keywords = "self hosting selfhosting security authentication auth openldap keycloak traefik"

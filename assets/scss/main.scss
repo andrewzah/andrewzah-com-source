@@ -1,11 +1,35 @@
-@import 'config';
-@import 'mixins';
-@import 'misc';
+@import "normalize";
 
-@import 'post';
-@import 'posts';
-@import 'pages';
+@import "variables";
 
-@import 'components/admonition';
-@import 'components/nav';
-@import 'components/highlight';
+@import "components/admonition";
+@import "components/toc";
+
+* {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+}
+
+article {
+  max-width: 95vw;
+
+  @media only screen and (min-width: $phoneWidth)  {
+    max-width: $max-width;
+  }
+
+  margin: 0 auto;
+}
+
+pre {
+  overflow: scroll;
+  code {
+    span {
+      margin: 5px;
+    }
+  }
+}
