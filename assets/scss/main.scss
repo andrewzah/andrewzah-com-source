@@ -18,25 +18,40 @@ html, body {
 
   background: rgb(248,248,248);
   color: rgb(5,5,5);
+
+  font-family: $serif-stack;
 }
+
+a {
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
 
 article {
   max-width: 95vw;
+  margin: 0 auto;
+  line-height: 1.6;
 
   @media only screen and (min-width: $phoneWidth)  {
     max-width: $max-width;
   }
-
-  margin: 0 auto;
-
 }
 
 img {
   max-width: 100%;
 }
 
+hr {
+  color: #eee;
+}
+
 pre {
-  overflow: scroll;
+  overflow-x: scroll;
   code {
     span {
       margin: 5px;
@@ -78,5 +93,34 @@ pre {
         display: block;
       }
     }
+  }
+}
+
+div.imageblock {
+  div.title {
+    font-style: italic;
+  }
+}
+
+div.listingblock {
+  div.content {
+    pre {
+      background-color: rgb(230,230,230);
+      padding: 5px;
+    }
+  }
+}
+
+div.paragraph {
+  p code {
+    background-color: rgb(230,230,230);
+    padding: 2px;
+  }
+}
+
+div.listing {
+  ul {
+    list-style: none;
+    padding-left: 0;
   }
 }

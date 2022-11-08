@@ -2,17 +2,6 @@
 /// mixins ///
 //////////////
 
-@mixin anchor-style() {
-  a{
-    text-decoration: none;
-    border-bottom: 1px dotted;
-
-    &:hover {
-      border-bottom: 1px solid;
-    }
-  }
-}
-
 @mixin anchor-colors() {
   a {
     color: $primary;

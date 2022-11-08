@@ -1,30 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Andrew Zah - {{ .Site.BaseURL }}">
-    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Andrew Zah - {{ .Site.BaseURL }}">
+  <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  {{ block "title" . -}}
     {{- if .IsHome -}}
-      <title>{{ .Page.Title }}</title>
+      <title> Index | {{ .Site.Title }}</title>
     {{- else -}}
-      <title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+      <title>{{ .Title }} | {{ $.Site.Title }}</title>
     {{- end -}}
+  {{- end -}}
 
-    {{ $styles := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
-    <style>{{ $styles.Content | safeCSS }}</style>
-  </head>
-
-  <body>
-    <nav>
-      <ul class="left-menu">
-        <li><a href="/">andrewzah.com</a></li>
-      </ul>
-      <ul class="right-menu">
-        <li><a href="/cats">cats</a></li>
-        <li><a href="/openbook">openbook</a></li>
-        <li><a href="/posts">posts</a></li>
-        <li><a href="/reviews">reviews</a></li>
-      </ul>
-      <hr>
-    </nav>
+  {{ $styles := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
+  <style>{{ $styles.Content | safeCSS }}</style>
+</head>

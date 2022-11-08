@@ -1,18 +1,19 @@
-{{ partial "header.html" . }}
-
-
-<article>
+{{ define "main" }}
   <h1> {{ .Type }} </h1>
 
-  <ul>
+  <div class="listing">
     {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
-      <h2 style="font-weight: bold; text-decoration: none;"> {{ .Key }} </h2>
-      {{- range .Pages }}
-        <li>
-          <time style="margin-right: 0.5rem;">{{ .Date.Format "01-02" }}</time>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-      {{- end -}}
+      <h3 style="font-weight: bold; text-decoration: none;"> {{ .Key }} </h3>
+      <ul>
+        {{- range .Pages }}
+          {{ partial "post-link.html" . }}
+        {{- end -}}
+      </ul>
     {{- end -}}
-  </ul>
-</article>
+  </div>
+
+  {{- if (eq .Type "posts") -}}
+    <hr>
+    <p><a href="/archives"> Link to Archives </a></p>
+  {{- end -}}
+{{ end }}

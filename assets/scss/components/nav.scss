@@ -1,14 +1,22 @@
 nav {
+  padding-top: 5px;
   max-width: 95vw;
+  margin: 0 auto;
 
   @media only screen and (min-width: $phoneWidth)  {
     max-width: $max-width;
   }
 
-  margin: 0 auto;
+  ul li a {
+    color: $text;
+  }
 
   ul.left-menu {
     @include horizontal-list;
+
+    li {
+      font-weight: bold;
+    }
   }
 
   ul.right-menu {

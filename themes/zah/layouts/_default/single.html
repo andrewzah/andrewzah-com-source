@@ -1,18 +1,34 @@
-{{ partial "header.html" }}
-
-<article>
+{{ define "main" }}
   {{- if or (eq .Type "posts") (eq .Type "reviews") -}}
     <h1> {{ .Title }} </h1>
-    <div id="meta">
+    <div id="front-meta">
       <p>
         Published: <time itemprop="datePublished" datetime="{{ .Date.Format "Jan 02, 2006" }}">
-        {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time> |
-        {{- if .Lastmod -}}
-          Updated: <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 02, 2006" }}">
+        {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
+        {{- if ne .Date .Lastmod -}}
+        </time>,
+        Updated: <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 02, 2006" }}">
             {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time>
+        {{- else -}}
+        </time>
         {{- end -}}
       </p>
 
+      {{- if not (eq .Params.Toc false) -}}
+        <h3> Table of Contents </h3>
+        {{ .TableOfContents }}
+        <hr>
+      {{- end -}}
+    </div>
+  {{- end -}}
+
+  {{ .Content }}
+
+
+  {{- if or (eq .Type "posts") (eq .Type "pages") -}}
+    <hr>
+
+    <div id="back-meta">
       <div class="post-tags">
         {{ .Page.WordCount }} words
         &mdash;
@@ -25,16 +41,6 @@
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
         {{ end }}
       </div>
-
-      {{- if not (eq .Params.Toc false) -}}
-        <h3> Table of Contents </h3>
-        {{ .TableOfContents }}
-        <hr>
-      {{- end -}}
     </div>
   {{- end -}}
-
-  {{ .Content }}
-</article>
-
-{{ partial "footer.html" }}
+{{ end }}

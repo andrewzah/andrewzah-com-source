@@ -12,6 +12,10 @@ title = "Andrew Zah"
   name = "Andrew Zah"
   email = "zah@andrewzah.com"
 
+[taxonomies]
+  tag = 'tags'
+  #series = 'series'
+
 [markup]
   [markup.asciidocext]
     extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]

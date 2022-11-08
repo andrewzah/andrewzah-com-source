@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+  {{- partial "header.html" . -}}
+
+  <body>
+    {{- partialCached "nav.html" . -}}
+
+    <article>
+      {{- block "main" . -}}{{- end -}}
+
+      {{ if or (not (eq .Page.Type "page")) (eq .Page.RelPermalink "/") }}
+
+          {{ if not .IsHome }}
+            {{- partialCached "footer.html" . -}}
+          {{ end }}
+      {{ end }}
+    </article>
+
+    <script data-goatcounter="https://stats.andrewzah.com/count"
+      async src="//stats.andrewzah.com/count.js"></script>
+  </body>
+</html>
