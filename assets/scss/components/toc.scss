@@ -1,9 +1,5 @@
 nav#TableOfContents {
-  ul {
-    li {
-      a {
-        border-bottom: 1px dotted #000000;
-      }
-    }
+  ul li a {
+    border-bottom: 1px dotted #000000;
   }
 }

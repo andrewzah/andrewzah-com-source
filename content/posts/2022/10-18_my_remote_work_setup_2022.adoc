@@ -1,6 +1,6 @@
 +++
-title = "My Remote Setup and Workflow for 2022"
-slug = "remote-setup-workflow-2022"
+title = "My Remote Setup for 2022"
+slug = "remote-setup-2022"
 date = "2022-10-18"
 tags = ["travel", "remote-work", "gear"]
 keywords = "tech gear setup remote nomad digital 2022 2021 2023 workflow productivity productive"
@@ -12,27 +12,36 @@ description = "The remote setup and workflow I've set up for 2022."
 :sectnums:
 :figure-caption!:
 
-It's time for my next installment of my workflow series. See my previous one https://andrewzah.com/posts/2019/my-setup-remote-programming-osx-2019/[for 2019].
+It's time for my next installment of my workflow series.
+See my previous one https://andrewzah.com/posts/2019/my-setup-remote-programming-osx-2019/[for 2019].
 
-I work as a software engineer for https://ossys.com[Open Source Systems], primarily on our https://analyticshq.com[AnalyticsHQ data platform]. I was the first employee and we've worked fully remotely since I joined in early 2018. I work on our backend and microservices, and dockerize applications for AnalyticsHQ.
+I work as a software engineer for https://ossys.com[Open Source Systems],
+primarily on our https://analyticshq.com[AnalyticsHQ data platform].
+I was the first employee and we've worked fully remotely since I joined in early 2018.
+I work on our backend and microservices, and dockerize applications for AnalyticsHQ.
 
 .WeWork, Gangnam Station, Seoul
 [.full-width]
 image::https://s3.amazonaws.com/andrewzah.com/posts/015/wework-gangnam.jpg[Working remotely at WeWork in Gangnam Seoul]
 
-
 == Development Machine
 
 My main requirements are: be powerful, have 32+ gb of memory, and be relatively light.
 
-I primarily work off of my Dell XPS 13 9300, provided by my company. I find a 12-13" display is more than sufficient, and it keeps the weight down. If you walk around a fair bit, weight seriously adds up quickly.
+I primarily work off of my Dell XPS 13 9300, provided by my company.
+I find a 12-13" display is more than sufficient, and it keeps the weight down.
+If you walk around a fair bit, weight seriously adds up quickly.
 
-I take my framework along as a backup, but I don't use it much due to the battery life.footnote:battery[I haven't tweaked arch linux for battery life yet, but I hear that this can be improved somewhat.] Unfortunately the XPS isn't too much better; I usually get about 3-4 hours of heavy development in before it starts throttling heavily.
+I take my framework along as a backup, but I don't use it much due to the battery life.
+footnote:battery[I haven't tweaked arch linux for battery life yet, but I hear that this can be improved somewhat.]
+Unfortunately the XPS isn't too much better;
+I usually get about 3-4 hours of heavy development in before it starts throttling heavily.
 
 At home this isn't a problem, but short battery life means I need to plan around power sources instead of randomly choosing a cafe to work at. I've been contemplating on going back to apple with the M2 Macbook Pro, but... I've been using linux daily for more than 5 years now and I'm used to it. Plus, I want https://frame.work[Framework] to succeed!
 
-image::https://i.imgur.com/83BIDvI.png[A screenshot with panes, split vertically down the middle. One pane is the web browser and the other pane is the terminal.]
-__A typical view: A web browser and terminal, automatically split by i3__.
+.A typical view: A web browser and terminal, automatically split by i3
+[.full-width,link=https://s3.amazonaws.com/andrewzah.com/posts/2022_11_08_remote_setup/2022-11-09-003400_2551x1429_scrot.png]
+image::https://s3.amazonaws.com/andrewzah.com/posts/2022_11_08_remote_setup/2022-11-09-003400_2551x1429_scrot.png[A screenshot with panes, split vertically down the middle. One pane is the web browser and the other pane is the terminal.]
 
 == Workflow
 
@@ -62,7 +71,7 @@ bindsym $mod+o split h
 bindsym $mod+v split v
 ```
 
-And anything that can run in the background lives in a tmux session. I believe the default to rename tmux sessions is `<ctrl>b+$`.
+And anything that can run in the background lives in a tmux session. I frequently rename tmux sessions with `<ctrl>b+$`.
 
 == Software
 

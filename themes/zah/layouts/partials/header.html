@@ -4,6 +4,7 @@
   <meta name="author" content="Andrew Zah - {{ .Site.BaseURL }}">
   <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
+  <link rel="canonical" href="{{ .Permalink | absURL }}">
   {{ block "title" . -}}
     {{- if .IsHome -}}
       <title> Index | {{ .Site.Title }}</title>
@@ -11,6 +12,10 @@
       <title>{{ .Title }} | {{ $.Site.Title }}</title>
     {{- end -}}
   {{- end -}}
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/schema.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 
   {{ $styles := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | minify }}
   <style>{{ $styles.Content | safeCSS }}</style>

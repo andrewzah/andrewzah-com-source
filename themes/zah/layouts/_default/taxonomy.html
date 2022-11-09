@@ -1,6 +1,4 @@
-{{ partial "header.html" }}
-
-<article>
+{{ define "main" }}
   {{- if eq .Title "Tags" -}}
     <h1> All Tags </h1>
       {{- range .Data.Terms.Alphabetical -}}
@@ -26,6 +24,4 @@
           {{- end -}}
     </div>
   {{- end -}}
-</article>
-
-{{ partial "footer.html" }}
+{{ end }}

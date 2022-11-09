@@ -14,11 +14,11 @@
         {{- end -}}
       </p>
 
-      {{- if not (eq .Params.Toc false) -}}
+      {{- if (eq .Params.Toc true) -}}
         <h3> Table of Contents </h3>
         {{ .TableOfContents }}
-        <hr>
       {{- end -}}
+      <hr>
     </div>
   {{- end -}}
 
@@ -36,7 +36,7 @@
         {{ $list := (.GetTerms "tags") }}
         {{ $len := (len $list) }}
 
-        about
+        under
         {{ range $i, $e := $list }}
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
         {{ end }}
