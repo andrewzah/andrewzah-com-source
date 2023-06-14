@@ -1,4 +1,4 @@
-FROM golang:1.18-alpine AS builder
+FROM golang:1.20-alpine AS builder
 
 WORKDIR /
 
@@ -18,7 +18,7 @@ RUN hugo \
   && cp -r ./public/ /dist/ \
   && find /dist/ -type f -exec sed -i 's#<img src#<img decoding="async" loading="lazy" src#g' {} \;
 
-FROM caddy:2.5.1-alpine
+FROM caddy:2.6-alpine
 
 COPY ./Caddyfile /etc/caddy/Caddyfile
 COPY --from=builder /dist/ /var/www/

@@ -5,6 +5,7 @@ date = "2022-10-18"
 tags = ["travel", "remote-work", "gear"]
 keywords = "tech gear setup remote nomad digital 2022 2021 2023 workflow productivity productive"
 description = "The remote setup and workflow I've set up for 2022."
+draft = true
 +++
 
 = My remote work setup for 2022
