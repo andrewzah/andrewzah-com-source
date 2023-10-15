@@ -7,6 +7,12 @@ nav {
     max-width: $max-width;
   }
 
+  @media (max-width: $phoneWidth)  {
+    hr {
+      display: none;
+    }
+  }
+
   ul li a {
     color: $text;
   }
