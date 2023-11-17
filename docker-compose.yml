@@ -1,0 +1,5 @@
+services:
+  web:
+    image: docker.io/andrewzah/personal_site:latest
+    ports:
+      - "2020:2020"

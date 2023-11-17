@@ -14,23 +14,6 @@
         {{- end -}}
       </p>
 
-      {{- if or (eq .Type "posts") (eq .Type "pages") -}}
-        <div id="back-meta">
-          <div class="post-tags">
-            {{ .Page.WordCount }} words
-            &mdash;
-
-            {{ $list := (.GetTerms "tags") }}
-            {{ $len := (len $list) }}
-
-            under
-            {{ range $i, $e := $list }}
-            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
-            {{ end }}
-          </div>
-        </div>
-      {{- end -}}
-
       {{- if (eq .Params.Toc true) -}}
         <h3> Table of Contents </h3>
         {{ .TableOfContents }}
@@ -40,4 +23,28 @@
   {{- end -}}
 
   {{ .Content }}
+
+
+  {{- if or (eq .Type "posts") (eq .Type "pages") -}}
+    <hr>
+
+    <div id="back-meta">
+      <div class="post-tags">
+        {{ .Page.WordCount }} words
+        &mdash;
+
+        {{ $list := (.GetTerms "tags") }}
+        {{ $len := (len $list) }}
+
+        under
+        {{ range $i, $e := $list }}
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
+        {{ end }}
+      </div>
+      <p>
+      🇺🇦
+      🇵🇸
+      </p>
+    </div>
+  {{- end -}}
 {{ end }}
