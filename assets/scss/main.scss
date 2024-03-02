@@ -56,6 +56,7 @@ tr:nth-child(even) {
 article {
   max-width: 95vw;
   margin: 0 auto;
+  padding-bottom: 1rem;
   line-height: 1.6;
 
   @media only screen and (min-width: $phoneWidth)  {
