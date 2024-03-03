@@ -8,10 +8,10 @@ It's built on Hugo and Asciidoctor.
 GPLv3 for the code. The written material is still copyrighted.
 
 ## dependencies
-* ruby (currently `2.6.6`)
-* hugo (currently `0.82.0-DEV+extended`)
+* ruby (currently [`3.1.2`](./tool-versions))
+* hugo (currently `v0.102.0-DEV`)
 
-gems:
+[gems](./gems.txt):
 * `asciidoctor-diagram`
 * `asciidoctor-html5s`
 * `asciidoctor`
