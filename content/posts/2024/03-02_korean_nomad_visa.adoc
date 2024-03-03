@@ -5,6 +5,7 @@ date = "2024-03-02"
 tags = ["travel", "korea"]
 description = "This is how I acquired the Korean F-1-D 'Workation' / Digital Nomad Visa."
 keywords = "korean f-1-d digital nomad visa workation korea south korea"
+toc = true
 +++
 
 = How I acquired the Korean Digital Nomad Visa.
