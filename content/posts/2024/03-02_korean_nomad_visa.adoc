@@ -2,6 +2,7 @@
 title = "How I acquired the Korean Digital Nomad Visa"
 slug = "korean-digital-nomad-visa"
 date = "2024-03-02"
+lastmod = "2024-03-14"
 tags = ["travel", "korea"]
 description = "This is how I acquired the Korean F-1-D 'Workation' / Digital Nomad Visa."
 keywords = "korean f-1-d digital nomad visa workation korea south korea"
@@ -52,9 +53,11 @@ https://www.immigration.go.kr/immigration_eng/1832/subview.do?enc=Zm5jdDF8QEB8JT
 
 1. Visa application form and fee
 2. Valid passport
-3. Standard size photo (35x45mm)
-4. Documents proving income such as: certificate of employment, certificate of salary, and bank transaction certificate
+3. Standard size photo (35x45mm, *not* 2x2in)
+4. Documents proving income such as: certificate of employment (*attached with Apostille*), certificate of salary, and bank transaction certificate
 5. Criminal record certificate (*attached with Apostille*), certificate of medical insurance, and certificate of family relations (if accompanied by dependents)
+
+WARNING: Make sure your passport doesn't expire within 6 months of your application, or your travel. Knowing that the South Korean government can be sticklers about things, consider expanding that to 12 months.
 
 When I applied in February, I went by the requirements of the 
 https://overseas.mofa.go.kr/us-chicago-en/wpge/m_20640/contents.do[Consulate in Chicago, Illinois]
@@ -64,13 +67,11 @@ https://overseas.mofa.go.kr/us-atlanta-en/brd/m_4849/view.do?seq=13&page=1[Consu
 In addition, the Chicago / Georgia consulates require:
 
 1. Valid Driver's License or other proof of residency in a state (like a utility bill), *not* a copy
-2. Prepaid USPS Express envelope (check each consulate's requirements as they vary, don't fill out the From portion as they will)
+2. Prepaid USPS Express envelope (check each consulate's requirements, don't fill out the From portion as they'll stamp it)
 
 == Preparing the documents
 
 The documents that took the longest to figure out were the certificate of employment and the federal background check, mainly due to the apostilling process.
-
-I recently renewed my passport so I'm fine past 2030. I'm not sure if they'll approve a visa if your passport expires within 6 months or the expected duration of the visa.
 
 The
 https://overseas.mofa.go.kr/ph-en/brd/m_3283/view.do?seq=745066&page=1[application form]
@@ -112,7 +113,12 @@ and get fingerprints done at a local police station.
 I've done Identogo before so I went with that. It's $50 USD and the process takes about 10 minutes once you make an appointment.
 
 === Notarizing & Apostilling
-Getting documents notarized and then apostilled is a pain in the ass. This time I went with MonumentVisa{fn-monument-visa} to handle it for me, at $55 per document. The certificate of employment was done in one day, but the background check depends on the workload of the Department of State, which MonumentVisa states is 2-4 weeks. In my case, it was 10 days.
+Getting documents notarized and then apostilled is a pain in the ass. This time I went with
+https://securemonumentvisa.com/apostille-order-form/[MonumentVisa]
+to handle it for me, at $55 per document. The savings in time and headaches is worth it, trust me.
+
+The certificate of employment was done in one day, but the background check depends on the workload of the Department of State.
+In my case, it was 10 days, but MonumentVisa stated it could be 2-4 weeks.
 
 == Application Timeline
 
@@ -136,6 +142,18 @@ So about a month and a half, most of which was figuring out the template for the
 - $531.30: SafetyWing Nomad Insurance paid out to 2024/12/31 (otherwise $45.08/mo)
 
 -> *~$794* in total, or $263 + $531, not including the travel to Georgia or the prepaid envelope. The bulk of it being the travel insurance... I erred on the side of caution and just paid out til the end of the year, since I wasn't sure how a monthly printout would be perceived by the consulate.
+
+== Frequently Asked Questions
+=== What if my income is above, but close to the threshold?
+You should be fine, but we're waiting on more data points to be sure.
+
+We do know that people who far exceed the threshold have easily acquired the visa.
+
+=== What types of insurance can I use?
+
+What the South Korean government is looking for is insurance that covers medical emergencies and repatriation.
+
+It's possible your insurance already provides that, or offer it as an addon. SafetyWing covers that and is quite convenient to set up.
 
 == Other Resources
 - https://www.digitalnomadskorea.com/post/everything-you-need-to-know-about-koreas-digital-nomad-visa[Digital Nomads Korea: South Korea’s Digital Nomad Visa: The Complete Guide (2024)]

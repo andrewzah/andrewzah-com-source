@@ -150,3 +150,15 @@ pre#landing-pre {
   width: 95vw;
   margin: 0 auto;
 }
+
+h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+h2,h3,h4 {
+  margin-bottom: 0px;
+
+  &+div.paragraph p {
+    margin-top: 0px;
+  }
+}

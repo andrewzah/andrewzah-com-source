@@ -7,8 +7,8 @@
         {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }}
         {{- if ne .Date .Lastmod -}}
         </time>,
-        Updated: <time itemprop="dateModified" datetime="{{ .Date.Format "Jan 02, 2006" }}">
-            {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time>
+        Updated: <time itemprop="dateModified" datetime="{{ .Lastmod.Format "Jan 02, 2006" }}">
+            {{ .Lastmod.Format (default "January 2, 2006" .Site.Params.dateFmt) }} </time>
         {{- else -}}
         </time>
         {{- end -}}
