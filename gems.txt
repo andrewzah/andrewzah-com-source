@@ -1,1 +1,0 @@
-asciidoctor asciidoctor-html5s asciidoctor-diagram rouge
