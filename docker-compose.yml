@@ -1,3 +1,5 @@
+---
+
 services:
   web:
     image: docker.io/andrewzah/personal_site:latest

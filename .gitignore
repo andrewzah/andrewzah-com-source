@@ -1,5 +1,8 @@
 .asciidoctor/
+*.lock
 
 resources/_gen
 cache/
 public/
+
+result

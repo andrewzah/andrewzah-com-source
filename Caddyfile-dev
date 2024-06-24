@@ -1,4 +1,0 @@
-:1314 {
-  root * ./public/
-  file_server
-}
