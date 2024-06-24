@@ -15,7 +15,7 @@ rec {
         caddy
         caddyfile
 
-        #(pkgs.callPackage ./personal-site.nix {})
+        (pkgs.callPackage ./personal-site.nix {})
       ];
     };
 

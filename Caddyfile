@@ -1,5 +1,5 @@
 :2020 {
-  root * /var/www
+  root * /var/www/com.andrewzah
   file_server
 
   encode gzip
