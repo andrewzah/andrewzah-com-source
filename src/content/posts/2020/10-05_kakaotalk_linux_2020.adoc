@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "How to run Kakaotalk on Linux"
 slug = "how-to-kakaotalk-linux"

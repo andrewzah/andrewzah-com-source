@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Things to avoid with Anki"
 slug = "things-to-avoid-with-anki"

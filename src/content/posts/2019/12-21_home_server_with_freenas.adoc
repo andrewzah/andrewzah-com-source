@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Building a Home Server with TrueNAS"
 slug = "building-home-server-truenas"

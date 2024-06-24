@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Korean Food & Cooking Vocabulary Reference"
 slug = "korean-cooking-eating-vocabulary-reference"

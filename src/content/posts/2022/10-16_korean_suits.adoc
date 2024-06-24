@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "I got some suits & shirts made in Korea. Here are the results"
 slug = "korea-suits"

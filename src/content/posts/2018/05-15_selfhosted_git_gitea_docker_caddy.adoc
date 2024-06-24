@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Selfhosting git with Gitea, Docker, Caddy"
 date = "2018-05-15"

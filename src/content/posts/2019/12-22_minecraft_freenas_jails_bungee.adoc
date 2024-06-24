@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Hosting Minecraft Servers + BungeeCord with FreeNAS"
 slug = "hosting-minecraft-servers-bungeecord-freenas"
@@ -591,4 +592,3 @@ and `coreprotect_creative`, both of which have different users.
 - https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/[Tuning the JVM - G1GC Garbage Collector Flags for Minecraft]
 - https://devpro.media/minecraft-server-freenas/[Installing a Minecraft server on FreeNAS]
 - https://www.computerhope.com/jargon/n/netmask.htm[What is a Netmask?]
-

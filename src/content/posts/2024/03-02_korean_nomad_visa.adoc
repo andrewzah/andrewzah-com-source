@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "How I acquired the Korean Digital Nomad Visa"
 slug = "korean-digital-nomad-visa"

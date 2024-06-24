@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 ---
 title: "Web Assembly: What is it? Does it do things? Let's find out!"
 slug: "web-assembly-what-is-it-does-it-do-things"

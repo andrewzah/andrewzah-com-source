@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Garmin's $850 smartwatch can’t render CJK text"
 slug = "garmins-850-dollar-watch-cant-render-korean-text"

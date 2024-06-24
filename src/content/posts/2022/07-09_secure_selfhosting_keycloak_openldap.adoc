@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Secure Selfhosting with OpenLDAP and Keycloak"
 slug = "secure-selfhosting-openldap-keycloak"

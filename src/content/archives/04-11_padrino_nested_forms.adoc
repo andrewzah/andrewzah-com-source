@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Nested Resource Forms Tutorial with Padrino or Rails"
 date = "2019-04-11"

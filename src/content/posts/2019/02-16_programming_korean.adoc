@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Korean for Programmers"
 slug = "korean_for_programmers"

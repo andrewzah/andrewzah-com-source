@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "System76 Launch & Launch Lite Keyboards"
 slug = "system-76-launch-keyboards"

@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 ---
 title: "Living out of 2 backpacks: A 6-month retrospective"
 slug: "living-out-of-2-backpacks-6-month-retrospective"

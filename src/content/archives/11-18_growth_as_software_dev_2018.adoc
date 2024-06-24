@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "My growth as a self-taught developer in 2018"
 slug = "my-growth-self-taught-software-developer-in-2018"

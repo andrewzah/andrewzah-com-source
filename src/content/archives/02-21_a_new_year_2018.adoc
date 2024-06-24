@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 ---
 title: "A new year, a new site"
 slug: "new-year-new-site-2018"

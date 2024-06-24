@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "Automatically deploy your blog via Git with Caddy and Docker"
 date = "2019-06-02"

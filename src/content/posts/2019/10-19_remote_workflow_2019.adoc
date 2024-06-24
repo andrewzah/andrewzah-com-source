@@ -1,3 +1,4 @@
+// Copyright 2016-2024 Andrew Zah
 +++
 title = "My setup for remote programming on OSX in 2019"
 slug = "my-setup-remote-programming-osx-2019"
