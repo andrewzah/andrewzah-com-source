@@ -1,18 +1,10 @@
 ## about
-
 This is the source for [andrewzah.com](https://andrewzah.com).
-It's built on Hugo and Asciidoctor.
+
+I use [Hugo](https://gohugo.io/) and [asciidoctor-{html5s,diagram}](https://asciidoctor.org/)
+for statically building my site.
+
+I use [Nix](https://nixos.org/) to manage the development environment and creating the docker image.
 
 ## license
-
-GPLv3 for the code. The written material is still copyrighted.
-
-## dependencies
-* ruby (currently [`3.1.2`](./tool-versions))
-* hugo (currently `v0.102.0-DEV`)
-
-[gems](./gems.txt):
-* `asciidoctor-diagram`
-* `asciidoctor-html5s`
-* `asciidoctor`
-* `rouge`
+Affero GPLv3 for the code. The written material is still copyrighted.
