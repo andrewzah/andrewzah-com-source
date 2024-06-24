@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "System76 Launch & Launch Lite Keyboards"
 slug = "system-76-launch-keyboards"
@@ -14,3 +13,4 @@ description = "A look at the Launch and Launch Lite keyboards from System76."
 :sectnums:
 
 Test, test, test.
+// Copyright 2016-2024 Andrew Zah

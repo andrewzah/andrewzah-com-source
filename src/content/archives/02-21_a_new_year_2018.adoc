@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 ---
 title: "A new year, a new site"
 slug: "new-year-new-site-2018"
@@ -182,3 +181,4 @@ programming. Possibly with audio hardware? We’ll just have to see.
 I also spent almost 7 months in Korea. More info on that will come, but
 I truly enjoyed my time there, and I’m making a plan on returning
 full-time as a programmer.
+// Copyright 2016-2024 Andrew Zah

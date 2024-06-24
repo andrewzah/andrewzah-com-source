@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Building a Home Server with TrueNAS"
 slug = "building-home-server-truenas"
@@ -273,3 +272,4 @@ about everything I could self host.
 - https://www.ixsystems.com/community/threads/amd-ryzen-build.74232/[AMD Ryzen Build]
 - https://www.ixsystems.com/blog/zfs-dictionary/[iXsystems: ZFS dictionary]
 - https://www.freebsd.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html[Practical rc.d scripting in BSD]
+// Copyright 2016-2024 Andrew Zah

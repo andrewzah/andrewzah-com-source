@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Korean for Programmers"
 slug = "korean_for_programmers"
@@ -484,3 +483,4 @@ romanized Korean it forces me to go and learn the older system as well.
 - [[[levels, 3]]] https://en.wikipedia.org/wiki/Korean_speech_levels[Korean Speech Levels]
 - [[[registers, 4]]] https://en.wikipedia.org/wiki/Register_(sociolinguistics)[English Registers]
 - http://www.koreanwikiproject.com/wiki/%EB%B0%9B%EC%B9%A8[Final Consonant Exception Rules]
+// Copyright 2016-2024 Andrew Zah

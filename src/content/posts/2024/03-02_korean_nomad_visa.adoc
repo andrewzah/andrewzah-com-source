@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "How I acquired the Korean Digital Nomad Visa"
 slug = "korean-digital-nomad-visa"
@@ -164,3 +163,4 @@ It's possible your insurance already provides that, or offer it as an addon. Saf
 == Other Resources
 - https://www.digitalnomadskorea.com/post/everything-you-need-to-know-about-koreas-digital-nomad-visa[Digital Nomads Korea: South Korea’s Digital Nomad Visa: The Complete Guide (2024)]
 - https://blog.digitalnomad-korea.com/korea-digital-nomad-visa-detailed-application-guidelines[Kim Ninja: Korea Digital Nomad Visa: Application Guideline]
+// Copyright 2016-2024 Andrew Zah

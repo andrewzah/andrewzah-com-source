@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 ---
 title: "On Wikipedia"
 date: 2022-07-29
@@ -15,3 +14,4 @@ However, to an average outsider (and non-technical people) Wikipedia seems to ma
 ---
 
 https://www.washingtonpost.com/outlook/2018/10/08/why-nobel-winner-donna-strickland-didnt-have-wikipedia-page[Why Nobel winner Donna Strickland didn’t have a Wikipedia page]
+// Copyright 2016-2024 Andrew Zah

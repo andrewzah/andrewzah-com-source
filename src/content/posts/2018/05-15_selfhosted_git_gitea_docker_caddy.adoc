@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Selfhosting git with Gitea, Docker, Caddy"
 date = "2018-05-15"
@@ -293,3 +292,4 @@ them out into separate folders, with `http` being its own central
 service. You can check out my
 https://git.andrewzah.com/andrei/andrewzah.com[services repository] to
 get an idea.
+// Copyright 2016-2024 Andrew Zah

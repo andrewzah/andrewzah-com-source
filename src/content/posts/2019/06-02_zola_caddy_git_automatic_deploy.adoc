@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Automatically deploy your blog via Git with Caddy and Docker"
 date = "2019-06-02"
@@ -370,3 +369,4 @@ data in my site’s repo. This blew up my docker alpine image from ~2mb to
 the Docker image for the first time. Hitting `ctrl-c` wouldn’t kill it,
 I had to run `docker-compose down`… but I ran it too late. I had to wait
 24 hours to deploy HTTPS for my site after that.''] +++
+// Copyright 2016-2024 Andrew Zah

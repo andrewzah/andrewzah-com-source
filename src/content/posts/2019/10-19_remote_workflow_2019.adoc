@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "My setup for remote programming on OSX in 2019"
 slug = "my-setup-remote-programming-osx-2019"
@@ -374,3 +373,4 @@ suggestions.
 
 - [[[tmg, 0]]] https://medium.com/@n4ru/the-definitive-t430-modding-guide-3dff3f6a8e2e[Definitive T430 Modding Guide]
 - [[[buf, 1]]] https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs[SO: Why do Vim experts prefer buffers over tabs?]
+// Copyright 2016-2024 Andrew Zah

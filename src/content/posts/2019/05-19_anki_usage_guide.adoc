@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Better Anki Usage Guide"
 slug = "better-anki-usage-guide"
@@ -406,3 +405,4 @@ link:../things-to-avoid-with-anki[general things to avoid while using Anki] that
 - [[[t89s,4]]] Targeting an 80-90% Success Rate in Anki[https://eshapard.github.io/anki/target-an-80-90-percent-success-rate-in-anki.html]
 - [[[lkanpb,5]]] Low-Key Anki: No Penalties or Boosting[https://massimmersionapproach.com/table-of-contents/anki/low-key-anki/low-key-anki-no-penalties-or-boosting/]
 - [[[lkarsz,6]]] Low-Key Anki: ResetEZ[https://massimmersionapproach.com/table-of-contents/anki/low-key-anki/low-key-anki-no-penalties-or-boosting/]
+// Copyright 2016-2024 Andrew Zah

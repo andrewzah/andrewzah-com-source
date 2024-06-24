@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 ---
 title: "Friendly Sites"
 date: 2020-08-01
@@ -10,3 +9,4 @@ Links to sites operated by friends/colleagues that write about interesting thing
 
 * http://cdaniels.net/index.html[Charles Daniels]
 * https://jyn.dev/[Jynn]
+// Copyright 2016-2024 Andrew Zah

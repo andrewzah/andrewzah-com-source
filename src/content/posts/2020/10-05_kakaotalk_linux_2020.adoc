@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "How to run Kakaotalk on Linux"
 slug = "how-to-kakaotalk-linux"
@@ -85,3 +84,4 @@ Kakaotalk is now installed! You should now see this screen:
 image::https://s3.amazonaws.com/andrewzah.com/posts/2020_10_05_kakaotalk_linux/main_menu.png[Playonlinux main menu]
 
 Double click KakaoTalk and sign in. Congrats, you now have KakaoTalk running on linux!
+// Copyright 2016-2024 Andrew Zah

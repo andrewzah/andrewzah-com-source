@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Korean Food & Cooking Vocabulary Reference"
 slug = "korean-cooking-eating-vocabulary-reference"
@@ -913,3 +912,4 @@ intestine
   http://www.koreanwikiproject.com/wiki/Nutrition
 - Korean Wiki Project - Eating Out and Drinking:
   http://www.koreanwikiproject.com/wiki/Nutrition
+// Copyright 2016-2024 Andrew Zah

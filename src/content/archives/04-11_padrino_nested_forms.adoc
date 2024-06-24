@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Nested Resource Forms Tutorial with Padrino or Rails"
 date = "2019-04-11"
@@ -349,3 +348,4 @@ model and a nested object at the same time!
 - https://sequel.jeremyevans.net/rdoc-plugins/classes/Sequel/Plugins/NestedAttributes.html[Sequel Plugins Nested Attributes Reference]
 - https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html[Rails Api Reference for Nested Attributes]
 - http://padrinorb.com/guides/application-helpers/nested-object-form-support/[Padrino Nested Form Reference]
+// Copyright 2016-2024 Andrew Zah

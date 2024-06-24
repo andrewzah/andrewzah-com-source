@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Secure Selfhosting with OpenLDAP and Keycloak"
 slug = "secure-selfhosting-openldap-keycloak"
@@ -429,3 +428,4 @@ keycloak:
 
 We'll need to create a Realm for our services, and then a Client for EAS.
 If a service natively supports OIDC or Keycloak logins, then you can skip EAS and create a Client for those specifically.
+// Copyright 2016-2024 Andrew Zah

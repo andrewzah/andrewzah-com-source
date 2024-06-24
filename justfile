@@ -1,5 +1,6 @@
 docker-build:
-  docker build . -t andrewzah/personal_site:latest
+  nix-build personal-site-docker.nix -A img
+  docker load < ./result
 
 docker:
   just docker-build

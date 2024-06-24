@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "My growth as a self-taught developer in 2018"
 slug = "my-growth-self-taught-software-developer-in-2018"
@@ -243,3 +242,4 @@ I just want to keep learning and growing overall. I don’t know if I’ll
 actually develop in Common Lisp, but I _do_ know it’ll give me a new
 perspective in programming. I’m very excited to see what 2019 offers in
 terms of safe, performant languages.
+// Copyright 2016-2024 Andrew Zah

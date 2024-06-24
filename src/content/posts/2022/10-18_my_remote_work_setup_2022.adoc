@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "My Remote Setup for 2022"
 slug = "remote-setup-2022"
@@ -154,3 +153,4 @@ NOTE: The Amazon links below are affiliate links.
 * Apple USB-C Power Adapter (Type C/F)
 * https://www.amazon.com/Kensington-International-Grounded-Adapter-K38237WW/dp/B071FYG49B[Kensington Travel Adapter]
 * Monoprice USB-C -> USB-C 10m cable
+// Copyright 2016-2024 Andrew Zah

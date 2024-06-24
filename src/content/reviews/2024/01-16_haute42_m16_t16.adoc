@@ -1,4 +1,3 @@
-// Copyright 2016-2024 Andrew Zah
 +++
 title = "Haute42 M16 & T16 Fightsticks"
 slug = "haute42-m16-t16-fightsticks"
@@ -10,3 +9,4 @@ description = ""
 +++
 
 Test, test, test.
+// Copyright 2016-2024 Andrew Zah
