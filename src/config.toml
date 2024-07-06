@@ -7,10 +7,11 @@ canonifyUrls = true
 toc = true
 destination = "./public"
 title = "Andrew Zah"
+enableGitInfo = true
 
-[author]
-  name = "Andrew Zah"
-  email = "zah@andrewzah.com"
+[params.author]
+name = "Andrew Zah"
+email = "zah@andrewzah.com"
 
 [taxonomies]
   tag = 'tags'

@@ -5,6 +5,7 @@ in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
     hugo
+    graphviz
 
     (ruby_3_3.withPackages (ps:
       with ps; [
