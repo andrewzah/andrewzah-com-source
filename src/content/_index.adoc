@@ -24,5 +24,4 @@ link:/contact[Contact]
 
 link:/openbook[Openbook]
 
-== Misc
-[Resume](/resume-andrew-zah.pdf)
+link:/resume-andrew-zah.pdf[Resume]
