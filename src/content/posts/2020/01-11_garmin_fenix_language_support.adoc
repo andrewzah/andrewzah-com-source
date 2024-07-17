@@ -12,10 +12,6 @@ description = "My $850 watch can’t render CJK languages because Garmin assumes
 
 = Garmin's $850 smartwatch can’t render Korean text
 
-NOTE: This article was written at the beginning of 2020.
-As of 2021-07-08, the Fenix 6X Pro Sapphire 51mm is $800 on Garmin's website.
-The Solar 51mm variant is $950.
-
 I recently acquired a
 https://buy.garmin.com/en-US/US/p/641435/pn/010-02157-10[Garmin Fenix
 6X], currently Garmin’s flagship model. While I did research beforehand,
@@ -81,14 +77,10 @@ language/region and allow the Korean version of games to be played.
 
 ---
 
-All too often, developers make assumptions about regions and language,
+All too often, people make assumptions about regions and language,
 if they do internationalization at all. This is understandable for open
 source projects with limited resources, and less understandable for
 large companies. Surely language support would help a product sell more?
-
-Someone can correct me if I’m wrong here, but I can’t imagine that it
-would be very difficult for Garmin to implement font packs for various
-languages, or allow users to use their own fonts.
 
 Just give me a way to change the language!
 // Copyright 2016-2024 Andrew Zah

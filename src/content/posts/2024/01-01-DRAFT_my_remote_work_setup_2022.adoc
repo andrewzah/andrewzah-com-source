@@ -1,11 +1,13 @@
 +++
-title = "My Remote Setup for 2022"
-slug = "remote-setup-2022"
-date = "2022-10-18"
+title = "My Remote Programming Setup for 2024"
+slug = "remote-setup-2024"
+date = "2024-07-17"
 tags = ["travel", "remote-work", "gear"]
 keywords = "tech gear setup remote nomad digital 2022 2021 2023 workflow productivity productive"
 description = "The remote setup and workflow I've set up for 2022."
+series = ["Remote Programming Setup"]
 draft = true
+toc = true
 +++
 
 = My remote work setup for 2022

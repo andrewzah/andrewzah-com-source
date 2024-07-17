@@ -5,9 +5,10 @@
   <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
   <link rel="canonical" href="{{ .Permalink | absURL }}">
-
-  <!-- fosstodon verification -->
-  <link rel="me" href="https://fosstodon.org/@andrewzah">Mastodon</a>
+  <link rel="alternate"
+    type="application/rss+xml"
+    href="{{.Site.BaseURL }}/posts/index.xml"
+    title="{{ .Site.Title }}">
 
   {{ block "title" . -}}
     {{- if .IsHome -}}

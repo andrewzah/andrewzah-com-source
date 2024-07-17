@@ -1,19 +1,32 @@
 ---
 title: "Contact"
-date: 2024-07-06
+date: 2024-07-17
 description: "Contact"
 slug: "contact"
 ---
 
-link:/D87BD9DCF11BACD6CDB40CB213732FB13E61E0BE.pubkey[gpg key]
+I live in Seoul, which is GMT+9, or 14 hours ahead of the east coast, USA
+(13 hours during daylight savings).
 
-Email is strongly preferred.
+[cols="1,2"]
+|===
+|GPG
+|link:/D87BD9DCF11BACD6CDB40CB213732FB13E61E0BE.pubkey[gpg key]
+-
+link:/message.txt.asc[message.txt.asc]
 
-email: mailto:zah@andrewzah.com[zah@andrewzah.com]
+|email (preferred)
+|mailto:zah@andrewzah.com[zah@andrewzah.com]
 
-bluesky: https://bsky.app/profile/abare.party
 
-discord: @stele_cazatoare
+|mastodon / fediverse
+|link:https://fosstodon.org/@andrewzah[@andrewzah@fosstodon.org]
 
-linkedin: https://www.linkedin.com/in/andrewzah/
+|bluesky
+|link:https://bsky.app/profile/abare.party[@abare.party]
+
+|linkedin
+|link:https://www.linkedin.com/in/andrewzah/[in/andrewzah]
+|===
+
 // Copyright 2016-2024 Andrew Zah

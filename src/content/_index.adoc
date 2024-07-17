@@ -1,0 +1,28 @@
+I'm 28, a first generation Romanian-American, and currently live in Seoul.
+I work for
+link:https://www.ossys.com/[Open Source Systems] on
+https://analyticshq.com/[AnalyticsHQ] and other projects.
+
+I enjoy researching things and making useful applications for people.
+
+== Popular Posts
+link:/posts/2024/korean-digital-nomad-visa/[How I acquired the Korean Digital Nomad Visa]
+
+== Standing Invitation
+
+If you'd like to discuss something you think would be up my alley, my inbox
+(link:mailto:zah@andrewzah.com[zah@andrewzah.com]) is open.
+
+In person, I'm open to a coffee if I'm not busy.
+If you see me at some conference or meetup, absolutely come up and introduce yourself.
+
+== Links
+
+link:/cats[Cats]
+
+link:/contact[Contact]
+
+link:/openbook[Openbook]
+
+== Misc
+[Resume](/resume-andrew-zah.pdf)

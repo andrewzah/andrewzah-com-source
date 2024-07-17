@@ -35,12 +35,19 @@
         {{ .TableOfContents }}
         </details>
       {{- end -}}
+      {{- if .Params.series -}}
+        <hr>
+        {{- with index (.GetTerms "series") 0 -}}
+          <div class="notice--info">
+            <p>This post is part of the <a href="{{ .Permalink }}" style="font-weight: bold">{{ .LinkTitle }}</a> series.</p>
+          </div>
+        {{- end -}}
+      {{- end -}}
       <hr>
     </div>
   {{- end -}}
 
   {{ .Content }}
-
 
   {{- if or (eq .Type "posts") (eq .Type "pages") -}}
     <div id="back-meta">

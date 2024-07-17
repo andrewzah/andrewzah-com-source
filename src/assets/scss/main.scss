@@ -71,11 +71,33 @@ article {
     margin: auto 0px;
   }
 
+  > div.sect1 > h2 > a {
+    border-bottom: none;
+    color: $text;
+
+    &:hover {
+      color: $primary-hover;
+    }
+  }
+
   > div.sect1 a.link {
     &:hover {
       &:after {
         content: ' \00A7';
       }
+    }
+  }
+
+  //html body article div.sect1 div.sectionbody table.tableblock.frame-all.grid-all.stretch
+  >table, div.sectionbody table.tableblock {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-top: 5px;
+
+    tbody tr td {
+      border: 1px solid #ccc;
     }
   }
 }

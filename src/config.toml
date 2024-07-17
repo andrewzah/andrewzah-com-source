@@ -6,7 +6,7 @@ summaryLength = 15
 canonifyUrls = true
 toc = true
 destination = "./public"
-title = "Andrew Zah"
+title = "Andrew Zah's blog"
 titleCaseStyle = 'none'
 
 [params.author]
@@ -15,7 +15,7 @@ email = "zah@andrewzah.com"
 
 [taxonomies]
   tag = 'tags'
-  #series = 'series'
+  series = 'series'
 
 [markup]
   [markup.asciidocext]

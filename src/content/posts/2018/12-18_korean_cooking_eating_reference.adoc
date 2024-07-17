@@ -2,23 +2,26 @@
 title = "Korean Food & Cooking Vocabulary Reference"
 slug = "korean-cooking-eating-vocabulary-reference"
 date = "2018-12-28"
-tags = ["korean", "vocabulary", "cooking"]
+tags = ["korean", "vocabulary"]
 categories = ["education"]
+toc = true
+#series = ["Korean Vocabulary Lists"]
 description = "Here is a compiled list of Korean words related to food, cooking, eating (out), going out, and nutrition."
 +++
 
-Here is a compiled list of Korean words related to food, cooking, eating
-(out), going out, and nutrition.
+= Korean Food & Cooking Vocabulary Reference
+:toc:
+
+Here is a compiled list of Korean words related to food, cooking, eating out, going out, and nutrition.
 
 If you spot a mistake or wish to add to this, please
-mailto:blog@andrewzah.com?subject=Korean%20Cooking%20List%20[contact
-Andrew].
+mailto:zah@andrewzah.com?subject=Korean%20Cooking%20List%20[contact Andrew].
 
 == General
 
 === Positions / People Terms
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |===================================================================
 |Word |Meaning
 |조리사 |a cook (요리사 is more common, see Cooking Verbs footnotes)
@@ -27,7 +30,7 @@ Andrew].
 
 === General Terms
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |================================================
 |Word |Meaning
 |요리 |cooking
@@ -52,7 +55,7 @@ Andrew].
 
 === Fruits
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |==============================
 |Word |Meaning
 |사과 |apple
@@ -85,7 +88,7 @@ Andrew].
 
 === Vegetables
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |======================
 |Word |Meaning
 |콩 |bean
@@ -118,7 +121,7 @@ Andrew].
 
 === Beverages
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |===============================
 |Word |Meaning
 |음료, 음료수 |beverages, drinks
@@ -148,7 +151,7 @@ Andrew].
 
 === Meat
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |========================
 |Word |Meaning
 |베이컨 |bacon
@@ -165,7 +168,7 @@ Andrew].
 
 === Seafood
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |==============================
 |Word |Meaning
 |전복 |abalone
@@ -191,7 +194,7 @@ Andrew].
 
 === Nuts
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |==============
 |Word |Meaning
 |도토리 |acorn
@@ -203,7 +206,7 @@ Andrew].
 
 === Misc
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=========================
 |Word |Meaning
 |버터 |butter
@@ -232,7 +235,7 @@ Andrew].
 
 === Ingredients, Spices
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |===============================
 |Word |Meaning
 |양념 |spices, seasonings
@@ -251,7 +254,7 @@ Andrew].
 
 === Sauces & Seasonings
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |===========================
 |Word |Meaning
 |꿀 |honey
@@ -268,7 +271,7 @@ Andrew].
 
 === Utensils, Dishes, & Cups
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |==================================
 |Word |Meaning
 |사발 |bowl
@@ -296,7 +299,7 @@ Andrew].
 
 === Kitchen Tools & Related
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |============================================
 |Word |Meaning
 |그램 |a gram
@@ -333,7 +336,7 @@ Andrew].
 
 === Appliances & Rooms
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |======================
 |Word |Meaning
 |믹서기 |blender
@@ -352,7 +355,7 @@ Andrew].
 
 === Cooking Verbs
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |====================================================================
 |Word |Meaning
 |잘게 썰다 |cut into small pieces
@@ -406,15 +409,9 @@ Andrew].
 |계량하다 |to weigh, measure
 |====================================================================
 
-__________________________________________________________________________________________________________________________________________________________________________________________________________________
-Please note: 요리하다 and 조리하다 both mean cooking but there is a
-slight difference in the feeling. 조리하다 focuses more on the action of
-cooking, whereas 요리하다 is more of a technical and artisic feeling.
-__________________________________________________________________________________________________________________________________________________________________________________________________________________
-
 === Adjectives
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |====================================================
 |Word |Meaning
 |썩다 (past tense) |to be rotten
@@ -443,7 +440,7 @@ ________________________________________________________________________________
 
 === Nouns (Nominalized)
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |===========================
 |Word |Meaning
 |맛 |taste
@@ -458,7 +455,7 @@ ________________________________________________________________________________
 
 === Adjectives
 
-[width="100%",cols="^50%,^50%",options="header",]
+[width="100%",cols="1,3",options="header",]
 |=======================================================================
 |Word |Meaning
 |떫다 |bitter, sour, rough-tasting
@@ -525,7 +522,7 @@ newly-baked bread)
 
 === Nouns
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=====================================================
 |Word |Meaning
 |입맛 |appetite
@@ -542,7 +539,7 @@ newly-baked bread)
 
 === Verbs
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=========================================================
 |Word |Meaning
 |건배 |cheers, a toast
@@ -568,7 +565,7 @@ newly-baked bread)
 
 === Adjectives
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=====================================================
 |Word |Meaning
 |알딸딸하다 |slang for being buzzed or tipsy
@@ -582,7 +579,7 @@ newly-baked bread)
 
 == Counters
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=================================================
 |Counter |Items Counted
 |조각 |a slice (pizza/pie), a piece (of something)
@@ -595,7 +592,7 @@ newly-baked bread)
 
 == Nutrition & Related Words
 
-[cols="^,^",options="header",]
+[cols="1,3",options="header",]
 |=================================
 |Word |Meaning
 |칼슘 |calcium
@@ -623,269 +620,321 @@ newly-baked bread)
 
 === Korean Food
 
-[width="100%",cols="^34%,^33%,^33%",options="header",]
-|=======================================================================
-|Base Food |Food/Description |Description
-|김치 |Kimchi, made by salting vegetables such as napa cabbages, white
-radishes, etc., and seasoning and fermenting them. |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*김치* |Kimchi, made by salting vegetables such as napa cabbages, white
+radishes, etc., and seasoning and fermenting them.
 
-| |겉절이 |Fresh Kimchi
+|겉절이 |Fresh Kimchi
 
-| |깍두기 |Kimchi made of salt-pickled radish chopped in small cubes
+|깍두기 |Kimchi made of salt-pickled radish chopped in small cubes
 mixed with seasonings such as red pepper powder, etc.
 
-| |나박김치 |Chilled Water Kimchi, made by cutting slices of radishes in
+|나박김치 |Chilled Water Kimchi, made by cutting slices of radishes in
 square shapes, salting them, adding chopped vegetables and spices, and
 finally soaking all these ingredients in seasoned water.
 
-| |배추김치 |Kimchi made with napa cabbages.
+|배추김치 |Kimchi made with napa cabbages.
 
-| |백김치 |White Kimchi, made without chili pepper.
+|백김치 |White Kimchi, made without chili pepper.
 
-| |보쌈김치 |Wrapped Kimchi, made by seasoning radishes, vegetables,
+|보쌈김치 |Wrapped Kimchi, made by seasoning radishes, vegetables,
 etc., sliced in fixed sizes, and wrapping them with a large napa cabbage
 leaf.
 
-| |오이소박이 |Cucumber Kimchi, made by cutting cucumbers twice
+|오이소박이 |Cucumber Kimchi, made by cutting cucumbers twice
 lengthwise, leaving one end uncut, and then stuffing them with chopped
 chives and onions seasoned with chopped scallions, minced garlic, red
 pepper, etc.
 
-| |두부김치 |Tofu with Stir-Fried Kimchi
+|두부김치 |Tofu with Stir-Fried Kimchi
+|===
 
-|밥 |Cooked White Rice |
+[width="100%",cols="1,3",options="header",]
+|===
+|Word |Meaning
 
-| |콩밥 |Rice with beans
+|*밥* |Cooked White Rice
 
-| |김밥 |Dried Seaweed Rolls, made by rolling rice and various other
+|콩밥 |Rice with beans
+
+|김밥 |Dried Seaweed Rolls, made by rolling rice and various other
 ingredients in dried laver seaweed and cutting them into bite-size
 slices.
 
-| |김치볶음밥 |Kimchi fried rice, made by stir-frying chopped kimchi,
+|김치볶음밥 |Kimchi fried rice, made by stir-frying chopped kimchi,
 meat, vegetables, etc., with rice.
 
-| |돌솥비빔밥 |Stone Pot Bibimbap. Bibimbap served in a sizziling-hot
+|돌솥비빔밥 |Stone Pot Bibimbap. Bibimbap served in a sizziling-hot
 earthenware bowl.
 
-| |불고기덮밥 |Bulgogi with Rice
+|불고기덮밥 |Bulgogi with Rice
 
-| |비빔밥 |Rice topped with sliced meat, mushrooms, eggs, seasoned
+|비빔밥 |Rice topped with sliced meat, mushrooms, eggs, seasoned
 vegetables, some seasonings, etc., of which all the ingredients are
 stirred before eating.
 
-| |산채비빔밥 |Mountain Vegetable Bibimbap
+|산채비빔밥 |Mountain Vegetable Bibimbap
 
-| |쌈밥 |Leaf wraps and rice, eaten after wrapping rice, several side
+|쌈밥 |Leaf wraps and rice, eaten after wrapping rice, several side
 dishes, and ssamjang, condiments, on a leaf of lettuce, sesame, etc.
 
-| |영양돌솥밥 |Nutritious Stone Pot Rice
+|영양돌솥밥 |Nutritious Stone Pot Rice
 
-| |오징어덮밥 |Spicy Sautéed Squid with Rice
+|오징어덮밥 |Spicy Sautéed Squid with Rice
 
-| |콩나물국밥 |Bean Sprout Soup with Rice
+|콩나물국밥 |Bean Sprout Soup with Rice
+|===
 
-|볶음 |Stir-fried dish |
+[width="100%",cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*볶음* |Stir-fried dish
 
-| |낙지볶음 |Stir-Fried Octopus
+|낙지볶음 |Stir-Fried Octopus
 
-| |오징어볶음 |Stir-Fried Squid
+|오징어볶음 |Stir-Fried Squid
 
-| |제육볶음 |Stir-Fried Pork
+|제육볶음 |Stir-Fried Pork
+|===
 
-|죽 |Porridge |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*죽* |Porridge
 
-| |잣죽 |Pine Nut Porridge
+|잣죽 |Pine Nut Porridge
 
-| |전복죽 |Rice Porridge with Abalone
+|전복죽 |Rice Porridge with Abalone
 
-| |호박죽 |Pumpkin Porridge
+|호박죽 |Pumpkin Porridge
 
-| |흑임자죽 |Black Sesame and Rice Porridge
+|흑임자죽 |Black Sesame and Rice Porridge
+|===
 
-|찌개 |Korean stew made by putting tofu, vegetables, etc., in a small
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*찌개* |Korean stew made by putting tofu, vegetables, etc., in a small
 amount of broth with soybean or red pepper paste, and then boiling it
-with some spices or seasonings to taste a little salty. |
+with some spices or seasonings to taste a little salty.
 
-| |김치찌개 |Kimchi Stew
+|김치찌개 |Kimchi Stew
 
-| |된장찌개 |Soybean Paste Stew
+|된장찌개 |Soybean Paste Stew
 
-| |부대찌개 |Spicy Sausage Stew
+|부대찌개 |Spicy Sausage Stew
 
-| |순두부찌개 |Spicy Soft Tofu Stew
+|순두부찌개 |Spicy Soft Tofu Stew
 
-| |청국장찌개 |Rich Soybean Paste Stew
+|청국장찌개 |Rich Soybean Paste Stew
 
-| |해물순두부찌개 |Seafood Soft Tofu Stew
+|해물순두부찌개 |Seafood Soft Tofu Stew
+|===
 
-|탕 |Soup |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*탕* |Soup
 
-| |삼계탕 |Ginseng Chicken Soup
+|삼계탕 |Ginseng Chicken Soup
 
-| |보신탕 |Dog soup
+|보신탕 |Dog soup
 
-| |갈비탕 |Short Rib Soup
+|갈비탕 |Short Rib Soup
 
-| |감자탕 |Pork-on-the-Bone Soup with Potatoes
+|감자탕 |Pork-on-the-Bone Soup with Potatoes
 
-| |곰탕 |Thick Beef Bone Soup
+|곰탕 |Thick Beef Bone Soup
 
-| |매운탕 |Spicy Fish Soup
+|매운탕 |Spicy Fish Soup
 
-| |설렁탕 |Ox Bone Soup
+|설렁탕 |Ox Bone Soup
 
-| |우거지갈비탕 |Cabbage and Short Rib Soup
+|우거지갈비탕 |Cabbage and Short Rib Soup
 
-| |육개장 |Spicy Beef Soup
+|육개장 |Spicy Beef Soup
 
-| |해물탕 |Spicy Seafood Soup
+|해물탕 |Spicy Seafood Soup
+|===
 
-|국 |Soup |
 
-| |떡국 |Sliced Rice Cake Soup
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*국* |Soup
 
-| |미역국 |Seaweed Soup
+|떡국 |Sliced Rice Cake Soup
 
-| |된장국 |Soybean Paste Soup
+|미역국 |Seaweed Soup
 
-| |떡만둣국 |Rice cake and Mandu Soup
+|된장국 |Soybean Paste Soup
 
-| |만둣국 |Mandu Soup
+|떡만둣국 |Rice cake and Mandu Soup
 
-| |북엇국 |Dried Pollock Soup
+|만둣국 |Mandu Soup
 
-|전골 |Hot Pot, food made by putting meat, mushroom, seafood, seasoning,
-etc., in a stew pot, adding broth, and boiling it. |
+|북엇국 |Dried Pollock Soup
+|===
 
-| |곱창전골 |Spicy Beef Tripe Hot Pot
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*전골* |Hot Pot, food made by putting meat, mushroom, seafood, seasoning,
+etc., in a stew pot, adding broth, and boiling it.
 
-| |국수전골 |Noodles Hot Pot
+|곱창전골 |Spicy Beef Tripe Hot Pot
 
-| |두부전골 |Tofu Hot Pot
+|국수전골 |Noodles Hot Pot
 
-| |만두전골 |Mandu Hot Pot
+|두부전골 |Tofu Hot Pot
 
-| |불낙전골 |Bulgogi and Octopus Hot Pot
+|만두전골 |Mandu Hot Pot
 
-| |신선로 |Royal Hot Pot
+|불낙전골 |Bulgogi and Octopus Hot Pot
 
-|찜 / 조림 |Steamed, Braised dish |
+|신선로 |Royal Hot Pot
+|===
 
-| |아귀찜 |Spicy Angler Fish with Soybean Sprouts
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*찜* / *조림* |Steamed, Braised dish
 
-| |해물찜 |Braised Seafood
+|아귀찜 |Spicy Angler Fish with Soybean Sprouts
 
-| |갈비찜 |Braised Short Ribs
+|해물찜 |Braised Seafood
 
-| |찜닭 |Braised Chili Chicken
+|갈비찜 |Braised Short Ribs
 
-| |갈치조림 |Braised Cutlassfish
+|찜닭 |Braised Chili Chicken
 
-| |고등어조림 |Braised Mackerel
+|갈치조림 |Braised Cutlassfish
 
-| |두부조림 |Braised Pan-Fried Tofu
+|고등어조림 |Braised Mackerel
 
-| |은대구조림 |Braised Cod
+|두부조림 |Braised Pan-Fried Tofu
 
-|국수 / 면 |Noodles, made by kneading wheat flour, buckwheat, potatoes,
+|은대구조림 |Braised Cod
+|===
+
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*국수* / *면* |Noodles, made by kneading wheat flour, buckwheat, potatoes,
 etc. and cutting the dough into long thin strips with a knife, machine,
-or by hand, or a dish made by boiling this. |
+or by hand, or a dish made by boiling this.
 
-| |냉면 |Cold noodles
+|냉면 |Cold noodles
 
-| |물냉면 |Chilled Buckwheat Noodle Soup
+|물냉면 |Chilled Buckwheat Noodle Soup
 
-| |비빔냉면 |Spicy Mixed Buckwheat Noodles
+|비빔냉면 |Spicy Mixed Buckwheat Noodles
 
-| |자장면 |Black bean noodles
+|자장면 |Black bean noodles
 
-| |잡채 |sweet potatoe noodles
+|잡채 |sweet potatoe noodles
 
-| |신라면 |Shin Ramen
+|신라면 |Shin Ramen
 
-| |비빔국수 |Spicy Mixed Noodles
+|비빔국수 |Spicy Mixed Noodles
 
-| |수제비 |Sujebi (Korean Style Pasta Soup)
+|수제비 |Sujebi (Korean Style Pasta Soup)
 
-| |잔치국수 |Banquet Noodles
+|잔치국수 |Banquet Noodles
 
-| |쟁반국수 |Jumbo Sized Buckwheat Noodles
+|쟁반국수 |Jumbo Sized Buckwheat Noodles
 
-| |칼국수 |Noodle Soup
+|칼국수 |Noodle Soup
+|===
 
-|고기 |Meat |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|고기 |Meat
 
-| |삼겹살 |pork belly meat: A fleshy part of a pork belly, featuring
+|삼겹살 |pork belly meat: A fleshy part of a pork belly, featuring
 three layers of fat and flesh, grilled pork belly, a Korea dish made
 from the meat.
 
-| |갈비 |Ribs
+|갈비 |Ribs
 
-| |불고기 |Bulgogi
+|불고기 |Bulgogi
 
-| |오삼고기 |Combination of 오징어 and 삼겹살 meat
+|오삼고기 |Combination of 오징어 and 삼겹살 meat
 
-| |닭발 |Chicken feet
+|닭발 |Chicken feet
+|===
 
-|물고기 |fish |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*물고기* |fish
 
-|조기 |yellow corvina (popular in Korea - the fish is fried whole) |
+|조기 |yellow corvina (popular in Korea - the fish is fried whole)
 
-|고등어 |mackerel (also fried whole) |
+|고등어 |mackerel (also fried whole)
 
-|참치 |tuna |
+|참치 |tuna
 
-|멸치 |anchovy (popular side dish) |
+|멸치 |anchovy (popular side dish)
+|===
 
-|구이 |Grilled |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*구이* |Grilled
 
-| |곱창구이 |Grilled Beef Tripe
+|곱창구이 |Grilled Beef Tripe
 
-| |더덕구이 |Grilled Deodeok
+|더덕구이 |Grilled Deodeok
 
-| |돼지갈비구이 |Grilled Spareribs
+|돼지갈비구이 |Grilled Spareribs
 
-| |생선구이 |Grilled Fish
+|생선구이 |Grilled Fish
 
-| |소갈비구이 |Grilled Beef Ribs
+|소갈비구이 |Grilled Beef Ribs
 
-| |오리구이 |Grilled Duck
+|오리구이 |Grilled Duck
 
-| |황태구이 |Seasoned and Grilled Dried Pollock
+|황태구이 |Seasoned and Grilled Dried Pollock
+|===
 
-|채 |Platter |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*채* |Platter
 
-| |잡채 |Noodles with Sautéed Vegetables
+|잡채 |Noodles with Sautéed Vegetables
 
-| |탕평채 |Mung Bean Jelly Mixed with Vegetables and Beef
+|탕평채 |Mung Bean Jelly Mixed with Vegetables and Beef
 
-| |해파리냉채 |Jellyfish Platter
+|해파리냉채 |Jellyfish Platter
+|===
 
-|만두 |dumpling |
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|*만두* |dumpling |
 
-| |만두소 |dumpling filling/stuffing
+|만두소 |dumpling filling/stuffing
 
-| |만두피 |dumpling skin
+|만두피 |dumpling skin
 
-| |군만두 |fried dumpling
+|군만두 |fried dumpling
 
-| |물만두 |boiled dumpling
+|물만두 |boiled dumpling
 
-| |찐만두 |steamed dumpling
-
-|Other | |
-
-| |순대 |Korean blood sausage, made by steaming seasoned sweet potato
-noodles, tofu, glutinous rice, etc. which are stuffed into a pig’s
-intestine
-|=======================================================================
+|찐만두 |steamed dumpling
+|===
 
 === Other Food
 
-[cols="^,^",options="header",]
-|==============================
-|Food |Description/Meaning
-|샐러드 |salad
+[cols="1,3",options="header",]
+|===
+|Word |Meaning
+|순대 |Korean blood sausage, made by steaming seasoned sweet potato, noodles, tofu, glutinous rice, etc. which are stuffed into a pig’s intestine
 |샌드위치 |sandwhich
 |감자 튀김 |french fries, chips
 |도넛 |doughnut
@@ -897,19 +946,13 @@ intestine
 |비스킷 |biscuit
 |케이크 |cake
 |아이스크림 |ice cream
-|==============================
+|===
 
 [bibliography]
 == References
 
-- National Institute of Korean Language Dictionary:
-  https://krdict.korean.go.kr/eng/
-- Korean Wiki Project - Cooking:
-  http://www.koreanwikiproject.com/wiki/Cooking
-- Korean Wiki Project - Nutrition:
-  http://www.koreanwikiproject.com/wiki/Nutrition
-- Korean Wiki Project - Food and Drinks:
-  http://www.koreanwikiproject.com/wiki/Nutrition
-- Korean Wiki Project - Eating Out and Drinking:
-  http://www.koreanwikiproject.com/wiki/Nutrition
+- link:https://krdict.korean.go.kr/eng/[National Institute of Korean Language Dictionary]
+- link:http://www.koreanwikiproject.com/wiki/Cooking[Korean Wiki Project - Cooking]
+- link:http://www.koreanwikiproject.com/wiki/Nutrition[Korean Wiki Project - Nutrition]
+
 // Copyright 2016-2024 Andrew Zah
