@@ -1,0 +1,244 @@
++++
+title = "This is a test of this site's capabilities."
+date = "1970-05-07"
+lastmod = "1974-04-11"
+draft = true
+categories = [ "personal" ]
+tags = [ "asciidoctor", "markdown"]
+keywords = "site capability test keywords"
+description = "site capability test desc"
+toc = true
++++
+
+= This is a test of this site's capabilities.
+:toc:
+:sectnums:
+:sectlinks:
+:sectnumlevels: 3
+:source-highlighter: rouge
+:docinfo: shared
+
+This is an example document.
+
+It is here to test how things look.
+It is here to test how things look.
+It is here to test how things look.
+
+_It is here to test how things look._
+
+*It is here to test how things look.*
+
+*_It is here to test how things look._*
+
+[.full-width]
+image::https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png[Dynmap rendering of our FreeNAS minecaft server]
+
+== Lorem Ipsum
+
+Nam luctus ac libero eget condimentum.
+Vestibulum iaculis tincidunt nisl, eu consectetur est malesuada in.
+Ut a elit et enim laoreet pretium eget fermentum ipsum.
+Sed sed tristique tellus, ut placerat velit.
+Donec vulputate id velit at consequat.
+Praesent iaculis suscipit neque, in ullamcorper massa interdum lobortis.
+Sed at ligula mattis mi dictum ultricies.
+Praesent tincidunt risus non metus sagittis gravida.
+Integer finibus non turpis vel accumsan.
+Aenean varius convallis nulla sed tincidunt.
+
+Nullam nec dui ut mi venenatis dignissim.
+Nunc lacus ipsum, tincidunt non dolor vel, tincidunt venenatis felis.
+Maecenas nec porttitor just.
+Donec gravida ex era.
+Proin eget ex at erat varius gravid.
+Donec sit amet tincidunt du.
+Sed eget maximus urna, eu vulputate nis.
+Phasellus nisi velit, sagittis quis rutrum sit amet, sodales sed era.
+
+Curabitur nibh erat, ullamcorper convallis felis at, rhoncus euismod augu.
+Phasellus et vulputate justo, a pellentesque du.
+Sed nec condimentum just.
+Integer porta felis vel massa mollis, vel tempus ante fringill.
+Quisque hendrerit, ligula vel tincidunt vehicula, eros lacus faucibus lacus, quis maximus lorem nisl efficitur tellu.
+Maecenas erat odio, interdum blandit tincidunt ac, vulputate vel puru.
+Ut sit amet sem convallis, rutrum purus in, vehicula mauri.
+Sed vulputate congue augue, sit amet mattis metus congue sit amet.
+
+Phasellus quis euismod est, ac scelerisque justo.
+Etiam porttitor hendrerit tempor.
+Vestibulum vitae faucibus erat, sit amet egestas mi.
+Vivamus dui urna, vulputate sed erat id, sodales molestie tellus.
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Nam vitae eros volutpat, lobortis ex vel, gravida ante.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Maecenas lacinia consectetur diam, non dapibus erat ultrices in.
+Nam maximus accumsan magna quis dictum.
+Aenean tincidunt enim ipsum, eu bibendum nisl dapibus a.
+Nullam rutrum condimentum orci, ut facilisis ex mollis sit amet.
+Quisque dictum semper dui et fermentum.
+Vestibulum interdum ipsum nisi, sit amet sollicitudin libero egestas sit amet.
+Nam ut lacus laoreet, mattis sem vel, faucibus orci.
+
+== The Meat and Potatoes
+
+A short quote:
+
+> _When you meet a swordsman, draw your sword: Do not recite poetry to one who is not a poet._
+>
+> —  Robert Greene
+
+And now, a longer quote.
+
+> _The reason creatures wanted to use language instead of mental telepathy was that they found out they could get so much more done with language.
+> Language made them so much more active.
+> Mental telepathy, with everybody constantly telling everybody everything, produced a sort of generalized indifference to all information.
+> But language, with its slow, narrow meanings, made it possible to think about one thing at a time -- to start thinking in terms of projects._
+>
+> —  Kurt Vonnegut, _God Bless You, Mr. Rosewater_
+
+== Inline Code Stuff
+
+`ip4_addr` and `defaultrouter` configure the network for our jail. If
+you’re running the server on your local network, then it’s likely the
+address of your router. (Typically x.x.x.1 or x.x.x.255, consult your
+router’s manual). `ip4_addr` is the address you want to assign to the
+jail.
+
+For `name`: If you’re just creating a single server, the name
+`minecraft` would suffice, but I recommend a structure like:
+
+image::https://s3.amazonaws.com/andrewzah.com/posts/freenas_minecraft_guide/dynmap.png[Dynmap rendering of our FreeNAS minecaft server]
+
+== Much Code
+
+This is a showcase of
+https://rouge-ruby.github.io/docs/[rouge's]
+syntax highlighting, and how code blocks appear in general.
+
+[,console]
+----
+$ ls -lah
+----
+
+[,console]
+----
+$ ls -lah
+<output>
+
+$ ls -lah
+----
+
+[,console,linenos]
+----
+$ ls -lah
+
+<output here>
+----
+
+[,console,linenos]
+----
+$ ls -lah <1>
+
+<output here> <2>
+----
+<1> The command name and arguments (case-sensitive)
+<2> The command's output
+
+[,yml,linenos]
+----
+services:
+  web:
+    image: docker.io/andrewzah/personal_site:latest
+    ports:
+      - "2020:2020"
+----
+
+[,yml,linenos]
+----
+services:
+  web: <1>
+    image: docker.io/andrewzah/personal_site:latest <2>
+    ports:
+      - "2020:2020"
+----
+<1> service name visible to docker
+<2> image tag
+
+.~/programming/com.andrewzah/personal-site-docker.nix
+[,nix,linenos,highlight=9..10]
+----
+let
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/archive/dd457de7e08c6d06789b1f5b88fc9327f4d96309.tar.gz";
+  pkgs = import nixpkgs { config = {}; overlays = []; };
+
+  caddyfile = pkgs.writeTextDir "/etc/caddy/Caddyfile" (builtins.readFile ./Caddyfile);
+in
+rec {
+  img = pkgs.dockerTools.buildImage {
+    name = "docker.io/andrewzah/personal_site";
+    tag = "latest";
+
+    copyToRoot = pkgs.buildEnv {
+      name = "img-root";
+      paths = with pkgs; [
+        caddy
+        caddyfile
+
+        (pkgs.callPackage ./personal-site.nix {})
+      ];
+    };
+
+    config = {
+      Cmd = [ "caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter"  "caddyfile" ];
+    };
+  };
+}
+----
+
+.internal/nfs.go
+[,go,linenos]
+----
+package internal
+
+import (
+	"fmt"
+	"golang.org/x/sys/unix"
+	"os"
+	"os/user"
+	"strconv"
+)
+
+func MountNFSv4(nfsHost, nfsPath, target string) error {
+	mountOptions := fmt.Sprintf("addr=%s", nfsHost)
+	src := fmt.Sprintf(":%s", nfsPath)
+
+	// Mount the NFS volume
+	err := unix.Mount(src, target, "nfs4", 0, mountOptions)
+	if err != nil {
+		return fmt.Errorf("failed to mount NFS volume: %w", err)
+	}
+
+	return nil
+}
+
+func UnmountNFSv4(target string) error {
+	err := unix.Unmount(target, 0)
+	if err != nil {
+		return fmt.Errorf("failed to unmount NFS volume: %w", err)
+	}
+
+	return nil
+}
+----
+
+== Admonish Me!
+
+NOTE: You have been noted.
+
+TIP: You have been tipped.
+
+CAUTION: Here is a more lengthy bubble, cautioning people about X/Y/Z.
+
+WARNING: Here is a more lengthy bubble, warning people about X/Y/Z.
+
+IMPORTANT: Here is a more lengthy bubble, importaning people about X/Y/Z.

@@ -9,11 +9,7 @@
           {{ partial "post-link.html" . }}
         {{- end -}}
       </ul>
+      <br>
     {{- end -}}
   </div>
-
-  {{- if (eq .Type "posts") -}}
-    <hr>
-    <p><a href="/archives"> Link to Archives </a></p>
-  {{- end -}}
 {{ end }}

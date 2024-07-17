@@ -7,7 +7,7 @@ canonifyUrls = true
 toc = true
 destination = "./public"
 title = "Andrew Zah"
-enableGitInfo = true
+titleCaseStyle = 'none'
 
 [params.author]
 name = "Andrew Zah"

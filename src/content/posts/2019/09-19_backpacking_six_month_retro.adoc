@@ -254,7 +254,7 @@ However I despise taking notes on the ipad, or any other digital device I’ve t
 Stupid goodreads 5 issues I had:
 
 * The stylus kept on changing to eraser mode randomly.
-* I wanted to study kanji by writing 1 character ~50 times, so I thought ``surely goodnotes can handle resizing a textbox''. Andrew, you utter fool. Resizing a textbox causes the character to become clipped for no discernable reason.
+* I wanted to study kanji by writing 1 character ~50 times, so I thought "surely goodnotes can handle resizing a textbox". Andrew, you utter fool. Resizing a textbox causes the character to become clipped for no discernable reason.
 
 Goodnotes’ saving grace is with annotating PDFs… once I save them in the right format to my phone, of course.
 
@@ -324,14 +324,14 @@ For EDC both gorucks are far too bulky. They’re fine in the US since I drive e
 So I use an https://www.opposethis.com/products/invisible-rolltop[Invisible Rolltop by OPPOSETHIS], which packs into the GR2 when I fly. I chose this for three reasons:
 
 1.  As mentioned, the gr1 was too bulky for daily use.
-2.  I wanted a sleek, minimal backpack that doesn’t scream ``I am a traveler/tourist''.
+2.  I wanted a sleek, minimal backpack that doesn’t scream "I am a traveler/tourist".
 3.  The bag fits my laptop + expands via the rolltop if I pick up some groceries, etc.
 
 ==== Macbook pro 2015 retina + sleeve
 
 My programming machine. The beating heart and core of all my operations. I got a quality leather sleeve to protect it while moving around.
 
-I like macs (2015 and prior) due to their build quality and reliability. I had a thinkpad t430 but it was insanely bulky and I got tired of ``configurability''. Give me a machine that works without incessant tinkering and workarounds. On my desktop at home I run Debian Stretch because I got tired of Arch’s constant annoyances. My home server runs FreeNAS–running FreeBSD without a hitch on a laptop would be ideal.
+I like macs (2015 and prior) due to their build quality and reliability. I had a thinkpad t430 but it was insanely bulky and I got tired of "configurability". Give me a machine that works without incessant tinkering and workarounds. On my desktop at home I run Debian Stretch because I got tired of Arch’s constant annoyances. My home server runs FreeNAS–running FreeBSD without a hitch on a laptop would be ideal.
 
 I may upgrade to a Lenovo Carbon in a year or two, but we’ll see. Maybe apple will release a non-shit macbook pro in 2020.
 
@@ -409,7 +409,7 @@ I wish I could travel with my hhkb2 pro keyboard but it just takes up too much s
 * A lot of exchanges and other groups can be found on https://meetup.com[Meetup].
 * Look up customs and things not to do. This sounds obvious, but I got a bit cocky after living ~1.5 years in Korea, and made some embarrassing gaffes in Japan.
 * Don’t enter busses in Japan from the front.
-* Don’t just go to the ``must go to'' places. Sometimes it’s worth it, sometimes you end up just waiting for an hour when there’s probably a similar place nearby.
+* Don’t just go to the "must go to" places. Sometimes it’s worth it, sometimes you end up just waiting for an hour when there’s probably a similar place nearby.
 * Pack extra deodorant if traveling to Korea. I seriously could not find it anywhere, aside from 이태원 [Itaewon] due to the huge foreign community there.
 * Negotiate the price down as much as you can on airbnb, especially if you’re looking for a longer stay.
 * Visit the airbnb before you book. You can always book a hostel for a week or so after you arrive, giving you time to check out some airbnbs.

@@ -13,24 +13,7 @@
         </time>
         {{- end -}}
       </p>
-
-      {{- if (eq .Params.Toc true) -}}
-        <hr>
-        <h3> Table of Contents </h3>
-        {{ .TableOfContents }}
-      {{- end -}}
-      <hr>
-    </div>
-  {{- end -}}
-
-  {{ .Content }}
-
-
-  {{- if or (eq .Type "posts") (eq .Type "pages") -}}
-    <hr>
-
-    <div id="back-meta">
-      <div class="post-tags">
+      <div style="font-style: italic;" class="post-tags">
         {{ .Page.WordCount }} words
         &mdash;
 
@@ -42,6 +25,25 @@
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
         {{ end }}
       </div>
+
+      {{- if (eq .Params.Toc true) -}}
+        <hr>
+        <details>
+        <summary>
+          Table of Contents
+        </summary>
+        {{ .TableOfContents }}
+        </details>
+      {{- end -}}
+      <hr>
+    </div>
+  {{- end -}}
+
+  {{ .Content }}
+
+
+  {{- if or (eq .Type "posts") (eq .Type "pages") -}}
+    <div id="back-meta">
     </div>
   {{- end -}}
 {{ end }}

@@ -144,23 +144,24 @@ So about a month and a half, most of which was figuring out the template for the
 -> *~$794* in total, or $263 + $531, not including the travel to Georgia or the prepaid envelope. The bulk of it being the travel insurance... I erred on the side of caution and just paid out til the end of the year, since I wasn't sure how a monthly printout would be perceived by the consulate.
 
 == Frequently Asked Questions
-=== What address and phone number should I put on the form?
+**What address and phone number should I put on the form?**
+
 You can use a temporary place like a hotel you plan on booking, which is what I did.
 
 Keep in mind you'll need to visit Immigration Services within 14 days of moving to reflect your new address and phone number.
 
-=== What if my income is above, but close to the threshold?
-You should be fine, but we're waiting on more data points to be sure.
+**What if my income is above, but close to the threshold?**
 
+You should be fine, but we're waiting on more data points to be sure.
 We do know that people who far exceed the threshold have easily acquired the visa.
 
-=== What types of insurance can I use?
+**What types of insurance can I use?**
 
 What the South Korean government is looking for is insurance that covers medical emergencies and repatriation.
-
 It's possible your insurance already provides that, or offer it as an addon. SafetyWing covers that and is quite convenient to set up.
 
 == Other Resources
 - https://www.digitalnomadskorea.com/post/everything-you-need-to-know-about-koreas-digital-nomad-visa[Digital Nomads Korea: South Korea’s Digital Nomad Visa: The Complete Guide (2024)]
 - https://blog.digitalnomad-korea.com/korea-digital-nomad-visa-detailed-application-guidelines[Kim Ninja: Korea Digital Nomad Visa: Application Guideline]
+
 // Copyright 2016-2024 Andrew Zah

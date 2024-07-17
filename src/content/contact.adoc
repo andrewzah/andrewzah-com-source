@@ -1,23 +1,19 @@
 ---
 title: "Contact"
-date: 2022-10-30
+date: 2024-07-06
 description: "Contact"
 slug: "contact"
 ---
 
 link:/D87BD9DCF11BACD6CDB40CB213732FB13E61E0BE.pubkey[gpg key]
 
-In order of preference.
+Email is strongly preferred.
 
-email: mailto:hello@andrewzah.com[hello@andrewzah.com]
+email: mailto:zah@andrewzah.com[zah@andrewzah.com]
 
-mastodon / fediverse: [@andrewzah@greendolphin.social]() - currently down
+bluesky: https://bsky.app/profile/abare.party
 
-telegram: https://t.me/andrewzah
-
-bluesky: https://bsky.app/profile/andrewzah.bsky.social
-
-discord: @andrewzah
+discord: @stele_cazatoare
 
 linkedin: https://www.linkedin.com/in/andrewzah/
 // Copyright 2016-2024 Andrew Zah

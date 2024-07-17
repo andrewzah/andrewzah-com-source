@@ -5,6 +5,10 @@
   <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
   <link rel="canonical" href="{{ .Permalink | absURL }}">
+
+  <!-- fosstodon verification -->
+  <link rel="me" href="https://fosstodon.org/@andrewzah">Mastodon</a>
+
   {{ block "title" . -}}
     {{- if .IsHome -}}
       <title> Hi, I'm Andrew Zah. </title>

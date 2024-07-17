@@ -1,4 +1,5 @@
 @import "normalize";
+@import "rouge";
 
 @import "variables";
 @import "mixins";
@@ -19,14 +20,14 @@ html, body {
   background: rgb(253,253,253);
   color: rgb(5,5,5);
 
-  //font-family: $serif-stack;
-  font-family: sans;
+  font-family: $sans-serif-stack;
+  line-height: 1.4;
 }
 
 a {
   text-decoration: none;
   color: $primary;
-  font-style: italic;
+  //font-style: italic;
   border-bottom: 2px solid $primary;
 
   &:hover {
@@ -34,7 +35,6 @@ a {
     border-bottom: 2px solid $primary-hover;
   }
 }
-
 
 img {
   max-width: 100%;
@@ -46,11 +46,12 @@ hr {
 
 pre {
   overflow-x: scroll;
-  code {
-    span {
-      margin: 5px;
-    }
-  }
+}
+
+blockquote {
+  margin-left: 0px;
+  padding-left: 20px;
+  border-left: 3px solid $primary;
 }
 
 tr:nth-child(even) {
@@ -61,7 +62,6 @@ article {
   max-width: 95vw;
   margin: 0 auto;
   padding-bottom: 1rem;
-  line-height: 1.6;
 
   @media only screen and (min-width: $phoneWidth)  {
     max-width: $max-width;
@@ -69,6 +69,14 @@ article {
 
   h1:nth-child(1) {
     margin: auto 0px;
+  }
+
+  > div.sect1 a.link {
+    &:hover {
+      &:after {
+        content: ' \00A7';
+      }
+    }
   }
 }
 
@@ -117,15 +125,6 @@ div.imageblock div.title {
   font-style: italic;
 }
 
-div.listingblock {
-  div.content {
-    pre {
-      background-color: rgb(230,230,230);
-      padding: 5px;
-    }
-  }
-}
-
 div.paragraph {
   p code {
     background-color: rgb(230,230,230);
@@ -134,9 +133,19 @@ div.paragraph {
 }
 
 div.listing {
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
   ul {
     list-style: none;
-    padding-left: 0;
+    margin: 0;
+    padding-left: 0px;
+
+    li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -145,12 +154,24 @@ div#front-meta {
     margin: 0px;
   }
 
+  h3 {
+    margin-top: 0px;
+  }
+
   h3:nth-child(2) {
     margin: 0px;
   }
 
   nav#TableOfContents ul {
     margin: auto 0px;
+  }
+
+  details {
+    summary {
+      cursor: pointer;
+      outline: none;
+      margin: 0px;
+    }
   }
 }
 
@@ -184,4 +205,66 @@ h2,h3,h4 {
   &+div.paragraph p {
     margin-top: 0px;
   }
+}
+
+pre.rouge .hll {
+  background-color: #ffc;
+
+  * {
+    background-color: initial;
+  }
+}
+
+div.listingblock {
+  margin-top: 1em;
+
+  div.title {
+    font-family: monospace;
+    font-size: 16px;
+    padding-left: 5px;
+
+    border: 1px solid #ccc;
+    border-bottom: none;
+
+    //&:before {
+    //  content: '# '
+    //}
+  }
+
+  div.content pre.rouge.highlight {
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    line-height: 1.2;
+  }
+
+  div.content {
+    pre > code:not(>table) {
+      span {
+        color: red;
+      }
+    }
+  }
+}
+
+div.listingblock + div.colist.arabic {
+  margin-top: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #ccc;
+  border-top: none;
+
+  ol {
+    margin: 0px auto;
+
+    li p {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+}
+
+td.linenos {
+  background-color: rgb(245,245,245);
+  color: rgb(180,180,180);
+  border-right: 1px solid #ccc;
 }

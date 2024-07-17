@@ -8,6 +8,7 @@ stdenv.mkDerivation {
   buildInputs = with pkgs; [
     findutils
     gnused
+    git
 
     hugo
     (ruby_3_3.withPackages (ps:
@@ -19,7 +20,6 @@ stdenv.mkDerivation {
 
   buildPhase = ''
     hugo
-
     find ./public/ -type f -exec sed -i 's#<img src#<img decoding="async" loading="lazy" src#g' {} \;
   '';
 

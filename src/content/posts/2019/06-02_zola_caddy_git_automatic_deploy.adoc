@@ -39,12 +39,10 @@ to minify the js files and bundle them.
 === Getting started
 
 Zola has a
-https://www.getzola.org/documentation/getting-started/installation/[getting
-started] guide. For inspiration, you can look at the
-https://git.sr.ht/~andrewzah/personal-site/tree[source code for this
-very blog] or
-https://github.com/getzola/zola/blob/master/EXAMPLES.md[different sites
-using Zola].\{\{fn(n=0)}}
+https://www.getzola.org/documentation/getting-started/installation/[getting started]
+guide. For inspiration, you can look at the
+https://git.sr.ht/~andrewzah/personal-site/tree[source code for this very blog] or
+https://github.com/getzola/zola/blob/master/EXAMPLES.md[different sites using Zola].
 
 === My setup
 
@@ -71,7 +69,7 @@ This is what my site’s directory looks like:
 `binary-data` is where I store all the screenshots, pdfs, and other
 binary data I refer to my posts. For the actual posts I upload these to
 an amazon S3 bucket, but I keep these as a backup, _outside_ of
-git.\{\{fn(n=1)}}
+git.
 
 `sass/` and `static/` are pretty easy: the former gets compiled to css,
 the latter gets copied directly to the `public/` directory during
@@ -95,7 +93,7 @@ want. I generally have one per page or page type, such as /projects or
 At a minimum, you probably want a
 https://git.sr.ht/~andrewzah/personal-site/tree/master/templates/base.html[base.html]
 to deal with the oh-so-fun SEO stuff, and a `macros.html` for
-``dynamically'' rendering things. I use it for the navigation bar,
+"dynamically" rendering things. I use it for the navigation bar,
 footnotes, references, citations, and rendering links.
 
 With child templates, you can use blocks to inject content back to the
@@ -176,9 +174,8 @@ Shortcodes are awesome. Two main things I use them for:
 <a id="footnote-cite-{{num}}" href="#footnote-{{num}}">({{num}})</a>
 ----
 
-My link:../korean-for-programmers/#finally-a-sentence[Korean for
-Programmers] post uses ~5 shortcodes to
-\{\{hl(t=``highlight'',c=``red'')}} words in different colors:
+My link:../korean-for-programmers/#finally-a-sentence[Korean for Programmers]
+post uses ~5 shortcodes to highlight words in different colors.
 
 [source,html]
 ----

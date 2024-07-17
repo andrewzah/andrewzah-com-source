@@ -58,19 +58,21 @@ In i3 I have 10 workspaces set up. `Alt+1` changes my display to workspace 1, an
 
 To focus on one window, I change the mode in i3 from tabbed to stacked.
 
-```
+[,conf]
+----
 # toggling view types
 bindsym $mod+s layout stacking
 bindsym $mod+p layout toggle split
-```
+----
 
 I can also sub-divide by telling i3 to open the next program horizontally or vertically, relative to the currently highlighted window.
 
-```
+[,conf]
+----
 # splits
 bindsym $mod+o split h
 bindsym $mod+v split v
-```
+----
 
 And anything that can run in the background lives in a tmux session. I frequently rename tmux sessions with `<ctrl>b+$`.
 

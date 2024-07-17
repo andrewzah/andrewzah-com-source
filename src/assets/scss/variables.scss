@@ -5,6 +5,24 @@ $serif-stack: (
 );
 // "Source Serif Pro", "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif, "Noto Emoji", "Quivira"
 
+$sans-serif-stack: (
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+'Roboto',
+'Oxygen',
+'Ubuntu',
+'Cantarell',
+'Fira Sans',
+'Droid Sans',
+'Helvetica Neue',
+'Segoe UI Emoji',
+'Apple Color Emoji',
+'Noto Color Emoji',
+sans-serif
+);
+
 $monospace-stack: (
   "SFMono-Regular",
   Consolas,

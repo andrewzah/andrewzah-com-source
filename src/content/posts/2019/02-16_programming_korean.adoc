@@ -6,17 +6,21 @@ lastmod = "2020-06-22"
 tags = ["korean", "programming"]
 categories = ["languages"]
 description = "Exploring the representation of Korean in the context of various programming languages."
+toc = true
 +++
 
 = Korean for Programmers
 :toc:
 :sectnums:
+:sectlinks:
+:source-highlighter: rouge
+:docinfo: shared
 
-I was inspired to write this after reading _German for
-Programmers_. <<gfp>> It’s quite likely that I’m just biased to
-see things a certain way because I work with programming languages for a
-living, but I often find myself drawing comparisons among Korean and
-programming.
+I was inspired to write this after reading
+https://wickedchicken.github.io/post/german-for-programmers/[_German for Programmers_].
+It’s quite likely that I’m just biased to see things a certain way because
+I work with programming languages for a living, but I often find myself drawing
+comparisons between Korean and programming.
 
 == Hangeul Basics
 
@@ -29,8 +33,9 @@ You may have seen the infamous "Learn how to read Hangeul in 10
 minutes" graphic. While Hangeul is indeed very easy to learn, it does
 have exceptions–quite a few actually. So maybe you can read 독립
 (independence), but the actual pronunciation is different from what’s
-written due to ㄹ following ㄱ. These are called 받침 <<batchim>>
-rules and one just has to memorize 'em.
+written due to ㄹ following ㄱ. These are called
+https://www.koreanwikiproject.com/wiki/%EB%B0%9B%EC%B9%A8[받침 rules]
+and one just has to memorize them.
 
 === Grid System
 
@@ -49,9 +54,9 @@ Some vowels can also be combined: `ㅚ` is `ㅜ` + `ㅣ`, `ㅙ` is `ㅗ` +
 
 For Korean fonts, all finished blocks (e.g. 쀍: ㅃㅜㅔㄹㄱ) have to be
 included because it’s possible to construct them via grid rules, but a
-fair amount are just gibberish. Hangeul is represented by 5 unicode
-blocks in total and I recommend reading about how they get composed
-together. <<hunicode>>
+fair amount are just gibberish. Hangeul is represented by
+https://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode[5 unicode blocks]
+in total and I recommend reading about how they get composed together.
 
 == Subject Elision, especially -you-
 
@@ -164,7 +169,7 @@ Korean has a number of postpositional particles that imbue meaning, some
 of which vary if the last character is a vowel or not. We can easily use
 a pure function to model this:
 
-[source,rust]
+[,rust]
 ----
 fn topic_marker(word: &str) -> &str {
   match word.last_character_type() {
@@ -237,7 +242,7 @@ details.
 
 We can model this as a basic pipeline à la Clojure:
 
-[source,clojure]
+[,clojure]
 ----
 (defn conjugate-verb
   [subject verb speaker audience]
@@ -385,7 +390,7 @@ polite). This is 감사하다, merged with `~ㅂ니다` because `하` ends in a
 vowel. 고마워요 is another way to say thank you(informal polite): 고맙다
 + apply `irregular ㅂ` consonant ending filter + `~아/어/여요`.
 
-[source,rust]
+[,rust]
 ----
 fn get_vowel_for_verb(verb: &str, formality: Formality) -> {
   // ha = 하
@@ -405,8 +410,9 @@ fn get_vowel_for_verb(verb: &str, formality: Formality) -> {
 }
 ----
 
-Korean has seven speech levels. <<levels>> When learning Korean,
-the `아/어/여요` and `~ㅂ/습니다` levels are commonly used, in that
+Korean has
+https://en.wikipedia.org/wiki/Korean_speech_levels[seven speech levels].
+When learning Korean, the `아/어/여요` and `~ㅂ/습니다` levels are commonly used, in that
 order. Using `아/어/여` (no `요`) to anyone other than close friends
 (who have agreed to use lowered speech) or young kids is rude.
 Foreigners get a pass at first but it’s still impolite.
@@ -416,8 +422,9 @@ and books/novels.
 
 English lacks this concept, as we use the same conjugation for everyone
 – "the prisoner ate", "the king ate", and "a God ate". What
-English does have is different registers <<registers>>, such as when
-you text versus when you write an academic paper or a business email.
+English does have is
+https://en.wikipedia.org/wiki/Register_(sociolinguistics)[different registers],
+such as when you text versus when you write an academic paper or a business email.
 This includes overly polite language like "Might you be interested in
 eating, sir?", but nevertheless the verb remains the same.
 
@@ -474,13 +481,4 @@ romanized Korean it forces me to go and learn the older system as well.
 * Article – Andrew Zah
 * Editing, sentence suggestions – 웁스
 
-[bibliography]
-== References
-
-- [[[gfp,0]]] https://wickedchicken.github.io/post/german-for-programmers/[German for Programmers]
-- [[[batchim,1]]] https://www.howtostudykorean.com/unit0/unit0lesson1/[Hangeul Grid Order]
-- [[[hunicode,2]]] https://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode[Hangeul in Unicode]
-- [[[levels, 3]]] https://en.wikipedia.org/wiki/Korean_speech_levels[Korean Speech Levels]
-- [[[registers, 4]]] https://en.wikipedia.org/wiki/Register_(sociolinguistics)[English Registers]
-- http://www.koreanwikiproject.com/wiki/%EB%B0%9B%EC%B9%A8[Final Consonant Exception Rules]
 // Copyright 2016-2024 Andrew Zah

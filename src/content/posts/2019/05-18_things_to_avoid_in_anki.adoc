@@ -60,6 +60,21 @@ By changing Anki preferences to `Show new cards after reviews`, you can
 always do reviews without worry. After you wake up, while you commute,
 et cetera.
 
+== Having too many concepts per card
+
+A good anki card should have **one** concept. Avoid memorizing lists if possible.
+If you do have to memorize a list, turn it into an
+enumeration (1. 2. 3…). It's much better to make split concepts into multiple cards.
+
+When memorizing foreign words it’s really tempting to put every
+definition into one card. Don’t do this. Putting related definitions
+together is fine, but if a word has multiple different meanings, it
+needs different cards.
+
+I see this a lot in premade decks, with 1 card having 4 or 5 totally
+unrelated usages of a word–and no sentence samples either, of course.
+
+
 == Studying too many new words
 
 Do not go over 20 words/day unless you are studying at least 1-2 hours
@@ -69,29 +84,6 @@ it’s scary.
 If you do 20 words a day, every day, for a year, you will learn 6,720
 words. That is pretty darn good! For most, if not all, languages, 3-5k
 words will let you have basic conversations.
-
-== Having the foreign word on the front side
-
-If you’re using Anki to learn a foreign language, you want to speak that
-language with someone, right? Think about how a conversation goes as a
-beginner. First, you think of the word _in your native language_, then
-you think of the equivalent foreign word.
-
-If you put a foreign word on the front of your anki cards, then you’re
-doing it totally backward! That just trains you to recognize a foreign
-word when you see it; it doesn’t train you to remember a foreign word
-from your native word.
-
-You can also make automatically make cards that go both ways if you use
-the `Basic (and reversed card)` template. So adding a card with [dog,
-강아지] will make another card that’s [강아지, dog]. If you only want
--some- cards to have a reverse, you can use the provided
-`Basic (optional reversed card)` template. This one only makes a reverse
-if you put something in the `Add Reverse` field (it can be any input, it
-doesn’t show anywhere).
-
-See https://apps.ankiweb.net/docs/manual.html#reverse-cards[the manual]
-for more information on reverse cards.
 
 == Only using premade decks
 
@@ -114,6 +106,28 @@ I explain subdecks a bit more in my
 link:../better-anki-usage-guide-2019#utilizing-subdecks[Better Anki
 Usage] post.
 
+
+== Not making use of reverse cards
+
+If you always have your native language on the front, and target language on the back,
+then you're training yourself to think in your language, then recall the equivalent in your target language...
+If you always have your target language on the front, and your native language on the back,
+then you're training recognition more than recall...
+
+I don't know which way is better. (Please send research if you do know).
+*But* I do know that Anki supports automatically making decks with both options!
+
+You can also make automatically make cards that go both ways if you use
+the `Basic (and reversed card)` template. So adding a card with [library,
+la biblioteca] will make another card that’s [la biblioteca, library]. If you only want
+-some- cards to have a reverse, you can use the provided
+`Basic (optional reversed card)` template. This one only makes a reverse
+if you put something in the `Add Reverse` field (it can be any input, it
+doesn’t show anywhere).
+
+See https://apps.ankiweb.net/docs/manual.html#reverse-cards[the manual]
+for more information on reverse cards.
+
 == Not including sample sentences
 
 A lot of language learning decks just have the word and its translation.
@@ -122,21 +136,6 @@ need sample sentences so you can see the context as well.
 
 I include 3 sample sentences in all the cards I make, as well as notes,
 common word pairings, and the grammar type.
-
-== Having too many concepts per card
-
-A good anki card should have one concept. Avoid memorizing lists if you
-really have to. If you do have to memorize a list, turn it into an
-enumeration (1. 2. 3…). If you have multiple concepts, make multiple
-cards.\{\{cite(n=0)}}
-
-When memorizing foreign words it’s really tempting to put every
-definition into one card. Don’t do this. Putting related definitions
-together is fine, but if a word has multiple different meanings, it
-needs different cards.
-
-I see this a lot in premade decks, with 1 card having 4 or 5 totally
-unrelated usages of a word–and no sentence samples either, of course.
 
 == Pressing `easy' too easily
 

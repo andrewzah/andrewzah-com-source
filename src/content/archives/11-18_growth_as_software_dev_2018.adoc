@@ -82,7 +82,7 @@ I applied for Gitlab’s backend-developer role, at $55k I believe. The
 amount was whatever their calculator gave me for South Carolina + no
 experience. For what it’s worth I’m not a huge fan of this concept in
 retrospect. Part of a job is negotiating for pay—actually being
-https://about.gitlab.com/handbook/values/#transparency[``transparent'']
+https://about.gitlab.com/handbook/values/#transparency[transparent]
 would be just an open spreadsheet of employee salaries, not taking away
 negotiating power from prospective applicants. That said, it is at least
 standardized. I mean, I still applied, so I can’t criticize much, but

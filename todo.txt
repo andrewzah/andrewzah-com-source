@@ -1,15 +1,15 @@
-fix blockquote styling
-
-all posts:
-  - fix references/citations
+- determine
+  - color scheme: white + green? green/colorful background ?
   - finetune line height + font size
   - finetune header display
-  - fix shortcodes
-  - add zebra striping / styling to tables
 
-posts to fix:
-  anki guide:
-    - wack image downsize to ~80px or so
-    - plugin links
-  korean programming:
-    - shortcodes
+- fix ToC css; make obvious it's clickable
+- make images clickable links
+- fix section link css
+- fix references/citations
+- fix shortcodes
+- add zebra striping / styling to tables
+
+- potential features
+  - admonitions: socrates dialogue character, like fasterthanlime?
+  - series: https://digitaldrummerj.me/hugo-post-series/
