@@ -1,15 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
 {{ partial "header.html" . }}
+  <body>
+    {{- partialCached "nav.html" . -}}
 
-<p>
-I ate your web page.
-</p>
+    <article>
+      <p> 404: </p>
+      <p> I ate your web page. </p>
+      <p> Forgive me, </p>
+      <p> it was juicy and tart on my tongue. </p>
+    </article>
+  </body>
+</html>
 
-<p>
-Forgive me,
-</p>
-
-<p>
-it was juicy and tart on my tongue.
-</p>
-
-{{ partial "footer.html" . }}

@@ -4,23 +4,24 @@ let
 
   caddyfile = pkgs.writeTextDir "/etc/caddy/Caddyfile" (builtins.readFile ./Caddyfile);
 in
-rec {
-  img = pkgs.dockerTools.buildImage {
-    name = "docker.io/andrewzah/personal_site";
-    tag = "latest";
+pkgs.dockerTools.buildImage {
+  name = "docker.io/andrewzah/personal_site";
+  tag = "latest";
 
-    copyToRoot = pkgs.buildEnv {
-      name = "img-root";
-      paths = with pkgs; [
-        caddy
-        caddyfile
+  copyToRoot = pkgs.buildEnv {
+    name = "img-root";
+    paths = with pkgs; [
+      caddy
+      caddyfile
 
-        (pkgs.callPackage ./personal-site.nix {})
-      ];
-    };
+      (pkgs.callPackage ./personal-site.nix {})
+    ];
+  };
 
-    config = {
-      Cmd = [ "caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter"  "caddyfile" ];
+  config = {
+    Cmd = [ "caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter"  "caddyfile" ];
+    ExposedPorts = {
+      "2020" = {};
     };
   };
 }

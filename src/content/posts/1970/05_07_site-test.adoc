@@ -241,7 +241,7 @@ CAUTION: Here is a more lengthy bubble, cautioning people about X/Y/Z.
 
 WARNING: Here is a more lengthy bubble, warning people about X/Y/Z.
 
-IMPORTANT: Here is a more lengthy bubble, importaning people about X/Y/Z.
+IMPORTANT: .Here is a more lengthy bubble, importaning people about X/Y/Z.
 
 == Tables
 

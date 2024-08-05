@@ -1,15 +1,14 @@
 ---
 title: "On Wikipedia"
 date: 2022-07-29
+lastmod: 2024-07-23
 description: "On Wikipedia"
 slug: "on-wikipedia"
 ---
 
-Wikipedia is generally alright for quick references or finding literature. However, one has to be *very* careful about any articles related to "soft" sciences, history, anthropology or really any topic where there are subjective opinions.
+Wikipedia is generally alright for quick references or finding resources. However, one has to be *very* careful about any articles related to "soft" sciences or really any topics that are more subjective.
 
-On one hand, I get why Wikipedia is the way it is. Without clear rules and tight moderation, there would be a deluge of people making articles about themselves and their dog, or simply editing their own article to state whatever they want. This would make Wikipedia basically unusable since one couldn't be sure about the veracity of an article.
-
-However, to an average outsider (and non-technical people) Wikipedia seems to make itself and its processes as abstruse as possible. Editing seems to be about being technically correct according to policy rather than being truthful. Rules are great in theory but they need to be evenly enforced, not just about subject matter that one doesn't like.
+I do get why Wikipedia is the way it is. Without clear rules and tight moderation, it would quickly be flooded with junk articles and edits.
 
 ---
 

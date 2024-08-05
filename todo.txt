@@ -1,3 +1,6 @@
+- post about intermediate / advanced resources
+  - https://unogs.com/search/?country_andorunique=or&start_year=1900&end_year=2024&end_rating=10&genrelist=7424&audio=Korean&audiosubtitle_andor=or&countrylist=348
+
 - determine
   - color scheme: white + green? green/colorful background ?
   - finetune line height + font size

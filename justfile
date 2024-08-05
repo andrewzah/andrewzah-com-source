@@ -1,5 +1,5 @@
 docker-build:
-  nix-build personal-site-docker.nix -A img
+  nix-build personal-site-docker.nix
   docker load < ./result
 
 docker:
