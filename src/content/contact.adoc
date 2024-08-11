@@ -5,19 +5,17 @@ description: "Contact"
 slug: "contact"
 ---
 
-I live in Seoul, which is GMT+9, or 14 hours ahead of the east coast, USA
+I'm currently in Seoul, which is GMT+9, or 14 hours ahead of the east coast, USA
 (13 hours during daylight savings).
 
 [cols="1,2"]
 |===
 |GPG
 |link:/D87BD9DCF11BACD6CDB40CB213732FB13E61E0BE.pubkey[gpg key]
--
-link:/message.txt.asc[message.txt.asc]
+- link:/message.txt.asc[message.txt.asc]
 
 |email (preferred)
 |mailto:zah@andrewzah.com[zah@andrewzah.com]
-
 
 |mastodon / fediverse
 |link:https://fosstodon.org/@andrewzah[@andrewzah@fosstodon.org]
@@ -26,7 +24,27 @@ link:/message.txt.asc[message.txt.asc]
 |link:https://bsky.app/profile/abare.party[@abare.party]
 
 |linkedin
-|link:https://www.linkedin.com/in/andrewzah/[in/andrewzah]
+|link:https://www.linkedin.com/in/andrewzah/[andrewzah]
+
+|cellphone
+|if you somehow found my phone number: no you didn't.
+|===
+
+Other links:
+
+[cols="1,2"]
+|===
+|Github
+|todo
+
+|IRC
+|todo jazz - libera
+
+|twitter
+|todo
+
+|telegram
+|
 |===
 
 // Copyright 2016-2024 Andrew Zah

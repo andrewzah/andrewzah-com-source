@@ -1,0 +1,15 @@
+---
+title: "Changelog"
+date: 2024-08-12
+description: "Changelog"
+slug: "changelog"
+---
+= Changelog
+
+== 2024-08-12
+* Massively revamp the site's CSS
+* Wrap Table of Contents in detail/summary tags
+* Change around colors of admonitions
+* Add changelog page
+* Make minor text adjustments while checking posts for CSS regressions
+* Fix 404 page to use article layout

@@ -77,13 +77,26 @@ unrelated usages of a word–and no sentence samples either, of course.
 
 == Studying too many new words
 
-Do not go over 20 words/day unless you are studying at least 1-2 hours
-every day. Initially it may be doable but reviews will pile up so fast
-it’s scary.
+Don't go over 20 words per day unless you are studying *at least* 1-2 hours
+every day. Initially it's doable but if you miss a day or two, it piles up so
+fast it’s scary.
 
-If you do 20 words a day, every day, for a year, you will learn 6,720
+If you do 20 words a day, every day, for a year, you will learn 7,300
 words. That is pretty darn good! For most, if not all, languages, 3-5k
 words will let you have basic conversations.
+
+Don't understimate the power of slow and steady practice.
+[cols="1,1"]
+|===
+|5 words per day per year
+|1,825
+
+|10 words per day per year
+|3,650
+
+|20 words per day per year
+|7,300
+|===
 
 == Only using premade decks
 

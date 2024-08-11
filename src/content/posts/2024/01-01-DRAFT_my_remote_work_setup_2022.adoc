@@ -5,8 +5,8 @@ date = "2024-07-17"
 tags = ["travel", "remote-work", "gear"]
 keywords = "tech gear setup remote nomad digital 2022 2021 2023 workflow productivity productive"
 description = "The remote setup and workflow I've set up for 2022."
-series = ["Remote Programming Setup"]
-draft = true
+series = "Remote Programming Setup"
+draft = false
 toc = true
 +++
 
@@ -36,7 +36,6 @@ I find a 12-13" display is more than sufficient, and it keeps the weight down.
 If you walk around a fair bit, weight seriously adds up quickly.
 
 I take my framework along as a backup, but I don't use it much due to the battery life.
-footnote:battery[I haven't tweaked arch linux for battery life yet, but I hear that this can be improved somewhat.]
 Unfortunately the XPS isn't too much better;
 I usually get about 3-4 hours of heavy development in before it starts throttling heavily.
 
@@ -60,6 +59,7 @@ In i3 I have 10 workspaces set up. `Alt+1` changes my display to workspace 1, an
 
 To focus on one window, I change the mode in i3 from tabbed to stacked.
 
+.conf
 [,conf]
 ----
 # toggling view types
@@ -69,6 +69,7 @@ bindsym $mod+p layout toggle split
 
 I can also sub-divide by telling i3 to open the next program horizontally or vertically, relative to the currently highlighted window.
 
+.conf
 [,conf]
 ----
 # splits
@@ -76,7 +77,9 @@ bindsym $mod+o split h
 bindsym $mod+v split v
 ----
 
-And anything that can run in the background lives in a tmux session. I frequently rename tmux sessions with `<ctrl>b+$`.
+And anything that can run in the background lives in a tmux session.
+I frequently rename tmux sessions with
+kbd:[CTRL-B + $].
 
 == Software
 

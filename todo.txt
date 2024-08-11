@@ -2,17 +2,16 @@
   - https://unogs.com/search/?country_andorunique=or&start_year=1900&end_year=2024&end_rating=10&genrelist=7424&audio=Korean&audiosubtitle_andor=or&countrylist=348
 
 - determine
-  - color scheme: white + green? green/colorful background ?
   - finetune line height + font size
   - finetune header display
 
-- fix ToC css; make obvious it's clickable
-- make images clickable links
+- make images clickable links in site, not after-the-build w/ sed
 - fix section link css
 - fix references/citations
 - fix shortcodes
-- add zebra striping / styling to tables
 
 - potential features
   - admonitions: socrates dialogue character, like fasterthanlime?
   - series: https://digitaldrummerj.me/hugo-post-series/
+
+  font-family: "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", serif;

@@ -27,30 +27,32 @@
       </div>
 
       {{- if (eq .Params.Toc true) -}}
-        <hr>
         <details>
         <summary>
           Table of Contents
         </summary>
         {{ .TableOfContents }}
         </details>
-      {{- end -}}
-      {{- if .Params.series -}}
+      {{- else -}}
         <hr>
-        {{- with index (.GetTerms "series") 0 -}}
-          <div class="notice--info">
-            <p>This post is part of the <a href="{{ .Permalink }}" style="font-weight: bold">{{ .LinkTitle }}</a> series.</p>
-          </div>
-        {{- end -}}
       {{- end -}}
-      <hr>
     </div>
   {{- end -}}
 
   {{ .Content }}
 
-  {{- if or (eq .Type "posts") (eq .Type "pages") -}}
-    <div id="back-meta">
+  {{- if .Params.series -}}
+    <div class="seriesblock">
+      <div class="title">
+        Other posts in the <b>{{ .Params.series }}</b> series:
+      </div>
+      <div class="contents">
+        <ul>
+          {{ range (where .Site.Pages ".Params.series" "eq" .Params.series)}}
+          <li> <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> </li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
   {{- end -}}
 {{ end }}

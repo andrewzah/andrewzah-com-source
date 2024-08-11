@@ -8,6 +8,7 @@ date = "2019-12-21"
 tags = ["selfhosting", "servers", "workflow"]
 description = "I built a home server with FreeNAS and an amd ryzen."
 keywords = "home server plex jellyfin setup amd ryzen truenas ixsystems freebsd freenas"
+toc = true
 +++
 
 = Building a Home Server with FreeNAS
@@ -82,8 +83,7 @@ Node 804 Micro Atx Case]
 https://www.newegg.com/western-digital-black-nvme-250gb/p/N82E16820250097[WD
 Black NVMe M.2 2280 250Gb PCI-Express 3.0 x4 SSD WDS250G2X0C]
 * ssd:
-https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5-15r/p/N82E16842301561?Description=APC%20BX1500M%20Back-UPS%20Pro%201500VA%2f900W&cm_re=APC_BX1500M_Back-UPS_Pro_1500VA%2f900W-_-42-301-561-_-Product[SAMSUNG
-860 EVO Series 2.5" 500GB MZ-76E500B/AM]
+https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5-15r/p/N82E16842301561[SAMSUNG 860 EVO Series 2.5" 500GB MZ-76E500B/AM]
 * intake fans x4:
 https://smile.amazon.com/dp/B00650P2ZC/?tag=ozlp-20[Noctua NF-F12 WPM
 120mm]
@@ -94,15 +94,10 @@ https://smile.amazon.com/dp/B00CP6QLY6/?tag=ozlp-20[Noctua NF-A14 PWM
 https://smile.amazon.com/Noctua-NH-L12S-Low-Profile-Cooler-Quiet/dp/B075SF5QQ8/ref=sr_1_2?keywords=NH-L12S&qid=1565553407&s=gateway&sr=8-2[Noctua
 NH-L12S 70mm Low-Profile CPU Cooler]
 * ups/apc:
-link:[https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5-15r/p/N82E16842301561?Description=APC%20BX1500M%20Back-UPS%20Pro%201500VA%2f900W&cm_re=APC_BX1500M_Back-UPS_Pro_1500VA%2f900W-_-42-301-561-_-Product]
-* psu:
-https://www.newegg.com/seasonic-focus-plus-650-gold-ssr-650fx-650w/p/N82E16817151186[Seasonic
-FOCUS Plus Series SSR-650FX 650W]
+link:https://www.newegg.com/apc-bx1500m-5-x-nema-5-15r-5-x-nema-5-15r/p/N82E16842301561[Seasonic FOCUS Plus Series SSR-650FX 650W]
 
 The total comes out to around $632. I don’t know why anyone would build
 a server without getting some sort of UPS/APC as well.
-
-'''''
 
 * cpu:
 https://www.newegg.com/amd-ryzen-5-3600/p/N82E16819113569?Description=5%203600%20amd&cm_re=5_3600_amd-_-19-113-569-_-Product[AMD
@@ -119,8 +114,6 @@ ram with ecc isn’t cheap. For comparison, a Xeon E5-2650 V2 goes for
 around $70 on ebay, with significantly cheaper DDR3 ram.
 
 NOTE: I’ve used the ryzen setup for 3+ months now with no issues.
-
-'''''
 
 So I was already at $1,300, _before_ purchasing hard drives. I bought 6
 Western Digital Red 4TB drives initially, @ $100. Later on I got 2 more
@@ -262,8 +255,7 @@ I’m done with that for the foreseeable future. I didn’t self-host that
 much when I began, but once I started adding services I started thinking
 about everything I could self host.
 
-[bibliography]
-== References
+== Further Reading
 
 - https://www.ixsystems.com/documentation/freenas/11.2-U7-legacy/freenas.html[FreeNAS® 11.2-U7 User Guide]
 - https://www.ixsystems.com/community/resources/links-to-useful-threads.108/[iXsystems: Links to useful threads]
@@ -272,4 +264,5 @@ about everything I could self host.
 - https://www.ixsystems.com/community/threads/amd-ryzen-build.74232/[AMD Ryzen Build]
 - https://www.ixsystems.com/blog/zfs-dictionary/[iXsystems: ZFS dictionary]
 - https://www.freebsd.org/doc/en_US.ISO8859-1/articles/rc-scripting/index.html[Practical rc.d scripting in BSD]
+
 // Copyright 2016-2024 Andrew Zah

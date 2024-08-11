@@ -3,7 +3,7 @@ title = "My Remote Programming Setup for 2019"
 slug = "my-setup-remote-programming-osx-2019"
 date = "2019-10-19"
 tags = ["programming", "workflow"]
-series = ["Remote Programming Setup"]
+series = "Remote Programming Setup"
 description = "This is my personal workflow for being productive remotely on OSX in 2019."
 keywords = "remote programming setup my workflow digital nomad mac apple osx vim nvim macbook rider rust ruby c#"
 +++

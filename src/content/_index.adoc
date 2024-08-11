@@ -1,27 +1,45 @@
-I'm 28, a first generation Romanian-American, and currently live in Seoul.
-I work for
-link:https://www.ossys.com/[Open Source Systems] on
-https://analyticshq.com/[AnalyticsHQ] and other projects.
+= Homepage
+:!sectnums:
 
-I enjoy researching things and making useful applications for people.
+> The image that concerns most people is the reflection they see in other people's minds.
+>
+> &mdash; Edward de Bono
 
-== Popular Posts
-link:/posts/2024/korean-digital-nomad-visa/[How I acquired the Korean Digital Nomad Visa]
+Welcome to my web page. I enjoy learning things and making useful applications for people.
+
+== Notable Posts
+link:/posts/2024/korean-digital-nomad-visa/[How I acquired the Korean Digital Nomad Visa]: A detailed summary of all the steps I took to aquire this visa, as well as some tips for those looking to apply.
+
+link:/posts/2018/korean-cooking-eating-vocabulary-reference/[Korean Food & Cooking Vocabulary Reference]:
+A vocabulary collection, all organized on a single page for ease of reference.
+
+link:/posts/2019/korean_for_programmers/[Korean for Programmers]:
+In which I clumsily attempt to compare aspects of a real human language to parts of artificially constructed programming languages.
+
+== Some of my projects that I think are cool
+*link:https://github.com/andrewzah/openbook[Openbook]* - an Open Source jazz
+link:https://en.wikipedia.org/wiki/Real_Book[Real Book], inspired by
+https://github.com/veltzer/openbook[Mark Veltzer]
+
+*link:https://github.com/andrewzah/korean-nums[korean_nums]* - an integer to
+https://en.wikipedia.org/wiki/Korean_numerals[korean numbers] (pure and sino-korean) conversion library, in rust
+
+*link:https://github.com/andrewzah/hangeul-rs[hangeul-rs]* - a
+link:https://en.wikipedia.org/wiki/Hangul[Hangeul (Korean alphabet)] manipulation library, in rust
 
 == Standing Invitation
 
-If you'd like to discuss something you think would be up my alley, my inbox
-(link:mailto:zah@andrewzah.com[zah@andrewzah.com]) is open.
+If you'd like to discuss something you think would be up my alley, feel free to link:/contact[contact] me.
+If you require technical support, we can work out a contract.
 
-In person, I'm open to a coffee if I'm not busy.
-If you see me at some conference or meetup, absolutely come up and introduce yourself.
+In person, I'm generally open to a coffee or coworking at a cafe, schedule permitting.
+If you see me at some conference or meetup, absolutely come up and introduce yourself&mdash;I love meeting new people.
 
 == Links
 
-link:/cats[Cats]
+link:/cats[Cats] |
+link:/contact[Contact] |
+link:/openbook[Openbook] |
+link:/openbook[Changelog]
 
-link:/contact[Contact]
-
-link:/openbook[Openbook]
-
-link:/resume-andrew-zah.pdf[Resume]
+link:/resume-andrew-zah.pdf[Resume] - Not looking for fulltime opportunities for the foreseeable future, but part time and consulting for [ruby/rails, rust, nix, golang] projects can be worked out.

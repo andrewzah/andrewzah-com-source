@@ -916,7 +916,7 @@ from the meat.
 [cols="1,3",options="header",]
 |===
 |Word |Meaning
-|*만두* |dumpling |
+|*만두* |dumpling
 
 |만두소 |dumpling filling/stuffing
 

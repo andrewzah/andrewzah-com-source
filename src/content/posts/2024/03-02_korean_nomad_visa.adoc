@@ -25,8 +25,12 @@ I've lived in Korea before and I love Seoul, so I jumped at the chance to get a 
 
 == What exactly is the F-1-D Workcation Visa?
 
-It's a long-term (>90 days) visa for people (and accompanying family members) who want to work remotely while residing in South Korea. It grants up to 2 years - 1 year initially, and a 1 year extension, as well as the ability to apply for a
-https://www.korvia.com/the-new-residence-card-in-south-korea-whats-changed-and-how-to-obtain-it/[Residence Card]{fn-residence-card}.
+It's a long-term (>90 days) visa for people (and accompanying family members) who want to work remotely
+while residing in South Korea. It grants up to 2 years - 1 year initially, and a 1 year extension,
+as well as the ability to apply for a
+https://www.korvia.com/the-new-residence-card-in-south-korea-whats-changed-and-how-to-obtain-it/[Residence Card].
+
+NOTE: The Residence Card was previously known as the Alien Registration Card (ARC).
 
 You can apply within Korea or at displomatic missions abroad, but gathering the documents might be hard if you're already in Korea. The main requirements are:
 

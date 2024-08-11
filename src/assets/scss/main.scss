@@ -7,10 +7,25 @@
 @import "components/admonition";
 @import "components/nav";
 @import "components/toc";
+@import "components/tables";
 
 * {
   box-sizing: border-box;
   text-rendering: geometricPrecision;
+}
+
+// keyboard icons, css based on asciidoc example
+kbd {
+  line-height: 1;
+  border-radius: .25em;
+  padding: .25em .5em;
+  vertical-align: text-bottom;
+  white-space: nowrap;
+
+  font-family: $monospace-stack;
+  box-shadow: rgb(193, 193, 193) 0px 1px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 1.2px inset;
+  background-color: #f0f0f0;
+  border: 1px solid #c1c1c1;
 }
 
 html, body {
@@ -20,7 +35,7 @@ html, body {
   background: rgb(253,253,253);
   color: rgb(5,5,5);
 
-  font-family: $sans-serif-stack;
+  font-family: $serif-stack;
   line-height: 1.4;
 }
 
@@ -28,11 +43,11 @@ a {
   text-decoration: none;
   color: $primary;
   //font-style: italic;
-  border-bottom: 2px solid $primary;
+  border-bottom: 1px dotted $primary;
 
   &:hover {
     color: $primary-hover;
-    border-bottom: 2px solid $primary-hover;
+    border-bottom: 1px solid $primary-hover;
   }
 }
 
@@ -71,7 +86,7 @@ article {
     margin: auto 0px;
   }
 
-  > div.sect1 > h2 > a {
+  div.sect1 > h2 > a, div.sect2 > h3 > a {
     border-bottom: none;
     color: $text;
 
@@ -88,18 +103,6 @@ article {
     }
   }
 
-  //html body article div.sect1 div.sectionbody table.tableblock.frame-all.grid-all.stretch
-  >table, div.sectionbody table.tableblock {
-    width: 100%;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    margin-top: 5px;
-
-    tbody tr td {
-      border: 1px solid #ccc;
-    }
-  }
 }
 
 // sup.footnote a {
@@ -143,14 +146,26 @@ article {
   }
 }
 
-div.imageblock div.title {
-  font-style: italic;
+div.imageblock {
+  > div.content > img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  div.title {
+    font-style: italic;
+    text-align: center;
+  }
 }
 
 div.paragraph {
   p code {
-    background-color: rgb(230,230,230);
-    padding: 2px;
+    background-color: rgba(104, 182, 112, .2);
+    color: #2d3436;
+    border-radius: .25em;
+    border: 1px solid rgba(104, 182, 112, .2);
+    font-family: $monospace-stack;
+    padding: .15em .25em;
   }
 }
 
@@ -184,8 +199,8 @@ div#front-meta {
     margin: 0px;
   }
 
-  nav#TableOfContents ul {
-    margin: auto 0px;
+  div.post-tags {
+    margin-bottom: .5em;
   }
 
   details {
@@ -222,10 +237,10 @@ h2 {
 }
 
 h2,h3,h4 {
-  margin-bottom: 0px;
+  margin-bottom: .25em;
 
   &+div.paragraph p {
-    margin-top: 0px;
+    margin-top: 1em;
   }
 }
 
@@ -239,13 +254,21 @@ pre.rouge .hll {
 
 div.listingblock {
   margin-top: 1em;
+  background-color: rgba(104, 182, 112, .05);
+  border: 1px solid rgba(104, 182, 112, .2);
 
   div.title {
+    display: inline-block;
+    padding: .1em .3em;
+    background-color: rgba(104, 182, 112, .5);
+    color: white;
+
+    width: auto;
+
     font-family: monospace;
     font-size: 16px;
     padding-left: 5px;
 
-    border: 1px solid #ccc;
     border-bottom: none;
 
     //&:before {
@@ -253,18 +276,11 @@ div.listingblock {
     //}
   }
 
-  div.content pre.rouge.highlight {
+  div.content > pre.rouge.highlight {
     margin: 0 auto;
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
     line-height: 1.2;
-  }
-
-  div.content {
-    pre > code:not(>table) {
-      span {
-        color: red;
-      }
-    }
+    margin: .1em .25em;
   }
 }
 
@@ -285,8 +301,67 @@ div.listingblock + div.colist.arabic {
   }
 }
 
-td.linenos {
-  background-color: rgb(245,245,245);
-  color: rgb(180,180,180);
-  border-right: 1px solid #ccc;
+article div.content {
+  div.paragraph:last-child p {
+    margin-bottom: .25em;
+  }
+}
+
+.exampleblock, .literalblock {
+  border: 1px solid #c1c1c1;
+  border-radius: .25em;
+  margin: .25em auto;
+  background-color: rgba(200, 200, 200, 0.1);
+  border-radius: .25em;
+
+  > div.content {
+    padding-left: .25em;
+    padding-right: .25em;
+  }
+}
+.exampleblock {
+  > div.title {
+    padding: .25em .5em;
+    background-color: rgba(80, 80, 80, 0.1);
+    display: inline-block;
+    border-radius: 0px 0px .25em 0px;
+    font-style: italic;
+  }
+}
+.literalblock > div.content > pre {
+  margin: .25em;
+}
+
+details {
+  border: 1px solid #cdcdcd;
+  border-radius: .25em;
+
+  summary {
+    margin: .5em .25em;
+  }
+}
+
+.seriesblock {
+  margin-top: .5em;
+  border-radius: .25em;
+  border: 1px solid rgba(104, 182, 112, .5);
+
+  div.title {
+    width: 100%;
+    color: #2d3436;
+    background-color: rgba(104, 182, 112, .1);
+  }
+  div.title, div.contents {
+    padding: .25em;
+  }
+  div.contents > ul {
+    margin: 0px;
+    padding: .5em;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+
+div.content > a.image {
+  border-bottom: none;
 }

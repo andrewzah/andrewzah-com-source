@@ -19,11 +19,33 @@ email = "zah@andrewzah.com"
 
 [markup]
   [markup.asciidocext]
-    extensions = ["asciidoctor-html5s", "asciidoctor-diagram"]
+    extensions = ["asciidoctor-chart", "asciidoctor-html5s", "asciidoctor-diagram"]
     workingFolderCurrent = true
 
   [markup.asciidocext.attributes]
-    my-base-url = "https://andrewzah.com/"
+    #my-base-url = "https://andrewzah.com/"
+    mathematical-inline = "true"
+    mathematical-format = "svg"
+    source-highlighter = "rouge"
+    sectnumlevels = 1
+    docinfo = "shared"
+    #sectnums = "yes"
+    sectlinks = "yes"
+    experimental = "yes"
+    "figure-caption" = "yes"
+    # vars
+    background-color = "#fdfdfd"
+    # symbols
+    sym_darr = "\u2193"
+    sym_rarr = "\u2192"
+    sym_uarr = "\u2191"
+    sym_larr = "\u2190"
+    sym_drarr = "\u2198"
+    sym_dlarr = "\u2199"
+    sym_urarr = "\u2191"
+    sym_ularr = "\u2196"
+    sym_clarr = "\u21E4"
+    sym_cdarr = "\u2913"
 
 [security]
   [security.exec]
