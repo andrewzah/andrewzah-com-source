@@ -118,16 +118,16 @@ article {
 //}
 
 // https://stackoverflow.com/a/31461807
-.full-width {
-  .content {
-    display: block;
-    text-align: center;
+div.imageblock.full-width {
+  > div.content {
+    display: block !important;
+    text-align: center !important;
 
-    img {
+    > img {
       text-align: center;
 
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
 
       max-width: max(100vw);
 
@@ -146,18 +146,20 @@ article {
   }
 }
 
-div.imageblock {
+div.imageblock.center-img {
   > div.content > img {
     display: block;
     margin: 0 auto;
   }
-
-  div.title {
+}
+div.imageblock {
+  > div.title {
     font-style: italic;
     text-align: center;
   }
 }
 
+// code in backticks
 div.paragraph {
   p code {
     background-color: rgba(104, 182, 112, .2);
@@ -244,14 +246,6 @@ h2,h3,h4 {
   }
 }
 
-pre.rouge .hll {
-  background-color: #ffc;
-
-  * {
-    background-color: initial;
-  }
-}
-
 div.listingblock {
   margin-top: 1em;
   background-color: rgba(104, 182, 112, .05);
@@ -260,7 +254,8 @@ div.listingblock {
   div.title {
     display: inline-block;
     padding: .1em .3em;
-    background-color: rgba(104, 182, 112, .5);
+    background-color: rgba(104, 182, 112, .8);
+    //background-color: $primary;
     color: white;
 
     width: auto;
@@ -364,4 +359,15 @@ details {
 
 div.content > a.image {
   border-bottom: none;
+}
+
+div.dlist > dl {
+  > dt { font-weight: bold; }
+  > dd > p {
+    margin: .25em;
+  }
+}
+
+p, .content {
+  font-size: $font-size;
 }

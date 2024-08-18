@@ -11,9 +11,6 @@ toc = true
 +++
 
 = This is a test of this site's capabilities.
-:toc:
-:stem: latexmath
-:experimental:
 
 This is an example document.
 
@@ -433,6 +430,8 @@ in {
 
 == Math
 
+WARNING: Unable to get this working currently due to a font issue.
+
 stem:[sqrt(4) = 2]
 
 Water (stem:[H_2O]) is a critical component.
@@ -504,15 +503,29 @@ link:/message.txt.asc[message.txt.asc]
 
 == Graphs, Charts
 
-NOTE: This section needs asciidoctor-chart and d2.
+NOTE: This section needs d2, gnuplot, and mermaid-cli.
 
-[chart,line]
-....
-January,February,March,April,May,June,July
-28,48,40,19,86,27,90
-65,59,80,81,56,55,40
-....
+[.center-img]
+[mermaid, "mermaid-test-1", svg, background="#fdfdfd"]
+----
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+----
 
+[.center-img]
+[gnuplot, "gnuplot-test-1", svg, background="#fdfdfd"]
+----
+set xlabel "Resistance [Ohm]"
+set ylabel "Power [W]"
+
+set title "error represented by xyerrorbars"
+n(x)=1.53**2*x/(5.67+x)**2
+plot [0:50] "battery.dat" t "Power" with xyerrorbars, n(x) t "Theory" w lines
+----
+
+[.center-img]
 [d2, d2-ex-1, svg, sketch=true, layout=elk, theme=104, pad=10]
 ----
 direction: right

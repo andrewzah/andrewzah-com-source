@@ -40,6 +40,6 @@ If you see me at some conference or meetup, absolutely come up and introduce you
 link:/cats[Cats] |
 link:/contact[Contact] |
 link:/openbook[Openbook] |
-link:/openbook[Changelog]
+link:/changelog[Changelog]
 
 link:/resume-andrew-zah.pdf[Resume] - Not looking for fulltime opportunities for the foreseeable future, but part time and consulting for [ruby/rails, rust, nix, golang] projects can be worked out.

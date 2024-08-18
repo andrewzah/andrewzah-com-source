@@ -4,6 +4,7 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     ruby-nix.url = "github:inscapist/ruby-nix";
+    nix2container.url = "github:nlewo/nix2container";
     bundix = {
       url = "github:inscapist/bundix/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,9 +15,10 @@
     };
   };
 
-  outputs = { self, flake-utils, nixpkgs, ruby-nix, bundix, bob-ruby }:
+  outputs = { nix2container, flake-utils, nixpkgs, ruby-nix, bundix, bob-ruby, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
+        n2c = nix2container.packages."${system}".nix2container;
         pkgs = import nixpkgs {
           inherit system;
           overlays = [ bob-ruby.overlays.default ];
@@ -38,13 +40,37 @@
           export BUNDLE_PATH=vendor/bundle
           bundle lock --update
         '';
+        env = (rubyNix { inherit gemset ruby; name = "my-rails-app"; gemConfig = pkgs.defaultGemConfig // gemConfig; }).env;
       in
-      rec {
-        inherit (rubyNix {
-          inherit gemset ruby; name = "my-rails-app";
-          gemConfig = pkgs.defaultGemConfig // gemConfig;
-          })
-          env;
+      {
+        packages = {
+          image = n2c.buildImage {
+            name = "docker.io/andrewzah/personal_site";
+            tag = "latest";
+
+            copyToRoot = let
+              caddyfile = pkgs.writeTextDir "/etc/caddy/Caddyfile" (builtins.readFile ./Caddyfile);
+            in
+            pkgs.buildEnv {
+              name = "img-root";
+              paths = [
+                caddyfile
+                pkgs.caddy
+                (pkgs.callPackage ./personal-site.nix {
+                  inherit pkgs env;
+                })
+              ];
+              pathsToLink = [ "/bin" "/etc" "/var" ];
+            };
+
+            config = {
+              Cmd = [ "caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter"  "caddyfile" ];
+              ExposedPorts = {
+                "2020" = {};
+              };
+            };
+          };
+        };
 
         devShells = rec {
           default = dev;
@@ -57,9 +83,8 @@
             ] ++ (with pkgs; [
               hugo
               d2
-              texliveSmall
-              texlivePackages.mathfont
-              texlivePackages.fontsetup
+              gnuplot
+              mermaid-cli
             ]);
           };
         };

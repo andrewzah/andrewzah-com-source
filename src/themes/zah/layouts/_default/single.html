@@ -13,19 +13,6 @@
         </time>
         {{- end -}}
       </p>
-      <div style="font-style: italic;" class="post-tags">
-        {{ .Page.WordCount }} words
-        &mdash;
-
-        {{ $list := (.GetTerms "tags") }}
-        {{ $len := (len $list) }}
-
-        under
-        {{ range $i, $e := $list }}
-        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
-        {{ end }}
-      </div>
-
       {{- if (eq .Params.Toc true) -}}
         <details>
         <summary>
@@ -41,6 +28,18 @@
 
   {{ .Content }}
 
+  <div style="font-style: italic;" class="post-tags">
+    {{ .Page.WordCount }} words
+    &mdash;
+
+    {{ $list := (.GetTerms "tags") }}
+    {{ $len := (len $list) }}
+
+    under
+    {{ range $i, $e := $list }}
+    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
+    {{ end }}
+  </div>
   {{- if .Params.series -}}
     <div class="seriesblock">
       <div class="title">

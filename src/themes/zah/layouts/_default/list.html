@@ -1,6 +1,8 @@
 {{ define "main" }}
   <h1> {{ .Type }} </h1>
 
+  {{ .Content }}
+
   <div class="listing">
     {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
       <h3 style="font-weight: bold; text-decoration: none;"> {{ .Key }} </h3>

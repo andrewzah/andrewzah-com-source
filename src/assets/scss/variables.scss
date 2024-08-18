@@ -36,15 +36,23 @@ $reference-mark: &#8251;
 
 // general
 $max-width: 750px;
-$font-size: 16px;
+$font-size: 18px;
 
 // breakpoints
 $phoneWidth: 600px;
 $desktopWidth: 1024px;
 
+$pistachio-green: #56aa69;
+$diamine-green: #1b8e13;
+
+// TODO: https://sanzo-wada.dmbk.io
 // colors
-$primary: #149864;
+//$primary: rgba(0, 89, 46, 1);
+$primary: $diamine-green;
 $primary-hover: #0d8c5b; //#10754e
+$secondary: rgba(214, 0, 54, 1);
+$tertiary: rgba(83, 34, 92, 1);
+
 $background: rgb(250, 250, 250);
 $text: rgb(30, 30, 30);
 $text-gray: rgb(90, 90, 90);

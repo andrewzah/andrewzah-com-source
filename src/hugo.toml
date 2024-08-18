@@ -19,7 +19,7 @@ email = "zah@andrewzah.com"
 
 [markup]
   [markup.asciidocext]
-    extensions = ["asciidoctor-chart", "asciidoctor-html5s", "asciidoctor-diagram"]
+    extensions = ["asciimath", "asciidoctor-mathematical", "asciidoctor-html5s", "asciidoctor-diagram"]
     workingFolderCurrent = true
 
   [markup.asciidocext.attributes]
@@ -32,7 +32,6 @@ email = "zah@andrewzah.com"
     #sectnums = "yes"
     sectlinks = "yes"
     experimental = "yes"
-    "figure-caption" = "yes"
     # vars
     background-color = "#fdfdfd"
     # symbols

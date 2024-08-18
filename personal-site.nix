@@ -1,26 +1,27 @@
-{ pkgs ? import <nixpkgs>{}
-, stdenv ? pkgs.stdenv
+{ pkgs
+, env
 }:
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
   pname = "personal-site";
   version = "0.1.0";
 
   src = ./src;
 
-  buildInputs = with pkgs; [
+  nativeBuildInputs = (with pkgs; [
     findutils
     gnused
     git
-
     hugo
-    (ruby_3_3.withPackages (ps:
-      with ps; [
-        asciidoctor-with-extensions
-        rubyPackages_3_3.rouge
-      ]))
-  ];
+    d2
+    gnuplot
+  ]) ++ [ env ];
 
   buildPhase = ''
+    # remove draft pages
+    pushd ./content
+    grep -rl "draft = true" | while read f; do rm "$f"; done
+    popd
+
     hugo
 
     # wrap <img> tags with <a>
