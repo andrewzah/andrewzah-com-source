@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  font-size: $font-size;
+}
+
+html, body {
+  padding: 0px;
+  margin: 0px;
+
+  background: rgb(253,253,253);
+  color: rgb(5,5,5);
+
+  font-family: $serif-stack;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  //font-style: italic;
+  border-bottom: 1px dotted $primary;
+
+  &:hover {
+    color: $primary-hover;
+    border-bottom: 1px solid $primary-hover;
+  }
+}
+
+
+blockquote {
+  margin-left: 0px;
+  padding-left: 20px;
+  border-left: 3px solid $primary;
+}
+
+details {
+  border: 1px solid #cdcdcd;
+  border-radius: .25em;
+
+  summary {
+    margin: .5em .25em;
+  }
+  div.content {
+    margin-top: .25;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-bottom: .75em;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  &:hover {
+    a.heading-anchor {
+      display: inline-block;
+    }
+  }
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+h2,h3,h4 {
+  margin-bottom: .25em;
+
+  &+div.paragraph p {
+    margin-top: 1em;
+  }
+}
+
+hr {
+  color: #eee;
+}
+
+img {
+  max-width: 100%;
+
+  border-radius: .25rem;
+}
+
+// keyboard icons, css based on asciidoc example
+kbd {
+  line-height: 1;
+  border-radius: .25em;
+  padding: .25em .5em;
+  vertical-align: text-bottom;
+  white-space: nowrap;
+
+  font-family: $monospace-stack;
+  box-shadow: rgb(193, 193, 193) 0px 1px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 1.2px inset;
+  background-color: #f0f0f0;
+  border: 1px solid #c1c1c1;
+}
+
+
+
+pre {
+  overflow-x: scroll;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h4, h5, h6 { font-size: 1em; }

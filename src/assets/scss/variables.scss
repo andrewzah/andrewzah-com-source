@@ -1,9 +1,16 @@
+// "Source Serif Pro", "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif, "Noto Emoji", "Quivira"
 $serif-stack: (
   "Libre Baskerville",
+  "New Century Schoolbook",
+  "Century Schoolbook",
+  "Century Schoolbook L",
+  "Source Serif Pro",
+  "Apple Garamond",
+  "DejaVu Serif",
+  "Roboto Slab",
   Georgia,
   serif
 );
-// "Source Serif Pro", "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif, "Noto Emoji", "Quivira"
 
 $sans-serif-stack: (
 system-ui,
@@ -35,7 +42,7 @@ $monospace-stack: (
 $reference-mark: &#8251;
 
 // general
-$max-width: 750px;
+$max-width: 800px;
 $font-size: 18px;
 
 // breakpoints

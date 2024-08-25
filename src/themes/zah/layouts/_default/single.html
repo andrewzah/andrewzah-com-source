@@ -28,30 +28,32 @@
 
   {{ .Content }}
 
-  <div style="font-style: italic;" class="post-tags">
-    {{ .Page.WordCount }} words
-    &mdash;
+  {{- if or (eq .Type "posts") (eq .Type "reviews") -}}
+    <div style="font-style: italic;" class="post-tags">
+      {{ .Page.WordCount }} words
+      &mdash;
 
-    {{ $list := (.GetTerms "tags") }}
-    {{ $len := (len $list) }}
+      {{ $list := (.GetTerms "tags") }}
+      {{ $len := (len $list) }}
 
-    under
-    {{ range $i, $e := $list }}
-    <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
-    {{ end }}
-  </div>
-  {{- if .Params.series -}}
-    <div class="seriesblock">
-      <div class="title">
-        Other posts in the <b>{{ .Params.series }}</b> series:
-      </div>
-      <div class="contents">
-        <ul>
-          {{ range (where .Site.Pages ".Params.series" "eq" .Params.series)}}
-          <li> <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> </li>
-          {{ end }}
-        </ul>
-      </div>
+      under
+      {{ range $i, $e := $list }}
+      <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{- if not (eq (add $i 1) $len) -}},{{- end -}}
+      {{ end }}
     </div>
+    {{- if .Params.series -}}
+      <div class="seriesblock">
+        <div class="title">
+          Other posts in the <b>{{ .Params.series }}</b> series:
+        </div>
+        <div class="contents">
+          <ul>
+            {{ range (where .Site.Pages ".Params.series" "eq" .Params.series)}}
+            <li> <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    {{- end -}}
   {{- end -}}
 {{ end }}

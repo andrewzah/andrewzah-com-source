@@ -5,7 +5,11 @@
 >
 > &mdash; Edward de Bono
 
-Welcome to my web page. I enjoy learning things and making useful applications for people.
+Welcome to my web page. My name is Andrew Zah.
+I'm a programmer by trade, and I'm fascinated by the world we inhabit.
+
+My interests are mainly in computer science and programming, language learning, and fighting games,
+although I dabble in many hobbies.
 
 == Notable Posts
 link:/posts/2024/korean-digital-nomad-visa/[How I acquired the Korean Digital Nomad Visa]: A detailed summary of all the steps I took to aquire this visa, as well as some tips for those looking to apply.
@@ -37,9 +41,11 @@ If you see me at some conference or meetup, absolutely come up and introduce you
 
 == Links
 
-link:/cats[Cats] |
 link:/contact[Contact] |
+link:/cats[Cats] |
+link:/uses[Uses] |
 link:/openbook[Openbook] |
-link:/changelog[Changelog]
+link:/changelog[Changelog] |
+link:/friends[Friends]
 
-link:/resume-andrew-zah.pdf[Resume] - Not looking for fulltime opportunities for the foreseeable future, but part time and consulting for [ruby/rails, rust, nix, golang] projects can be worked out.
+link:/resume-andrew-zah.pdf[Resume] - Not looking for fulltime opportunities for the foreseeable future, but part time and consulting (especially for ruby/rails, rust, nix, golang) projects can be worked out.

@@ -2,15 +2,22 @@
 
 .admonitionblock {
   margin: .5rem auto;
-  border-radius: 5px;
+  border-radius: .25rem;
 
   table { border-spacing: 0; width: 100%; }
   table > tbody > tr {
     display: block;
 
-    td { padding: 5px; }
     td.icon {
       display: block;
+
+      .title {
+        padding: .25rem .75rem;
+      }
+    }
+
+    td.content {
+      padding: .50rem .75rem;
     }
   }
 

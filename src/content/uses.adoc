@@ -1,0 +1,57 @@
++++
+title = "Uses"
+slug = "/uses"
+date = "2024-08-19"
++++
+
+= Uses
+
+This is a living document of the hardware and software I use for work, personal projects, and hobbies.
+
+I alternate between working from home in the U.S. and traveling with 2 carryon bags in Europe and Asia.
+
+== Hardware
+* desktop pc with AMD Ryzen 9 3900x and EVGA GeForce RTX 2070 Super FTW3 Ultra
+* laptops:
+** (work) - Dell XPS 13" 9300 + NixOS
+** (work) - Apple M3 Macbook Pro
+** (gaming) - Asus ROG Zephyrus G14 2024 with RTX 4060
+* headphones:
+** apple earbuds (3.5mm + lightning)
+** link:/reviews/2024/philips-tah7508-bluetooth-headphones/[Philips TAH7508 Bluetooth Headphones]
+* backpacks:
+** Goruck GR1 26L
+** Goruck GR2 40L
+** Aer Go Pack 2
+* Anker 727 GaNPrime Charging Station 140W
+* Anker 65W Charger (Pikachu model, Japanese socket)
+* Anker 120W Charger (Raichu model, Korean socket)
+* Anker 655 8-in-1 usb-c hub
+* Anker Powercore Slim 10000 power bank
+* Istmall Makestick Pro with Viewlix layout
+* Snackbox Micro
+* Sondergut travel backgammon set
+
+== Services / Subscriptions
+* fastmail
+* vaultwarden
+* hedgedoc
+* laftel (korean anime streaming site)
+* youtube premium
+* calendar syncing: baikal
+* domains: porkbun and gandi
+* dns: porkbun, gandi, and cloudflare
+
+== Software
+* theme: gruvbox
+* font: Iosevka SS03 Consolas
+* NixOS
+* ProxmoxVE (managed LXCs/VMs with Ansible)
+* Hyprland
+* NeoVim
+* firefox
+* foot terminal (hyprland)
+* xterm (x11)
+* docker + docker compose
+
+Inspired by link:https://uses.tech/[uses.tech].

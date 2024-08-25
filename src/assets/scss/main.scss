@@ -3,75 +3,12 @@
 
 @import "variables";
 @import "mixins";
+@import "elements";
 
 @import "components/admonition";
 @import "components/nav";
 @import "components/toc";
 @import "components/tables";
-
-* {
-  box-sizing: border-box;
-  text-rendering: geometricPrecision;
-}
-
-// keyboard icons, css based on asciidoc example
-kbd {
-  line-height: 1;
-  border-radius: .25em;
-  padding: .25em .5em;
-  vertical-align: text-bottom;
-  white-space: nowrap;
-
-  font-family: $monospace-stack;
-  box-shadow: rgb(193, 193, 193) 0px 1px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 1.2px inset;
-  background-color: #f0f0f0;
-  border: 1px solid #c1c1c1;
-}
-
-html, body {
-  padding: 0px;
-  margin: 0px;
-
-  background: rgb(253,253,253);
-  color: rgb(5,5,5);
-
-  font-family: $serif-stack;
-  line-height: 1.4;
-}
-
-a {
-  text-decoration: none;
-  color: $primary;
-  //font-style: italic;
-  border-bottom: 1px dotted $primary;
-
-  &:hover {
-    color: $primary-hover;
-    border-bottom: 1px solid $primary-hover;
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-hr {
-  color: #eee;
-}
-
-pre {
-  overflow-x: scroll;
-}
-
-blockquote {
-  margin-left: 0px;
-  padding-left: 20px;
-  border-left: 3px solid $primary;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
 
 article {
   max-width: 95vw;
@@ -84,6 +21,13 @@ article {
 
   h1:nth-child(1) {
     margin: auto 0px;
+  }
+
+  div.sec2, > div.sect1 {
+    h1,h2,h3,h4,h5,h6 {
+      margin-top: .5em;
+      margin-bottom: .25em;
+    }
   }
 
   div.sect1 > h2 > a, div.sect2 > h3 > a {
@@ -102,20 +46,7 @@ article {
       }
     }
   }
-
 }
-
-// sup.footnote a {
-//   color: red;
-// }
-
-//.full-width {
-//  width: 100vw;
-//  left: 50%;
-//  position: relative;
-//  transform: translateX(-50%);
-//  -webkit-transform: translateX(-50%);
-//}
 
 // https://stackoverflow.com/a/31461807
 div.imageblock.full-width {
@@ -201,10 +132,6 @@ div#front-meta {
     margin: 0px;
   }
 
-  div.post-tags {
-    margin-bottom: .5em;
-  }
-
   details {
     summary {
       cursor: pointer;
@@ -213,6 +140,12 @@ div#front-meta {
     }
   }
 }
+
+div.post-tags {
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
 
 pre#landing-pre {
   width: 95vw;
@@ -226,25 +159,6 @@ a.heading-anchor {
   color: $text-gray;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  &:hover {
-    a.heading-anchor {
-      display: inline-block;
-    }
-  }
-}
-
-h2 {
-  border-bottom: 1px solid #ccc;
-}
-
-h2,h3,h4 {
-  margin-bottom: .25em;
-
-  &+div.paragraph p {
-    margin-top: 1em;
-  }
-}
 
 div.listingblock {
   margin-top: 1em;
@@ -327,15 +241,6 @@ article div.content {
   margin: .25em;
 }
 
-details {
-  border: 1px solid #cdcdcd;
-  border-radius: .25em;
-
-  summary {
-    margin: .5em .25em;
-  }
-}
-
 .seriesblock {
   margin-top: .5em;
   border-radius: .25em;
@@ -368,6 +273,26 @@ div.dlist > dl {
   }
 }
 
-p, .content {
-  font-size: $font-size;
+// sup.footnote a {
+//   color: red;
+// }
+
+//.full-width {
+//  width: 100vw;
+//  left: 50%;
+//  position: relative;
+//  transform: translateX(-50%);
+//  -webkit-transform: translateX(-50%);
+//}
+
+div.ulist > ul {
+  margin-left: 1rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  padding-left: 0px;
+
+  > li > p {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
 }

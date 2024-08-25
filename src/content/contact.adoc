@@ -27,7 +27,7 @@ I'm currently in Seoul, which is GMT+9, or 14 hours ahead of the east coast, USA
 |link:https://www.linkedin.com/in/andrewzah/[andrewzah]
 
 |cellphone
-|if you somehow found my phone number: no you didn't.
+|if you somehow found my phone number online: no you didn't.
 |===
 
 Other links:
@@ -35,16 +35,13 @@ Other links:
 [cols="1,2"]
 |===
 |Github
-|todo
+|link:https://github.com/andrewzah[andrewzah]
 
 |IRC
-|todo jazz - libera
+|jazz @ libera.chat
 
-|twitter
-|todo
-
-|telegram
-|
+|Wikipedia
+|link:https://en.wikipedia.org/wiki/User:Andrewzah[Andrewzah]
 |===
 
 // Copyright 2016-2024 Andrew Zah

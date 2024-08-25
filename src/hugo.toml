@@ -6,7 +6,7 @@ summaryLength = 15
 canonifyUrls = true
 toc = true
 destination = "./public"
-title = "Andrew Zah's blog"
+title = "Andrew Zah's Site"
 titleCaseStyle = 'none'
 
 [params.author]
@@ -35,16 +35,18 @@ email = "zah@andrewzah.com"
     # vars
     background-color = "#fdfdfd"
     # symbols
-    sym_darr = "\u2193"
-    sym_rarr = "\u2192"
-    sym_uarr = "\u2191"
-    sym_larr = "\u2190"
-    sym_drarr = "\u2198"
-    sym_dlarr = "\u2199"
+    sym_neutral1 = "&#8857;"
+    sym_neutral = "&#183;"
+    sym_darr = "&#x1F86B;"
+    sym_rarr = "&#x1F86A;"
+    sym_uarr = "&#x1F869;"
+    sym_larr = "&#x1F868;"
+    sym_drarr = "&#x1F86E;"
+    sym_dlarr = "&#x1F86F;"
     sym_urarr = "\u2191"
     sym_ularr = "\u2196"
-    sym_clarr = "\u21E4"
-    sym_cdarr = "\u2913"
+    sym_clarr = "\u27FB"
+    sym_cdarr = "\u21A7"
 
 [security]
   [security.exec]
