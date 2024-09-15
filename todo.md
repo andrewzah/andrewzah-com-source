@@ -5,10 +5,6 @@
 - nix layer caching, put caddy deps etc in a first layer
 
 ## features
-- /uses page
-  - https://uses.tech/
-  - https://melkat.blog/p/uses
-
 - openring - https://git.sr.ht/~sircmpwn/openring
   - ex) bottom: https://blog.sergeantbiggs.net/posts/aerc-a-well-crafted-tui-for-email/
 
