@@ -1,5 +1,7 @@
 ## todo
 - write, motherfucker. WRITE
+- pic for philips review
+- investigate optimized image generation + integration into nix flake
 
 ## potential alterations:
 - blog comments via ssh, https://blog.haschek.at/2023/ssh-based-comment-system.html

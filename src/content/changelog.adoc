@@ -19,7 +19,7 @@ slug: "changelog"
 * fix metadata following post content appearing on page types other than posts and reviews
 
 == 2024-08-18
-* write initial link:/reviews/2024/philips-tah7508-bluetooth-headphones/[Philips TAH7508] review (TODO: pics)
+* write initial link:/reviews/2024/philips-tah7508-bluetooth-headphones/[Philips TAH7508] review
 * update list.html partial to include content from the root
   e.g. from reviews/_index.adoc to show disclaimer on link:/reviews[the reviews page]
 * bump p font size from 16px to 18px (testing this out)
