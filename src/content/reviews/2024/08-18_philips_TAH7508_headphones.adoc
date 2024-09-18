@@ -2,7 +2,7 @@
 title = "Philips TAH7508 Bluetooth Headphones"
 slug = "philips-tah7508-bluetooth-headphones"
 date = "2024-08-18"
-lastmod = "2024-08-19"
+lastmod = "2024-09-18"
 tags = ["audio"]
 description = "A look at the Philips TAH7508 Bluetooth Headphones."
 +++
