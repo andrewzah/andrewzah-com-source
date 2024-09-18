@@ -2,7 +2,8 @@
 title = "Philips TAH7508 Bluetooth Headphones"
 slug = "philips-tah7508-bluetooth-headphones"
 date = "2024-08-18"
-tags = ["headphones"]
+lastmod = "2024-08-19"
+tags = ["audio"]
 description = "A look at the Philips TAH7508 Bluetooth Headphones."
 +++
 
@@ -43,6 +44,15 @@ three laptops. All I have to do is disconnect with one and connect with another,
 so this is a much welcome change.
 
 Though, there is a Philips app for things like settings and firmware updates.
+
+== Update: 1 Month
+
+Overall I'm very happy with how these have held up so far.
+
+I use them just about daily for multiple-hour calls via discord and listening to music,
+charging every 2-3 days.
+
+The battery life is long enough that I don't find myself worrying at all.
 
 == Info
 

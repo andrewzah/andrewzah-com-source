@@ -1,11 +1,18 @@
 ---
 title: "Changelog"
 date: 2024-08-12
-lastmod: 2024-08-20
+lastmod: 2024-09-18
 description: "Changelog"
 slug: "changelog"
 ---
 = Changelog
+
+== 2024-09-18
+* add 1 month update to link:/reviews/2024/philips-tah7508-bluetooth-headphones/[Philips TAH7508] review
+
+== 2024-09-15 - housekeeping
+* clean up /uses
+* clear up todo.txt clutter
 
 == 2024-08-20
 * decrease margin and padding for ul and li elements
